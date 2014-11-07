@@ -1,0 +1,1261 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='description' content="14,000 words on how to run a software company and how to make web and mobile products." />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>playbook</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="//use.typekit.net/loq1vxq.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </head>
+
+  <body>
+      <header>
+        <nav class="main">
+          <h2 class='logo'>
+            <a href='/'>
+              <img src='images/logo.svg' data-png-fallback='images/logo.png' alt='thoughtbot logo' title='playbook' />
+            </a>
+          </h2>
+
+          <hgroup>
+            <h2><a href='/'>playbook</a></h2>
+            <h3>Written by <a href='http://thoughtbot.com'>thoughtbot</a></h3>
+          </hgroup>
+
+          <section class="table-of-contents">
+            <a href="#TOC" class="show-table">
+              <span class="text">Table of Contents</span>
+            </a>
+          </section>
+        </nav>
+      </header>
+
+      <section id='book'>
+        <div id="promo" class="promo">
+          <div>
+            <h1>
+              Get .pdf, .mobi, and .epub versions of the playbook by
+              subscribing to our newsletter
+            </h1>
+            <form action="https://formkeep.com/f/8d679880cb43" method="post">
+              <label for="email">Enter your email address</label>
+              <input type="email" name="email" id="email" placeholder="Email address" required/>
+              <input type="submit" value="Subscribe" />
+            </form>
+          </div>
+        </div>
+
+        <p></p>
+        <h1 id="hello">Hello</h1>
+        <p>You work at thoughtbot. This is your playbook. It details how you and your teammates run our software consulting company and how we make web and mobile products together. It is a living document that you can edit in a private GitHub repo.</p>
+        <p>It's filled with things we've learned based on our own experience and study of others' experiences.</p>
+        <p>We've made the playbook free and licensed it as <a href="http://creativecommons.org/licenses/by-nc/3.0">Creative Commons Attribution-NonCommercial</a> so others may learn from, or use, our tactics in their own companies. While our &quot;plays&quot; have worked for us, we trust their judgment over ours to decide which tools and techniques might work for them, too.</p>
+        <figure>
+        <img src="images/creative-commons.png" alt="Creative Commons Attribution-NonCommercial" /><figcaption>Creative Commons Attribution-NonCommercial</figcaption>
+        </figure>
+        <p>Some of our work needs to be private, such as links to various accounts like our HR system or documentation on how we handle credentials. Look in our private company Basecamp account for that kind of information.</p>
+        <p>Some of our work is very technical, but can be public, such as our git protocol for feature branches. Look in our <a href="https://github.com/thoughtbot/guides">public <code>thoughtbot/guides</code> GitHub repo</a> for that kind of information.</p>
+        <p></p>
+        <h1 id="guiding-principles">Guiding Principles</h1>
+        <p>We regularly eliminate and simplify policies. Our most important policy is &quot;use your best judgement&quot;.</p>
+        <p>We strive for few job titles, few departments, and few hierarchies. We prefer composition of roles necessary for projects and company objectives over inheritance of bosses and direct reports. We are at thoughtbot primarily for our design and development skill, and want to apply it, rather than creating company overhead.</p>
+        <p>We avoid having private conversations about each other or clients. Instead, we talk in person, and use tools such as Slack, Basecamp, and GitHub to communicate openly within a project, within thoughtbot, and publicly.</p>
+        <p>While we should be cognizant of people's feelings, and seek to work with each other constructively, we cannot let those concerns get in the way of our happiness and the success of our work. We'd rather be too honest than too polite.</p>
+        <p>Our standards are very high, and bringing on a new team member requires a &quot;yes&quot; from everyone who participated in the <a href="#interviewing">interview process</a>. Therefore, we expect the best from each other, give each other the benefit of the doubt, and encourage each other to take initiative to improve ourselves and the company.</p>
+        <p>We recognize that we can always be better. Therefore, we have strong opinions, loosely held, and take initiative to improve ourselves, the company, and our community.</p>
+        <h1 id="time">Time</h1>
+        <p>We work a <a href="http://www.extremeprogramming.org/rules/overtime.html">sustainable pace</a>. We work four days for clients on consulting and one day on &quot;investment time.&quot; We typically spend Monday-Thursday on client work and Friday on investment.</p>
+        <p>During weeks with a Monday holiday, we work Tuesday-Friday on client work and skip an investment day. If a team member is sick or unexpectedly absent from client work during the week, we'll use Friday as an extra client day to avoid slipping behind schedule.</p>
+        <p>When taking a planned vacation or attending a conference spanning multiple days, we generally don't &quot;make up&quot; client work on investment days.</p>
+        <p>When taking time off during client work, we discuss how it will impact the schedule with other team members.</p>
+        <h2 id="consulting">Consulting</h2>
+        <p>We make our money on consulting projects. Those projects start with <a href="#sales">sales</a> and go through a normal flow of designing, developing, shipping, monitoring, and iterating. We should do such a good job for our clients that they will want to poach us, and be such a great place to work that we can be confident our teammates won't leave.</p>
+        <h2 id="investment">Investment</h2>
+        <p>Investment time is time for investment in ourselves, our company, and our community.</p>
+        <p>Ideas for Fridays and in between client projects:</p>
+        <ul>
+        <li>Contribute to <a href="#open-source">open source software</a>.</li>
+        <li>Contribute content to <a href="http://upcase.com">Upcase</a>. Manage it on the &quot;Upcase Content&quot; Trello board. Pull from any list or add ideas to the &quot;Ideas&quot; list.</li>
+        <li>Write a blog post. Manage it on the &quot;Editorial Calendar&quot; Trello board.</li>
+        <li>Pick from or contribute back to <a href="https://github.com/thoughtbot/dotfiles">dotfiles</a>.</li>
+        <li>Share your technical research on the &quot;Research&quot; Trello board, which we use to gather material for <a href="http://tinyletter.com/thoughtbot">The Bot Cave</a> newsletter.</li>
+        <li>Answer questions on the <a href="http://forum.upcase.com">Upcase Forum</a>.</li>
+        <li>Run a <a href="/#product-design-sprint">product design sprint</a> on an idea of your own.</li>
+        <li>Work on conference and meetup talks and proposals.</li>
+        <li>Volunteer as a mentor for <a href="http://upcase.com">Upcase</a>, <a href="http://www.thisismetis.com">Metis</a>, <a href="https://www.gschool.it">gSchool</a>, <a href="http://devbootcamp.com">Dev Bootcamp</a>, or <a href="http://www.railsbridge.org">RailsBridge</a>, or another solid learning organization.</li>
+        </ul>
+        <h1 id="product-design-sprint">Product Design Sprint</h1>
+        <blockquote>
+        <p>&quot;Most people make the mistake of thinking design is what it looks like. People think it's this veneer — that the designers are handed this box and told, 'Make it look good!' That's not what we think design is. It's not just what it looks like and feels like. Design is how it works.&quot; - Steve Jobs</p>
+        </blockquote>
+        <p><a href="http://robots.thoughtbot.com/the-product-design-sprint">Product Design Sprints</a>, an invention of <a href="http://www.gv.com/design/">Google Ventures' design team</a>, are 5-phase exercises intended to improve the chances of <a href="http://paulgraham.com/good.html">making something people want</a>. We want to turn false confidence into validated confidence before beginning an expensive build. Or, we want to dodge bullets by learning we shouldn't begin the expensive build at all.</p>
+        <p>Sprints are useful starting points when kicking off a new product or workflow, as well as solving problems with an existing product. They typically last 5 days but we have done them in less time. We get as many stakeholders and expertises in the room as we can.</p>
+        <p>Product design sprints are test-driven design.</p>
+        <figure>
+        <img src="images/sprint-phases.png" />
+        </figure>
+        <h2 id="prep-work">Prep Work</h2>
+        <p>Before the sprint, our clients schedule 5 real humans for the tests we'll do in the last phase. They know their users better than we do.</p>
+        <p>They also gather research from sources such as:</p>
+        <ul>
+        <li><a href="http://quora.com/">Quora</a></li>
+        <li><a href="http://analytics.google.com">Google Analytics</a></li>
+        <li><a href="https://adwords.google.com/ko/KeywordPlanner/Home">Adwords Keyword Planner</a></li>
+        </ul>
+        <p>We may also do some (paid) prep-work:</p>
+        <ul>
+        <li>Schedule and run <a href="http://www.nngroup.com/articles/interviewing-users/">user interviews</a>.</li>
+        <li>Deploy a short <a href="http://www.google.com/insights/consumersurveys/use_cases">survey</a> whose results we can review in the first phase.</li>
+        </ul>
+        <p>We typically order breakfast for the first day to make it feel special but don't order lunch for each day of the sprint. For both the sprints and normal days, we believe it's important to not have &quot;working lunches&quot;, instead breaking from work for a short time to rest the brain, maybe get some fresh air, and interact with teammates and clients.</p>
+        <h2 id="understand">Understand</h2>
+        <p>The exercises in this phase help us understand and empathize with the users' life (consumer software) or work (business software) needs.</p>
+        <p>Throughout the phase, people take notes, often on sticky notes that they stick to the walls of the room.</p>
+        <p>We start with &quot;pitch practice&quot;, where the client pitches their product like they would to investors. This helps us identify the user, their problem, and the job they are hiring the product to do. It also begins documenting the <a href="http://martinfowler.com/bliki/UbiquitousLanguage.html">vocabulary used in the domain</a>.</p>
+        <p>We then review research from Quora, Analytics, AdWords Keyword Planner, interviews, and surveys. This helps us understand users' motivation, the marketing funnel, and the size of target markets.</p>
+        <p>Lastly, we sketch what the rest of the sprint will focus on: the critical path for the software. At this point, we try to keep this high-level and as light on implementation details as possible. A great question to help generate the critical path is:</p>
+        <blockquote>
+        <p><a href="http://www.youtube.com/watch?v=f84LymEs67Y">What job is the user hiring the product to do?</a></p>
+        </blockquote>
+        <figure>
+        <img src="images/criticalpath_small.jpg" />
+        </figure>
+        <p>We will edit the critical path as we move through the phases.</p>
+        <h2 id="diverge">Diverge</h2>
+        <p>The exercises in this phase help us exhaust our imaginations for potential solutions that meet the users' needs.</p>
+        <p>Before this phase, the team naturally walks around the room reviewing the walls, covered in the critical path and lots of sticky notes.</p>
+        <p>We start with &quot;pitch practice&quot; again, comparing to the critical path.</p>
+        <p>We then have each person individually sketch 10+ <a href="http://37signals.com/svn/posts/1926-a-shorthand-for-designing-ui-flows">user flows</a> and user interfaces. We ask people to include the sources where the customer will come from: Twitter? A blog post? AdWords? Automated suggestions? Drip email? Referral from a friend? Push notification?</p>
+        <p>Should the product become realized, these sources should eventually be measured in <a href="http://analytics.blogspot.com/2013/10/new-acquisitions-reporting-channels.html">Google Analytics' &quot;Acquisition Channels&quot; report</a>:</p>
+        <figure>
+        <img src="images/acquisition-channels_small.jpg" />
+        </figure>
+        <p>We then put those sketches on the wall and begin a silent critique, observing and putting <a href="http://www.amazon.com/dp/B002M3SBM2">dot stickers</a> on different parts of the flows and user interfaces that we like. This helps visually identify the best ideas.</p>
+        <p>We then do a group critique, three minutes per idea. The group explains their dots. The author can then add any extra commentary. We don't shoot down any ideas or start winnowing. This voting process helps avoid long discussions and design-by-committee.</p>
+        <p>Lastly, we do a &quot;super vote&quot; with larger, red dot stickers. The CEO or other product owner will place a single &quot;super vote&quot; on what they think is the best idea. This helps us reflect the reality of how their organization makes decisions and affirm their ultimate authority.</p>
+        <p>Our experience has been that this phase is mentally exhausting. We recommend ending early and sending people home to re-charge their batteries.</p>
+        <h2 id="converge">Converge</h2>
+        <p>The exercises in this phase force us to stop generating new solutions, converge on the best, and write the test for the prototype.</p>
+        <p>First, we identify assumptions we're making in the best ideas. We list all assumptions about users' motivations, the business model, our ability to acquire users, and our ability to implement the solution within budget. This helps eliminate some options.</p>
+        <figure>
+        <img src="images/assumptions_small.jpg" />
+        </figure>
+        <p>We then look for conflicts in the remaining sticky notes, user flows, and user interfaces: ideas that aim to solve the same problem in different ways. We eliminate solutions that can't be pursued currently.</p>
+        <p>We then decide whether we're creating one prototype (&quot;best shot&quot;) or multiple (&quot;battle royale&quot;). Multiple prototypes are more initial work but may reveal more dead ends and help us dodge more bullets without running follow-on sprints.</p>
+        <p>We then storyboard each prototype. This is a comic book-style story of our customer moving through the critical path.</p>
+        <figure>
+        <img src="images/storyboard_small.jpg" />
+        </figure>
+        <p>Lastly, we create the testing script in Google Docs and put the scoreboard on the wall of the observation room. The script is based on the storyboard and the scoreboard will be used to record the results of the test. This helps us be very explicit about what we're trying to learn.</p>
+        <h2 id="prototype">Prototype</h2>
+        <p>After another pitch practice to rally the troops, there are no exercises in this phase. It is entirely focused on building the right prototype(s) with just the right amount of fidelity to generate useful test results.</p>
+        <p>For the entire phase, we ask our clients to write copy text in Google Docs. They write <a href="http://gettingreal.37signals.com/ch11_Use_Real_Words.php">real text, not lorem ipsum</a>, in order to test user understanding and enthusiasm. This text is also useful later for tweets, press, ad copy, landing pages, etc.</p>
+        <p>While our clients are busy getting communication polished, we are heads-down prototyping. We use different tools depending on the designer and the project.</p>
+        <p>For web app prototypes, some good options are:</p>
+        <ul>
+        <li><a href="http://www.squarespace.com">Squarespace</a> templates</li>
+        <li><a href="http://bourbon.io">Bourbon</a> + <a href="http://neat.bourbon.io">Neat</a> + <a href="http://bitters.bourbon.io">Bitters</a> locally</li>
+        <li><a href="http://www.invisionapp.com">Invision</a></li>
+        </ul>
+        <p>For mobile app prototypes, some good options are:</p>
+        <ul>
+        <li><a href="https://www.flinto.com">Flinto</a> + <a href="https://itunes.apple.com/us/app/sketch/id402476602?mt=12">Sketch</a> + <a href="http://tapsplusapps.com/ios7-template.html">iOS 7 template</a></li>
+        <li><a href="https://popapp.in/">Prototyping on Paper</a></li>
+        </ul>
+        <p>Don't try to learn these tools during the sprint. Get familiar with them during investment time. During the sprint, use one that you've mastered.</p>
+        <h2 id="test-and-learn">Test and Learn</h2>
+        <p>Finally, we interview 5 users to test our understanding of them, their context, and our prototype. This is not a usability test. We begin the conversation as an interview before showing them the prototype.</p>
+        <p>One of our designers interviews each user. We set them up in an interview room with video and audio streaming to the observation, where the rest of the stakeholders are watching, discussing, and recording answers on the scoreboard.</p>
+        <p>Good questions are open-ended to allow users to tell stories.</p>
+        <blockquote>
+        <p>&quot;Could you tell us about a time you donated to a non-profit?&quot;</p>
+        </blockquote>
+        <p>Don't lead users to an expected answer.</p>
+        <blockquote>
+        <p>&quot;Would you donate money to a public school if you could?&quot;</p>
+        </blockquote>
+        <p>Don't close the conversation.</p>
+        <blockquote>
+        <p>&quot;Have you donated money to an organization within the last week?&quot;</p>
+        </blockquote>
+        <p>For a new product, it's unlikely that any team will nail it their first sprint. The most likely outcome is that we'll want to run a follow-on sprint starting at Diverge or Converge and test again with a new users.</p>
+        <p>After one or two sprints, we typically have many assumptions validated, a clear critical path established, and are ready to begin coding a first version to release to a wider audience.</p>
+        <p>For web apps, we can typically ship a first version in 4-6 weeks. For mobile apps, we can typically ship a beta via <a href="http://hockeyapp.net/">HockeyApp</a> in 6-8 weeks and ship to the App Store in 8-10 weeks.</p>
+        <p>Given those timelines, spending an extra 2-5 days doing a second or even third truncated product design sprint is worth the opportunity cost of spending 4x-10x more time and money to learn we bombed.</p>
+        <p>Another outcome is that there's no clear user pain, or the business model is murky, or everything we thought we knew was proven wrong. That's an emotional blow, but a success. Time and money were saved.</p>
+        <p>We end the phase with a plan for moving forward.</p>
+        <h1 id="choose-platforms">Choose Platforms</h1>
+        <p>Early in a project, we have to decide which platforms we'll use.</p>
+        <p>Which platform depends on our ideas for solving these users' problems. For example, if they're construction workers on a job site, a mobile or tablet interface might be the best choice.</p>
+        <p>After considering what's best for users, what's best for us?</p>
+        <ul>
+        <li>The tools are open source with a strong community</li>
+        <li>The tools make us happy</li>
+        <li>The tools help us create and iterate quickly</li>
+        </ul>
+        <h2 id="web-apps">Web Apps</h2>
+        <p>In our experience, <a href="http://rubyonrails.org/">Ruby on Rails</a> web apps tend to be fast to market and have a low total cost of ownership because they are highly conventional. One Rails app's codebase looks very similar to other Rails app's codebases. There's also strong overlap between agile and Ruby communities, which means (among things) that Ruby developers tend to write tests, use object-oriented design, and avoid repeated code.</p>
+        <p>Maybe the greatest compliment we can pay to Rails is that we've made an existential financial commitment to it, betting the future of the company on it in 2005, and we're still here.</p>
+        <p>In return, we're proud of our contributions to the community, in particular our <a href="https://github.com/thoughtbot">open source libraries</a> and articles on <a href="http://robots.thoughtbot.com">GIANT ROBOTS SMASHING INTO OTHER GIANT ROBOTS</a>.</p>
+        <p>In addition to Ruby, we use other open source software and web standards such as HTML, CSS, JavaScript, UNIX, Vim, and Postgres because they:</p>
+        <ul>
+        <li>Are high quality.</li>
+        <li>Avoid vendor lock-in.</li>
+        <li>Provide flexibility to switch components.</li>
+        <li>Work on many devices.</li>
+        <li>Are battle-tested.</li>
+        <li>Have few bugs when seen by many eyes.</li>
+        </ul>
+        <p>Ruby on Rails comes with features that decrease the burden on the programmer to protect against security attacks such as:</p>
+        <ul>
+        <li>Cross-Site Scripting (XSS)</li>
+        <li>Cross-Site Request Forgery (CSRF)</li>
+        <li>SQL injection</li>
+        <li>Header injection</li>
+        <li>Sensitive data in logs</li>
+        </ul>
+        <p>Rails helps us do the right thing with regards to security but we are still required to be diligent, knowledgeable, and test comprehensively. For more information, see the <a href="http://guides.rubyonrails.org/security.html">Ruby on Rails Security Guide</a>.</p>
+        <p>We support Internet Explorer 9.0+ and the latest versions of Firefox, Chrome, and Safari. We do not support Internet Explorer 6, 7, or 8. Instead, those users see a polite message showing them how to upgrade. Those browsers are <a href="http://en.wikipedia.org/wiki/Internet_Explorer#Market_adoption_and_usage_share">losing market share</a>, they have <a href="http://en.wikipedia.org/wiki/Internet_Explorer_6#Security_issues">security issues</a>, and they are time-consuming to design for, develop for, and support.</p>
+        <p>In limited special cases, user demographics will dictate that supporting an older version of Internet Explorer is required. Those special cases should be identified early on so we can plan for additional time and expense in order to support the version.</p>
+        <h2 id="mobile-apps">Mobile Apps</h2>
+        <p>&quot;Mobile&quot; refers to the user, not the device.</p>
+        <p>Everything about how we design a mobile application has to be in the context of that idea. It raises questions like:</p>
+        <ul>
+        <li>Are they moving?</li>
+        <li>Are they relaxed on a couch?</li>
+        <li>How dexterous are their fingers?</li>
+        </ul>
+        <p>We try to start with the most usable platform first. If the device needs the camera, calendar, or address book, a &quot;native&quot; app like an iPhone or iPad app may be the right choice.</p>
+        <p>For other products, especially content-only products such as text, images, videos, and landing pages, a mobile web app makes sense because:</p>
+        <ul>
+        <li>All modern smart phones can render HTML.</li>
+        <li><a href="https://github.com/thoughtbot/bourbon">Bourbon</a> and <a href="https://github.com/thoughtbot/neat">Neat</a> make &quot;responsive&quot; designs easy to implement.</li>
+        <li>We can create and iterate quickly.</li>
+        <li>We can deploy new versions multiple times a day.</li>
+        </ul>
+        <p>Our mobile developers' expertise is with the Objective-C, and more recently Swift, programming languages and iOS frameworks such as Cocoa.</p>
+        <p>We don't take on Titanium or PhoneGap projects because of:</p>
+        <ul>
+        <li>Cost: it is a costly burden on our designers to try to design for the iOS and Android platforms at the same time. The differences in screen sizes, resolutions, aspect ratios, and expected user interface patterns require different design solutions.</li>
+        <li>Early access to upgrades: Apple's NDA forces 3rd party apps like Titanium to wait until new iOS versions are released to the public before they can code against them. Working the way Apple recommends, we get access to new versions months early. We can use new features earlier to make the app feel more modern. We can use the new ways of doing things to save lines of code and time.</li>
+        <li>Quality: Appcelerator, like past cross-platform technologies such as Adobe Air or Adobe Flash, provide a least-common denominator user experience. They may or may not be compiled to &quot;native&quot; code but they rarely achieve a &quot;native&quot; feel.</li>
+        </ul>
+        <h2 id="programming-languages">Programming Languages</h2>
+        <p>Examples of languages we typically use are:</p>
+        <ul>
+        <li>Ruby: our server-side preference</li>
+        <li>CoffeeScript: our client-side preference</li>
+        <li>Swift: the language for iOS apps</li>
+        </ul>
+        <p>&quot;Server-side&quot; means code that is run on servers provided by the application hosting company. &quot;Client-side&quot; means code that is run in users' web browsers.</p>
+        <h2 id="frameworks">Frameworks</h2>
+        <p>Ruby on Rails, Node.js, and other libraries are frameworks that require developers know the underlying language such as Ruby or JavaScript.</p>
+        <p>Examples of frameworks we typically use are:</p>
+        <ul>
+        <li>Ruby on Rails</li>
+        <li>jQuery</li>
+        <li>Angular.js</li>
+        <li>Ember.js</li>
+        <li>iOS Core Data</li>
+        </ul>
+        <p>A framework is a library that makes performing a particular task in a programming language easier. Like the framework of a house, it is there when we begin programming and is always there giving the program structure and support.</p>
+        <p>It can be difficult to switch from one framework to another. The more code that's written specifically for Rails, the harder it will be to switch to Django. That would approach &quot;total rewrite&quot; territory.</p>
+        <h2 id="databases">Databases</h2>
+        <p>For data that must be saved and stored correctly, we use <a href="http://www.postgresql.org/">PostgreSQL</a> (we usually refer to it as &quot;Postgres&quot;).</p>
+        <p>It's a 30 year old open source database that is highly respected, well supported by documentation and hosting providers, and used by any developer who knows the SQL standard.</p>
+        <p>In recent years, a movement called <a href="http://en.wikipedia.org/wiki/NoSQL">NoSQL</a> has gained popularity. Best translated as &quot;not only SQL&quot;, tremendous effort has been made to create different kinds of databases for different use cases, often based off <a href="http://nosqlsummer.org/papers">academic or industry research</a>.</p>
+        <p>Our most frequently used NoSQL database is <a href="http://redis.io">Redis</a>, which we use for storing transient, high quantity read/write data such as activity feeds, tags, background jobs, sessions, tokens, and counters.</p>
+        <p>Redis is reliable, open-source, and simple. It offers high performance and reliable predictions of its performance. It can flexibly model different data sets but we typically use it for small data structures, not large images, videos, or text documents.</p>
+        <p>We typically use <a href="https://redistogo.com/">Redis to Go</a> to host our production Redis databases.</p>
+        <h2 id="licenses">Licenses</h2>
+        <p>In contrast with a proprietary license, the source code of an open source program is made available for review, modification and redistribution. The difference between open source licenses is what we can and can't do with the source code.</p>
+        <p>Open source licenses can be divided in two categories: permissive and copyleft.</p>
+        <p>Permissive examples include:</p>
+        <ul>
+        <li><a href="http://en.wikipedia.org/wiki/BSD_licenses">Berkeley Software Distribution (BSD) licenses</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/MIT_License">MIT license</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/Apache_License">Apache license</a></li>
+        </ul>
+        <p>A copyleft example is the <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">General Public License (GPL)</a>.</p>
+        <p>Both categories have the purpose of establishing the copyright holder for the software, granting users the right to copy, modify and redistribute it, protecting the copyright holder from any potential guarantees that the software may provide (software is provided as-is), and optionally imposing some restrictions.</p>
+        <p>Permissive licenses let us modify a program, redistribute it, and even sell it. We can embed or link code with other programs without restriction or explicit permission by the copyright holder.</p>
+        <p>Copyleft licenses only allow us to link or distribute code with other code that has the same license. It also forces modifications to be released under the same license. Combining anything with the GPL makes it GPL.</p>
+        <p>Non-copyleft licenses do not enforce derivative works to also be open source.</p>
+        <p>Some software is released under a dual license: both a permissive and copyleft license. This provides developers who use the dual licensed code to apply the license that better suits their needs.</p>
+        <p>Most of the software we use has a permissive license:</p>
+        <ul>
+        <li>PostgreSQL, PostgreSQL License (BSD based)</li>
+        <li>Redis, BSD</li>
+        <li>Ruby (MRI), Ruby license (BSD based)</li>
+        <li>Ruby on Rails, MIT</li>
+        <li>jQuery, Dual MIT and GPL</li>
+        </ul>
+        <h1 id="laptop-setup">Laptop Setup</h1>
+        <p>Your laptop is your sword. Don't go into battle without it. Set up your laptop with <a href="https://github.com/thoughtbot/laptop">this script</a> and <a href="https://github.com/thoughtbot/dotfiles">these dotfiles</a>.</p>
+        <h2 id="laptop">Laptop</h2>
+        <p><a href="https://github.com/thoughtbot/laptop">Laptop</a> is a script to set up a Mac OS X or Linux laptop for Rails development. It should take less than 15 minutes to install.</p>
+        <p>This sets up compilers, databases, programming languages, package management systems, installers, and other critical programs to our daily programming activities.</p>
+        <h2 id="dotfiles">Dotfiles</h2>
+        <p>'Dotfile' is a generalized term for a UNIX configuration file, typically prefixed with a dot (e.g. <code>.vimrc</code>) and found in your home directory. Most UNIX programs, including Vim, will load a dotfile during launch.</p>
+        <p>We recommend using dotfiles to customize your tools and environment to suit your preferences, reduce typing, and get work done. Check them into a git repository for safe-keeping and open-source for the benefit of others.</p>
+        <p>Use our <a href="https://github.com/thoughtbot/dotfiles">dotfiles</a> to make pair programming with teammates easier and make each other more productive.</p>
+        <h2 id="text-editor">Text Editor</h2>
+        <blockquote>
+        <p>Plain text won't become obsolete. It helps leverage your work and simplifies debugging and testing. The editor should be an extension of your hand; make sure your editor is configurable, extensible, and programmable. -The Pragmatic Programmer</p>
+        </blockquote>
+        <p>Almost everyone at thoughtbot uses <a href="https://upcase.com/vim">Vim</a> as our text editor.</p>
+        <p>When we use Vim, we type few characters and avoid the mouse. We're productive and more easily achieve flow.</p>
+        <p>It's great because:</p>
+        <ul>
+        <li>Vim is tiny (1.6MB) and starts up instantly.</li>
+        <li>Vim is a well-polished stone by virtue of how long it has been around. It was introduced in 1991 as an improvement on Vi, which itself was written in 1976 by <a href="http://en.wikipedia.org/wiki/Bill_Joy">Bill Joy</a>.</li>
+        <li>It has a rich ecosystem of open-source plugins.</li>
+        </ul>
+        <h1 id="planning">Planning</h1>
+        <p>One of our primary process goals is to make <a href="http://www.extremeprogramming.org/rules/releaseoften.html">frequent, small releases</a> of our working software.</p>
+        <p>This section describes how we achieve one week's worth of iteration on a product. It lays out the process we follow and some communication tactics.</p>
+        <h2 id="daily-standups">Daily Standups</h2>
+        <p>Every morning, we get together as a team for 10 minutes at 10 AM.</p>
+        <p>We say what we did yesterday, what we're going to do today, and if anything is blocking us. We immediately resolve blockers or help the person after standup.</p>
+        <p>We do this in order to:</p>
+        <ul>
+        <li>See each other face-to-face.</li>
+        <li>Learn what others are doing so you can help them.</li>
+        <li>Build accountability and trust.</li>
+        </ul>
+        <h2 id="tasks">Tasks</h2>
+        <p>We have used JIRA, Pivotal Tracker, Lighthouse, Basecamp, Trajectory, Unfuddle, and other task management systems over the years. The following section details a process using Trello but the overall process remains relatively similar across different systems.</p>
+        <p>No two products are the same, so flexibility in the product development process is important. Trello responds well to changing the structure of the process &quot;on the fly.&quot;</p>
+        <p>A Trello board is a software equivalent of a physical wall with columns of sticky notes. In Trello terminology, the wall is called a &quot;board.&quot; The columns are called &quot;lists.&quot; The sticky notes in columns are called &quot;cards.&quot;</p>
+        <p>In the following image, &quot;Current&quot; is an example of a board. &quot;In Progress&quot; is an example of a list. &quot;Set up Splunk for logging&quot; is an example of a card.</p>
+        <figure>
+        <img src="images/next-up-trello_small.jpg" alt="Next Up Trello board" /><figcaption>Next Up Trello board</figcaption>
+        </figure>
+        <p>In any task management system, it's important to have a view into the product development process like this. The Next Up list is the single prioritized list to which the product team refers in order to know what to work on next. It represents one week of work.</p>
+        <p>A card represents a user story, bug fix, engineering task, or general todo.</p>
+        <p>Cards start out as a simple idea, 1-2 sentences long. As they are pulled through boards, detail is added, explaining why (from a business perspective) we're focusing on it, and maybe notes on suggested implementation (though designers and developers may take or leave it at their discretion; it's supposed to be helpful, not prescriptive).</p>
+        <figure>
+        <img src="images/live-trello_small.jpg" alt="Live Trello board" /><figcaption>Live Trello board</figcaption>
+        </figure>
+        <p>Once the cards in the Next Up list have been prioritized and vetted, they are ready for design and development. A designer or developer &quot;puts their face on it&quot; by assigning it to themselves and pulling it into the In Progress list.</p>
+        <p>The cards in the In Progress list are actively being designed or developed. Etiquette is that you should never have your face on more than two cards at a time. Work is done in a <a href="https://github.com/thoughtbot/guides/tree/master/protocol">feature branch</a>.</p>
+        <p>When a designer or developer creates a pull request for their feature branch, they move the card to the Code Review list. Any reviewers &quot;put their face on it&quot; while reviewing.</p>
+        <p>There is no bottleneck for merging into master: everyone can do it.</p>
+        <p>The cards in the Testing on Staging (or Testing on Ad Hoc build for iPhone apps) list are deployed to staging (or distributed via HockeyApp for iPhone apps). The card creator and a designer review it for accuracy and user experience.</p>
+        <p>There is no bottleneck for deploying to staging: everyone can do it.</p>
+        <p>The cards in the Ready for Production list include cards that have been accepted on staging and are ready to be deployed (but not necessarily rolled out).</p>
+        <p>There is no bottleneck for releasing to production: everyone can do it.</p>
+        <p>The cards in the Live (Week of [date]) lists have been released. Each week has its own Live list so we can follow what got released when.</p>
+        <h2 id="weekly-retrospectives">Weekly Retrospectives</h2>
+        <p>Once a week, usually on Monday, everyone meets in-person or via Google Hangout for 30 minutes or less. This replaces Monday's daily standup. Everyone should leave feeling energized and excited for the week.</p>
+        <p>The advisor runs this meeting like this:</p>
+        <ul>
+        <li>Celebrate success. Review the work that shipped last week, showing the actual product, and congratulate those who made it happen.</li>
+        <li>Identify and address areas for improvement.</li>
+        </ul>
+        <h2 id="planning-meeting">Planning Meeting</h2>
+        <p>Once a week, usually on Thursday, everyone meets in-person or via Google Hangout for 60 minutes or less. This gives the week closure and plans the upcoming week's iteration. The advisor runs the meeting.</p>
+        <p>The stage of the product should guide the planning meeting. For example:</p>
+        <ol type="1">
+        <li>Research and Validation: Is a user interface flow validated enough to start making a minimal working version?</li>
+        <li>Product Availability: Can users accomplish the flow with working, deployed software?</li>
+        <li>User Engagement: What do numbers look like for that flow?</li>
+        </ol>
+        <p>Tell customer stories. Do people love this product? Show numbers. Are more people using the product this week than last? Are the same people using the product more this week than last?</p>
+        <p>In all stages, we should be asking:</p>
+        <ul>
+        <li>Are we building the right product?</li>
+        <li>How much time remains based on the budget?</li>
+        </ul>
+        <p>Based on the answers to these questions, we record our plans in the task management system:</p>
+        <ul>
+        <li>Archive the two-week old &quot;Live (Week of [date])&quot; list.</li>
+        <li>Review product design priorities. Pull what we estimate to be an appropriate amount for this week into Next Up.</li>
+        <li>Review bugs. Pull any important bugs into Next Up and prioritize them at the top of the queue before everything else. We want to always be fixing what's broken first.</li>
+        <li>Review engineering and refactoring tasks. Pull cards into Next Up based on what the designers and developers believe is appropriate given the previously stated product design and bug tasks.</li>
+        <li>Re-sort the entire Next Up queue according to priority. Cards that were at the top of the list last week may be moved to the bottom or back to other boards or lists.</li>
+        </ul>
+        <p>The task management system is the canonical repository for plans.</p>
+        <p>When things are only said on the phone, in person, in emails that don't include the whole group, or in one-on-one chats, information gets lost, forgotten, or misinterpreted. The problems expand when someone joins or leaves the project.</p>
+        <p>During this meeting, seek discussion with, not instruction from, clients. We can't talk about solutions until we identify the underlying problems.</p>
+        <p>We've been called &quot;aggressive&quot; with our approach cutting features, budgets, and schedules. We say &quot;no&quot; a lot. It's hard to say &quot;no.&quot; &quot;No&quot; is usually not well-received. There's a reason someone requested the feature.</p>
+        <p>We have to battle sometimes in the face of &quot;yes&quot;. We do so armed with knowledge of <a href="http://www.codinghorror.com/blog/2006/05/the-long-dismal-history-of-software-project-failure.html">the history of software success and failure</a>: in 2004, only 34% of software projects were considered successes. The good news is that was 100% better than the stats in 1994. &quot;The primary reason is the projects have gotten a lot smaller.&quot;</p>
+        <p>Few software projects fail because they aren't complicated enough. Saying &quot;no&quot; means keeping the software we're building as simple as possible. Every line of code we write is an asset and a liability.</p>
+        <p>Simple software, once launched, is better suited to meeting the demands of customers. Complex software, if it ever even launches, is not as able to respond to customer demands quickly.</p>
+        <h2 id="altering-the-process">Altering the Process</h2>
+        <p>A single Trello board with a few lists as described above works well for most early-stage teams and products. As they grow, however, more organizational tools may be necessary. For example, we might want to first add lists to the &quot;Current&quot; board such as:</p>
+        <ul>
+        <li>Bugs</li>
+        <li>Product Design</li>
+        <li>Engineering</li>
+        </ul>
+        <p>Later on, <a href="http://community.uservoice.com/blog/trello-google-docs-product-management/">those lists might be better organized as entire boards themselves</a>. Separated as boards, it's easier to evaluate the relative value of addressing each related thing. Separate boards also keep the &quot;Current&quot; board clean and the product team focused on the week at hand.</p>
+        <p>Each of those boards can be organized as the team sees fit for the stage of the product and the team's communication needs.</p>
+        <p>On the &quot;Bugs&quot; board, we've sometimes used labels to describe relative criticality of the bug. If a bug is labeled Critical, then it is pulled immediately into Next Up on the &quot;Current&quot; board. If the bug is not critical, it stays in Bugs until the next weekly retrospective. A bug has steps to reproduce the bug and optionally a screenshot or screencast.</p>
+        <p>The cards on the &quot;Product Design&quot; board are typically the result of sketching user flows, usability tests, other user research, or the designer's feel for visual design improvements.</p>
+        <p>The cards on the &quot;Engineering&quot; board are refactorings and other engineering tasks necessary to reduce bugs or improve the user experience. &quot;Response time&quot; is a primary user experience goal on every app. If an engineering task is labeled Critical, then it is pulled immediately to Next Up. If the task is not critical, it stays in Engineering until the next weekly retrospective.</p>
+        <h1 id="designing">Designing</h1>
+        <p>This may surprise you, but most of our designers use Vim as their primary text editor. This isn't the only characteristic that has become distinctly thoughtbot.</p>
+        <p>Many of our projects are frequently undergoing rapid change. Without classic Photoshop comps or requirements documents, how do our designers fit into the process?</p>
+        <h2 id="sketches">Sketches</h2>
+        <p>Just like during the product design sprint, our designers are often sketching interfaces before implementing them. Also like the sprint, anyone on the team is encouraged to sketch at any time.</p>
+        <p>We have many <a href="http://www.amazon.com/Moleskine-Squared-Notebook-Cover-Pocket/dp/8883707125">Moleskine squared, soft, pocket-sized notebooks</a> around the offices. Take one. The pocket size encourages the habit of getting ideas onto paper whenever and wherever they hit us. The pocket size also forces design constraints and mobile-first thinking.</p>
+        <figure>
+        <img src="images/moleskines.jpg" alt="Moleskines" /><figcaption>Moleskines</figcaption>
+        </figure>
+        <h2 id="wireframes">Wireframes</h2>
+        <p>The designer will then refine the sketches into HTML and CSS wireframes. HTML and CSS wireframes are built using <a href="https://github.com/thoughtbot/bourbon">Bourbon</a> and <a href="https://github.com/thoughtbot/neat">Neat</a> in the browser so the team can understand the core experience as fast as possible. It also allows developers to start implementing features within the wireframes.</p>
+        <p>It is crucial to keep the design of the application ahead of the development. Focus should be placed on wireframing usability, user experience, and flows.</p>
+        <p>We find it important to keep the design and development cycle adequately tight. We do not wireframe one month out because as we approach certain areas of the product, we often decide to cut or change features.</p>
+        <p>Those changes are an expected part of the iterative process and feedback loop between the client, the thoughtbot team, and users. It would be wasteful to spend time wireframing features that never get built or building features that won't be used.</p>
+        <h2 id="user-interface">User Interface</h2>
+        <blockquote>
+        <p>An interface is a place where two things meet: the human and the computer. The computer has functions it can perform. The human needs inputs and outputs to take advantage of those functions. The interface is the arrangement of inputs and outputs that enable people to apply the computer's functions to create outcomes they want. - <a href="http://feltpresence.com/articles/19-what-ui-really-is-and-how-ux-%20confuses-matters">Ryan Singer</a></p>
+        </blockquote>
+        <p>In the context of our software, the user interface is the individual views that provide for goal completion.</p>
+        <p>We evaluate interfaces on the following criteria:</p>
+        <ul>
+        <li><strong>Puts outcomes first</strong></li>
+        <li>Provides users with affordances</li>
+        <li>Congruent with surrounding platform</li>
+        <li>Consistent across entire application</li>
+        </ul>
+        <p>We put the users goals first. No one is using our software exclusively because of how beautiful it is. There's a reason they sought our solution out. Making that outcome easily attainable and desirable is our highest priority.</p>
+        <p>We make software easy to comprehend. It's not enough to be functional, users must know capabilities exist and be able to anticipate how the software is going to react to their inputs. Our software should be as intuitive as possible.</p>
+        <p>We remain consistent with platform guidelines. Interfaces look and feel best when in congruence with their context, rather than being strictly branded across all platforms. We prefer common patterns when designing.</p>
+        <p>We retain consistency. Usable interfaces work as expected across the entire application.</p>
+        <h2 id="interaction-design">Interaction Design</h2>
+        <p>Interaction gives users the ability to change the canvas, to directly manipulate. Designing those interactions is what makes our software come to life. Interactions should provide affordance — <a href="http://medium.com/p/926eb80d64e3">animation, for examples</a>, can be used as a powerful metaphor for helping a user understand an interface. Interactions help guide a user from the beginning of a task through it's completion.</p>
+        <p>Designers guide these interactions from prototype to implementation. For web applications we start in the browser. For iOS, we use <a href="https://developer.apple.com/technologies/mac/graphics-and-animation.html">QuartzComposer</a>. For review, we use <a href="http://gifbrewery.com/">gifs</a> to demonstrate interactions.</p>
+        <h2 id="visual-design">Visual Design</h2>
+        <p>We refer to an application's visual design exclusively as its style. We use the <a href="https://upcase.com/design-for-developers-resources/principles">universal design principles</a> to communicate and bring order to those ideas in our applications.</p>
+        <p>Those fundamentals include, among others:</p>
+        <ul>
+        <li>Alignment (often achieved with grids)</li>
+        <li>Emphasis (often achieved with size, position, color)</li>
+        <li>Consistency (buttons, links, headers typically look alike)</li>
+        <li>Whitespace (elegant, timeless, gives eye a rest)</li>
+        </ul>
+        <p>Successful visual designs typically don't draw attention to themselves. The content will be front-and-center. The workflows through the site will be obvious. Resist the temptation to aim for a design that is &quot;memorable&quot; or a design that &quot;pops.&quot;</p>
+        <p>Successful designs are usable. Consider Google's visual design:</p>
+        <figure>
+        <img src="images/google-mail.jpg" alt="Gmail" /><figcaption>Gmail</figcaption>
+        </figure>
+        <p>Everything's on a grid. The &quot;Search Mail&quot; and &quot;Compose Mail&quot; buttons are emphasized over other calls to action with color. The unread messages are emphasized over other messages with a bold font weight.</p>
+        <figure>
+        <img src="images/google-search.jpg" alt="Google Search" /><figcaption>Google Search</figcaption>
+        </figure>
+        <p>Everything's on a grid. There is lots of whitespace (especially with <a href="https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom">AdBlock</a>). Search interface is consistent with Gmail. Search button is emphasized with color.</p>
+        <figure>
+        <img src="images/google-video.jpg" alt="Google Video" /><figcaption>Google Video</figcaption>
+        </figure>
+        <p>Grids. Whitespace. Consistent search box, search filters, search results.</p>
+        <figure>
+        <img src="images/google-places.jpg" alt="Google Places" /><figcaption>Google Places</figcaption>
+        </figure>
+        <p>Grids. Whitespace. Emphasis on searching and writing a review.</p>
+        <p>We say &quot;visual design&quot; instead of &quot;graphic design&quot; because typically graphics aren't called for in our applications. Instead, we rely on these principles and excellent <a href="https://upcase.com/design-for-developers-resources/typography">typography</a>, using high-quality typefaces from <a href="http://typekit.com">Typekit</a> and <a href="http://www.typography.com/">typography.com</a>.</p>
+        <h2 id="usability-testing">Usability Testing</h2>
+        <blockquote>
+        <p>We're testing the software, not you.</p>
+        </blockquote>
+        <p>Usability is the measure of how easy it is for a user to reach an outcome.</p>
+        <p>Running usability tests early and often is critical. We even test sketches to get a feel for flows and mental models. The earlier the stage, the more we're testing the problem/solution fit. The later the stage, the more we're testing actual usability.</p>
+        <p>We think about usability testing similarly to test-driven development: writing falsifiable outcomes for users. Our outcomes are written in the form of a script that's written in the same way as a user story.</p>
+        <blockquote>
+        <p>As an admin I can create an account, add content, and attach .pdf files to that content</p>
+        </blockquote>
+        <p>Once the script is written, we find testers.</p>
+        <p>The most representative candidates are going to be sourced from our existing userbase. Send out a tweet, add a banner to our site, or add a link to our newsletter. Even pre-launched projects have a mailing list to use.</p>
+        <p>When we have trouble sourcing or aren't interested in existing users, craigslist can be effective to find candidates. Our office manager puts a posting on craigslist, schedules them to come into our office, and pays them $30 for their time after the test.</p>
+        <p>We have a simple <a href="https://gist.github.com/croaky/1a1ff3902b4321984b0b">template for finding people on craigslist</a>.</p>
+        <p>After the tester has arrived, we introduce ourselves and explain the process. There's no need to be strictly formal, we want them to be at ease. To have a relaxed user test, it's important to remind the user of a few things:</p>
+        <ul>
+        <li>&quot;We are looking for your honest feedback.&quot;</li>
+        <li>&quot;None of what you're about to see was made by me. There's no way you can hurt my feelings.&quot;</li>
+        <li>&quot;We're testing the software, not you. It's not user testing, it's usability testing.&quot;</li>
+        </ul>
+        <p>If we are filming them, we ask them to sign <a href="https://gist.github.com/croaky/bf97025689b019293f78">a simple consent form</a>.</p>
+        <p>Once underway, we ask them to say out loud what they're thinking as they're using the software, which can feel unnatural but is important. While running the session, the only reasons to speak are to get them to talk out loud again, ask questions, and provide them with outcomes to achieve.</p>
+        <p>We should avoid leading questions such as &quot;Was this task difficult for you?&quot; but should ask follow-up questions. For example, if someone says &quot;That's awesome!&quot;, we shouldn't silently pat ourselves on the back. We should say &quot;Why is it awesome for you?&quot; We are seeking understanding.</p>
+        <p>After the session, we look back at our notes to identify the top handful of problems and fix them before the next round of usability tests. If there's a problem revealed with the navigation, there's a temptation to totally re-do it. We try to resist that urge and come up with less drastic changes.</p>
+        <h1 id="developing">Developing</h1>
+        <p>The majority of our development practices were first detailed in Kent Beck's classic <a href="http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition-ebook/dp/B000OZ0N5S/ref=tmm_kin_title_0">Extreme Programming Explained: Embrace Change</a> and in Gerald Weinberg's <a href="http://www.amazon.com/The-Psychology-Computer-Programming-Anniversary/dp/0932633420">The Psychology of Computer Programming</a>. We've tried its practices and found that using most of the practices most of the time improves the quality of our work and happiness of our team.</p>
+        <h2 id="version-control">Version Control</h2>
+        <p>We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong.</p>
+        <p><a href="http://git-scm.com">Git</a> is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches.</p>
+        <p>We use <a href="http://github.com">GitHub</a> for hosting our git repositories.</p>
+        <h2 id="style-guide">Style Guide</h2>
+        <p>We write code in a consistent <a href="https://github.com/thoughtbot/guides/tree/master/style">style</a> that emphasizes cleanliness and team communication.</p>
+        <p>High level guidelines:</p>
+        <ul>
+        <li>Be consistent.</li>
+        <li>Don't rewrite existing code to follow this guide.</li>
+        <li>Don't violate a guideline without a good reason.</li>
+        <li>A reason is good when you can convince a teammate.</li>
+        </ul>
+        <h2 id="pair-programming">Pair Programming</h2>
+        <p>Code that is written by two people who sit next to each at the same computer is <a href="http://www.extremeprogramming.org/rules/pair.html">pair-programmed</a> code. That code is considered high quality and should result in cost savings due to less maintenance.</p>
+        <p>In the long run, this style of development saves money because fewer bugs are written and therefore do not need to be fixed later.</p>
+        <p>An indication that pairing is beneficial and should be done more often is the following example:</p>
+        <blockquote>
+        <p>When you are writing an important piece of code, don't you want another person to look it over before it goes into production?</p>
+        </blockquote>
+        <p>While we don't pair program 100% of the time, we recognize the difficulty in acting as a team when we work at a distance from each other. There is no better collaboration between designers, developers, or between designers and developers than at the keyboard.</p>
+        <h2 id="test-driven-development">Test-Driven Development</h2>
+        <p><a href="http://www.extremeprogramming.org/rules/testfirst.html">Test-Driven Development (TDD)</a> is perhaps the most important Extreme Programming (XP) rule that we practice.</p>
+        <p>Business benefits of TDD:</p>
+        <ul>
+        <li>Deliver more value, faster</li>
+        <li>Always ship working software</li>
+        <li>Adapt to change quickly</li>
+        </ul>
+        <p>Code benefits of TDD:</p>
+        <ul>
+        <li>Readable specs and code</li>
+        <li>Clean public interfaces</li>
+        <li>Decoupled modules</li>
+        </ul>
+        <p>Process benefits of TDD:</p>
+        <ul>
+        <li>Regression safety net</li>
+        <li>Fearless refactoring</li>
+        <li>Team trust</li>
+        </ul>
+        <p>At a high level, how to test is very simple:</p>
+        <ul>
+        <li>Write test first.</li>
+        <li>Red-Green-Refactor cycle.</li>
+        </ul>
+        <p>For more specifics, we recommend our <a href="https://upcase.com/test-driven-rails">Test-Driven Rails</a> workshop, which we run about once a month. It goes into incredible detail about the TDD workflow specifically for Ruby on Rails developers.</p>
+        <h2 id="acceptance-tests">Acceptance Tests</h2>
+        <p>Acceptance tests are code created from user stories. <a href="https://gist.github.com/croaky/d8699363382d86c10c54">They look like this</a>. This code is run against the application. When executed for the first time, the test will fail. The developer writes application code until the test passes.</p>
+        <p>When the test passes, the developer commits the code into version control with a message such as:</p>
+        <blockquote>
+        <p>Guest creates pledge</p>
+        </blockquote>
+        <p>The code is then run on the <a href="/#continuous-integration">Continuous Integration</a> server to make sure the acceptance test still passes in an environment that matches the production environment.</p>
+        <p>Meanwhile, the code is pushed to the staging environment and the developer and customer representative smoke test it in the browser.</p>
+        <p>When the acceptance test is green for the CI server and you and any other designers, developers, or clients are satisfied that the user story is complete on staging, the feature can be deployed to production at will. This can result in features being pushed to production very frequently, and therefore more value is being delivered to customers sooner.</p>
+        <h2 id="refactoring">Refactoring</h2>
+        <p>The third step of the &quot;red, green, refactor&quot; step is refactoring, the process of improving the design of existing code without altering its external behavior. It's a critical step in the process, but often overlooked. We're so passionate about refactoring, we wrote an entire book on it, <a href="https://upcase.com/ruby-science">Ruby Science</a>.</p>
+        <h2 id="code-reviews">Code Reviews</h2>
+        <p>Here's the flow. Read <a href="https://github.com/thoughtbot/guides/tree/master/protocol">our git protocol</a> for the git commands.</p>
+        <ol type="1">
+        <li>Create a local feature branch based off master.</li>
+        <li>When feature is complete and tests pass, stage the changes.</li>
+        <li>When you've staged the changes, commit them.</li>
+        <li>Write a <a href="http://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message">good commit message</a>.</li>
+        <li>Share your branch.</li>
+        <li>Submit a <a href="https://help.github.com/articles/using-pull-requests/">GitHub pull request</a>.</li>
+        <li>Ask for a code review in <a href="https://slack.com/">Slack</a>.</li>
+        <li>A team member other than the author reviews the pull request. They follow <a href="https://github.com/thoughtbot/guides/blob/master/code-review">Code Review</a> guidelines to avoid miscommunication.</li>
+        <li>They make comments and ask questions directly on lines of code in the GitHub web interface or in Slack.</li>
+        <li>When satisfied, they comment on the pull request &quot;Ready to merge.&quot;</li>
+        <li>Rebase interactively. Squash commits like &quot;Fix whitespace&quot; into one or a small number of valuable commit(s). Edit commit messages to reveal intent.</li>
+        <li>View a list of new commits. View changed files. Merge branch into master.</li>
+        <li>Delete your remote feature branch.</li>
+        <li>Delete your local feature branch.</li>
+        </ol>
+        <p>Test-Driven Development moves code failure earlier in the development process. It's better to have a failing test on your development machine than in production. It also allows you to have tighter feedback cycles.</p>
+        <p>Code reviews that happen right before code goes into master offer similar benefits:</p>
+        <ul>
+        <li>The whole team learns about new code as it is written.</li>
+        <li>Mistakes are caught earlier.</li>
+        <li>Coding standards are more likely to be established, discussed, and followed.</li>
+        <li>Feedback from this style of code review is far more likely to be applied.</li>
+        <li>No one forgets context (&quot;Why did we write this?&quot;) since it's fresh in the author's mind.</li>
+        </ul>
+        <h2 id="continuous-integration">Continuous Integration</h2>
+        <p>Martin Fowler has an <a href="http://martinfowler.com/articles/continuousIntegration.html">extensive description</a> of Continuous Integration. The basics are:</p>
+        <ul>
+        <li>We have a test suite that each developer runs on their own machine.</li>
+        <li>When they commit their code to a shared version control repository, the tests are run again, &quot;integrated&quot; with code from other developers.</li>
+        </ul>
+        <p>This helps ensure there's nothing specific to the developer's machine making the tests pass. The code in version control needs to run cleanly in production later so before the code is allowed to be deployed to production, it is run on a CI server or service.</p>
+        <p>When a build fails, we get alerts in Slack and via email. Click the alert and we see a backtrace that gives us a hint of how to &quot;fix the build.&quot;</p>
+        <p>When we write the fix and commit to version control again, we'll get a &quot;passing build&quot; alert in Slack and via email. Click the alert and we see the passing build.</p>
+        <p>Green is good.</p>
+        <p>A solid test suite is an absolute requirement for a web application in our opinion. However, one major problem with test suites is that they get slow as they get large.</p>
+        <p>CI can ease the pain by distributing the test runs in parallel. We've had 45 minute test suites cut down to 2 minutes using this technique.</p>
+        <p>We've used CruiseControl, Integrity, Hudson (now called Jenkins), and other CI libraries that we manage ourselves. This resulted in many hours of expensive attention.</p>
+        <p>We use <a href="http://travis-ci.org">Travis CI Free</a> for open source projects. We use <a href="https://www.travis-ci.com/">Travis CI Pro</a> for private repositories because of its consistent UI, simple configuration and its close integration with GitHub.</p>
+        <p>CI test runs are triggered by <a href="https://help.github.com/articles/post-receive-hooks">GitHub post-receive hooks</a>. The hooks we have on most of our GitHub repos are:</p>
+        <ul>
+        <li>Travis for Continuous Integration</li>
+        <li><a href="https://codeclimate.com">Code Climate</a> for code quality and security checks</li>
+        <li><a href="https://houndci.com/">Hound</a> for style guide enforcement</li>
+        <li>Slack for chat room notifications</li>
+        </ul>
+        <h1 id="production">Production</h1>
+        <p>We live in a magical modern era where many problems have already been solved for us. We focus on the client's product as much as possible and outsource operations as much as possible to external services.</p>
+        <p>This saves time and money. We can get started using those services in minutes. Our clients pay a service tens or hundreds of dollars per month instead of paying developers thousands or tens of thousands.</p>
+        <p>We often create a Google spreadsheet listing the monthly cost, description, and credentials of each of our clients' external services. It includes line items like GitHub, Heroku, SendGrid, New Relic, Airbrake, and Splunk.</p>
+        <h2 id="checklist">Checklist</h2>
+        <p>We have found that a short checklist is valuable when setting up a new production environment or preparing for a launch:</p>
+        <ul>
+        <li>Are we on the Heroku <a href="https://devcenter.heroku.com/articles/production-check#cedar">Cedar</a> stack?</li>
+        <li>Are we using a concurrent web server? See <a href="https://github.com/thoughtbot/suspenders/commit/e1ff44bfa2d8bc1db5570c465051cc36095815aa">how to set up Unicorn</a>.</li>
+        <li>Are long-running processes such as email delivery being run in background jobs? See <a href="https://github.com/thoughtbot/suspenders/commit/7b3e73b54d37f29f6867c8984a487ffbdb051516">how to set up Delayed Job</a>.</li>
+        <li>Are there redundant (at least two) web and background processes running?</li>
+        <li>Are we using SSL? See &quot;SSL Certificates&quot; section below.</li>
+        <li>Are API requests being made via a separate subdomain (<code>api.example.com</code>)? Even if the same app, this gives us architectural flexibility in the future.</li>
+        <li>Is Ruby 2.1.0 defined in the <code>Gemfile</code>? See <a href="https://github.com/yammer/sched.do/commit/afe21ebd1a8822f2b06511b8c42efbb07c3bccc2">how to set it up</a>.</li>
+        <li>Is <a href="http://12factor.net/config">config stored in environment variables</a>? See <a href="http://ddollar.github.io/foreman/">Foreman</a>.</li>
+        <li>Are deploys done manually at a scheduled time when teammates are fresh and available if something goes wrong?</li>
+        <li>Do deploys follow <a href="https://github.com/thoughtbot/guides/tree/master/protocol#deploy">a well-documented script</a>?</li>
+        <li>Are we sending logs to a remote logging service? See <a href="http://robots.thoughtbot.com/how-to-splunk-with-heroku">How to Splunk with Heroku</a>.</li>
+        <li>Are we using a Heroku &quot;Yanari&quot; database or higher? See <a href="https://devcenter.heroku.com/articles/production-check#production-database">Heroku production databases</a>.</li>
+        <li>Are we backing up our production database? See <a href="https://devcenter.heroku.com/articles/pgbackups">PG Backups</a>.</li>
+        <li>Are we monitoring performance and uptime? See <a href="https://newrelic.com/">New Relic</a>.</li>
+        <li>Are we tracking errors? See <a href="https://airbrake.io">Airbrake</a>.</li>
+        </ul>
+        <h2 id="domain-names">Domain Names</h2>
+        <p>Use <a href="http://domai.nr">Domainr</a> to see what's available.</p>
+        <p>Use <a href="http://dnsimple.com">DNSimple</a> to buy and maintain domain names name. If a client already has a domain registered elsewhere, like GoDaddy, DNSimple provides a transfer service that makes it easy to switch.</p>
+        <p>We like it for its simplicity. It also has templates we most often need:</p>
+        <ul>
+        <li>Heroku</li>
+        <li>Google Apps</li>
+        <li>Tumblr</li>
+        </ul>
+        <p>Follow the <a href="https://devcenter.heroku.com/articles/custom-domains">Custom Domains</a> tutorial to set up root and subdomains on Heroku.</p>
+        <h2 id="ssl-certificates">SSL Certificates</h2>
+        <p>Buy a <a href="https://dnsimple.com/ssl-certificate">wildcard certificate from DNSimple</a>. The wildcard (<code>*</code>) lets you use the same certificate on <code>www.</code>, <code>staging.</code>, <code>api.</code>, and any other future subdomains.</p>
+        <p>Follow <a href="https://gist.github.com/croaky/e0beb6025d58eeb88db5">these steps</a> for adding a DNSimple SSL certificate to Heroku.</p>
+        <p>SSL and DNS are tightly coupled. If we're doing any work with SSL, we need to make sure we have access to make DNS changes, like adding a CNAME record. If we're working with a client who has a department that handles DNS, schedule time during off-peak hours to pair program with the DNS person to make sure everything goes well. We can accidentally take down a site that is all SSL if this work isn't done methodically.</p>
+        <h2 id="hosting">Hosting</h2>
+        <p>We use <a href="http://heroku.com">Heroku</a>. It's a platform built on Amazon's cloud infrastructure. It is simple to use when our app is just a toy and is built to scale up for high concurrency or high sustained load.</p>
+        <p>Like Rails, Heroku uses conventions to make decisions for us that are unnecessary for us to make. Some things like web servers and app servers are solved problems. They act as our outsourced operations team. The amount of time we can focus on the product instead of solved problems is worth the premium over bare-bones Amazon Web Services.</p>
+        <p>The cloud promises lower operating costs, especially at the beginning when capacity can be lower. Forget about sunk costs of expensive servers.</p>
+        <p>The cloud and the services it enables will empower our clients' businesses to start and operate in a manner that has never been possible before without significant upfront investment.</p>
+        <p>If we offer file uploads for features like user avatars, we upload them to <a href="http://aws.amazon.com/s3/">Amazon S3</a>.</p>
+        <p>We also serve our images, CSS, and JavaScript assets from a CDN such as <a href="http://www.fastly.com/">Fastly</a>.</p>
+        <h2 id="performance-monitoring">Performance Monitoring</h2>
+        <p>We use <a href="http://www.newrelic.com">NewRelic</a> (Free-$100s/month) to monitor performance of production applications.</p>
+        <p>Debugging performance might be the best part of a developer's job. There's a clear, numeric problem. When we fix it, that number improves. We can say things like &quot;We made this 175% better.&quot;</p>
+        <p>There's many established techniques for fixing performance problems. A number of them come &quot;for free&quot; with Rails + Heroku:</p>
+        <ul>
+        <li>Amazon server clusters</li>
+        <li>gzipping</li>
+        <li><a href="http://guides.rubyonrails.org/asset_pipeline.html">Asset pipeline</a></li>
+        <li><a href="http://guides.rubyonrails.org/caching_with_rails.html#sql-caching">SQL query caching</a></li>
+        </ul>
+        <p>A number of them require developer thought:</p>
+        <ul>
+        <li>Database indexing</li>
+        <li>Eager loading</li>
+        <li>HTTP caching</li>
+        </ul>
+        <p>Page caching is the heaviest handed technique we have, but if we can cache an entire page and push it into a CDN, that will be the fastest option.</p>
+        <h2 id="error-tracking">Error Tracking</h2>
+        <p>We use <a href="http://airbrake.io">Airbrake</a> (Free-$25/month).</p>
+        <h2 id="transactional-email">Transactional Email</h2>
+        <p>We use <a href="http://sendgrid.com">SendGrid</a> (Free-$400/month) to have our application deliver email to users, known as <a href="http://www.foundrygroup.com/wp/2010/04/foundry-group-invests-in-sendgrid/">transactional email</a>.</p>
+        <p>Examples of transactional email are:</p>
+        <ul>
+        <li>Confirmations</li>
+        <li>Follow ups after the first 3 days of use</li>
+        <li>Free trial is expiring</li>
+        <li>Message another user in the system</li>
+        </ul>
+        <p>We use SendGrid directly, not via the Heroku add-on, in order to avoid being lumped under the same IP group as others on Heroku (who might be misbehaving).</p>
+        <h2 id="payment-processing">Payment Processing</h2>
+        <p>For collecting payments from users via credit or debit card, we use <a href="http://stripe.com/">Stripe</a>. It is a payment gateway and merchant account. We also use it for recurring billing.</p>
+        <p>Charges for Stripe will vary depending on usage. Successful charges are 2.9% + 30 cents. There are no setup fees, monthly fees, or card storage fees.</p>
+        <p>For sending money to users' bank accounts via ACH, we use <a href="https://www.balancedpayments.com/">Balanced</a>.</p>
+        <h1 id="measuring">Measuring</h1>
+        <blockquote>
+        <p>&quot;If you can not measure it, you can not improve it.&quot; -- Lord Kelvin</p>
+        </blockquote>
+        <p>The difficult part of measuring is deciding what to track.</p>
+        <p>Dave McClure's <a href="http://www.slideshare.net/dmc500hats/startup-metrics-for-pirates-nov-2012">AARRR framework</a> provides a high-level overview of important metrics. We then use tactics such as event tracking to instrument those metrics.</p>
+        <h2 id="aarrr">AARRR</h2>
+        <p>The AARR framework is:</p>
+        <ul>
+        <li>Acquisition</li>
+        <li>Activation</li>
+        <li>Retention</li>
+        <li>Revenue</li>
+        <li>Referral</li>
+        </ul>
+        <p>For an early stage product, we work to improve them in this order:</p>
+        <ol type="1">
+        <li>Activation: visitor finds the product desirable enough to try, is able to use it and get to <a href="http://www.growhack.com/2012/12/04/discovering-your-aha-moment/">aha moment</a> in shortest time possible</li>
+        <li>Retention: user regularly uses product, it is doing the job they hired it for, customer is happy</li>
+        <li>Revenue: user pays for product</li>
+        <li>Acquisition: we know where our users come from, are able to try new channels, run tests, and kill or double-down on different channels</li>
+        <li>Referral: users refer other users, the ideal acquisition channel</li>
+        </ol>
+        <h2 id="instrumentation">Instrumentation</h2>
+        <p>In order to analyze metrics later, we need to instrument our app to log the right metrics. The primary type of instrumentation we care about is called &quot;event tracking.&quot;</p>
+        <p>Use <a href="https://segment.io/">Segment.io</a> to capture events whenever possible. It is basically <a href="http://sourcemaking.com/design_patterns/adapter">the adapter pattern</a> for analytics services.</p>
+        <p>Segment.io lets us drop one JS library into our web apps, or one Ruby library into our server-side framework, or one iOS SDK into our mobile apps. Then, we can toggle on and off different services such as Google Analytics, Mixpanel, Intercom, Olark, Localytics, and others.</p>
+        <figure>
+        <img src="images/segment-io.jpg" alt="Segment.io" /><figcaption>Segment.io</figcaption>
+        </figure>
+        <p>Segment.io's API endpoint is hosted on Amazon CloudFront. So, it has extremely good uptime and you can have Segment pipe the CloudFront logs for your apps to your own S3 bucket, giving you access to your raw logs.</p>
+        <p>When Segment.io does not support a backend service, we can either use the service directly or contribute to the appropriate <a href="https://segment.io/libraries/analytics.js">Segment.io open source libraries</a>.</p>
+        <p>The hardest part of event tracking is choosing the <a href="http://qr.ae/GBPdx">granularity of the events</a>. It's costly to reconstruct historical measurements and missed knowledge can kill an early-stage product. So:</p>
+        <ul>
+        <li>track events as soon as they exist in the product</li>
+        <li>err on the side of more data than less</li>
+        <li>include as much state as possible per event</li>
+        <li>own the data from the start</li>
+        </ul>
+        <p>Some typical events we'll want to track:</p>
+        <ul>
+        <li>open app (mobile)</li>
+        <li>background app (mobile)</li>
+        <li>pageviews (web)</li>
+        <li>create account</li>
+        <li>make purchase</li>
+        <li>add content</li>
+        <li>make connection/friend</li>
+        <li>upgrade subscription</li>
+        <li>refer friend</li>
+        </ul>
+        <p>Use properties on events liberally. Typically include:</p>
+        <ul>
+        <li>session ID</li>
+        <li>all user properties</li>
+        <li>environment: operating system, app version, device hardware details,</li>
+        <li>current battery, wifi, cellular status</li>
+        <li>number of seconds into the session</li>
+        </ul>
+        <p><a href="http://mcfunley.com/whom-the-gods-would-destroy-they-first-give-real-time-analytics">Business analytics do not need to be realtime</a> and tracking these data should not slow down the user experience. So, we background these tasks whenever possible using whatever backgrounding system makes sense for our platform. Examples include <a href="https://github.com/collectiveidea/delayed_job">Delayed Job</a> and <a href="http://www.iron.io/worker">IronWorker</a>.</p>
+        <h2 id="subscription-metrics">Subscription Metrics</h2>
+        <p>We work on a lot of products that have a monthly or yearly subscription business model. There are some classic metrics we know we want to track for these products, such as:</p>
+        <ul>
+        <li>Monthly Recurring Revenue (MRR)</li>
+        <li>Active subscriptions</li>
+        <li>Lifetime Value (<a href="http://en.wikipedia.org/wiki/Customer_lifetime_value">LTV</a>)</li>
+        <li>Churn per-plan, monthly and annually</li>
+        </ul>
+        <p>Since we use Stripe for payments, we've found <a href="https://www.baremetrics.io">Baremetrics</a> is the fastest and easiest way to track these metrics.</p>
+        <p>If our clients want to raise money from investors, the following numbers are generally considered investment-ready:</p>
+        <ul>
+        <li><a href="http://www.forentrepreneurs.com/startup-killer/">LTV is 3x-5x greater than Customer Acquisition Cost (CAC)</a></li>
+        <li><a href="http://www.forentrepreneurs.com/startup-killer/">10-30% month-over-month growth in MRR</a></li>
+        <li><a href="http://sixteenventures.com/saas-churn-rate">5-7% annual churn</a></li>
+        </ul>
+        <p>Churn is particularly critical when fundraising. <a href="http://www.forentrepreneurs.com/why-churn-is-critical-in-saas/">Small changes in churn can drastically improve valuation</a>.</p>
+        <p>Calculating CAC is a manual <a href="https://docs.google.com/a/thoughtbot.com/spreadsheet/ccc?key=0AnkUc5wE2xc6dGhHSUpnTy03MDlJd29xc3BzbWg2Unc">spreadsheet exercise</a>. It requires adding employee overhead costs and direct marketing costs together, then dividing by the number of new customers for that month.</p>
+        <p>For <a href="https://upcase.com">Upcase</a>, we can rely on our bookkeeper, <a href="http://www.accountingdepartment.com/">AccountingDepartment.com</a> to provide us with those numbers, and make adjustments for which vendors such as Google (AdWords), Twitter, or AdRoll fall under the direct marketing accounting class.</p>
+        <h2 id="ab-testing">A/B Testing</h2>
+        <p>Someone can tell us in a usability test when they're confused by a page or when they're frustrated by upsells during the checkout process. They probably can't tell us whether one set of copy or another is more likely to make them feel an affinity with our landing page, pull out their wallet, and plunk down cash.</p>
+        <p>So, we <a href="http://en.wikipedia.org/wiki/A/B_testing">A/B test</a> landing pages and payment flows.</p>
+        <p>We don't A/B test price. Users talk to each other and it can make customer support difficult. We test the price off-line via customer interviews instead.</p>
+        <h2 id="feature-flags">Feature Flags</h2>
+        <p>Software is soft. It's always changing. Hopefully, we're always learning from our changes.</p>
+        <p>A cool way to manage changes is via feature flags. Using a tool like <a href="https://github.com/FetLife/rollout">Rollout</a>, we can &quot;flag&quot; certain features as only ready for parts of our user base; i.e. just the development team, or just the founder's friends, or 10% of all users, etc.</p>
+        <p>That way, we can see how users respond to the feature without rolling it out to everyone. We can pair this technique with A/B testing to compare how users respond to different features.</p>
+        <h1 id="sales">Sales</h1>
+        <p>We're designers and developers. We want to design and develop software. Before we can do that, we need clients to hire us. The following section details how our sales process works and answers commonly asked questions by potential clients.</p>
+        <figure>
+        <img src="images/always-be-closing.jpg" alt="Always Be Closing" /><figcaption>Always Be Closing</figcaption>
+        </figure>
+        <p>The overall process is:</p>
+        <ul>
+        <li>Someone contacts us.</li>
+        <li>We have them fill out <a href="http://thoughtbot.com/contact">our new project form</a>.</li>
+        <li>We have a phone call or have them come into the office.</li>
+        <li>Qualify/disqualify: are we a good fit for the client?</li>
+        <li>Qualify/disqualify: is the client a good fit for us?</li>
+        <li>Understand the client's vision.</li>
+        <li>Agree to the outcomes we're trying to achieve.</li>
+        <li>Estimate iterations.</li>
+        <li>Schedule people for iterations.</li>
+        <li>Sign the contract.</li>
+        <li>Pay us for the first iteration.</li>
+        <li>We begin work.</li>
+        </ul>
+        <h2 id="leads">Leads</h2>
+        <p>Our leads often come from <a href="http://www.quora.com/Whos-the-best-web-development-firm-in-Boston">referrals from clients</a> and Google searches.</p>
+        <p>We track each lead on a <a href="http://trello.com">Trello</a> card in the &quot;Contacted&quot; list on our &quot;Sales&quot; board:</p>
+        <figure>
+        <img src="images/sales-trello_small.jpg" alt="Sales Trello board" /><figcaption>Sales Trello board</figcaption>
+        </figure>
+        <p>We manually create cards for personal introductions. <a href="http://thoughtbot.com/#new-project">Our new project form</a> automatically creates cards for each submission. <a href="http://zapier.com">Zapier</a> automatically creates cards for each voicemail we receive into our main phone line.</p>
+        <p>The person responsible for the lead (typically a managing director) qualifies or disqualifies the lead, often with a quick intro phone call with the potential client. They pull designers or developers into subsequent discussions based on expected availability, putting their faces on the Trello cards.</p>
+        <h2 id="understanding-product-vision">Understanding Product Vision</h2>
+        <p>Our goal is to begin thinking about the client's product and working as a team to plan it even before we officially start working together. Some example questions to ask:</p>
+        <ul>
+        <li>What's unique about this product?</li>
+        <li>What big benefit does the product provide?</li>
+        <li>What pain does the product alleviate?</li>
+        <li>Who currently buys this product?</li>
+        <li>Who do you want to buy this product?</li>
+        <li>What do customers love about your product?</li>
+        </ul>
+        <p>We distribute the sales process throughout the team. Potential clients should be able to talk to the people they'll work with. We should be able to handle spikes in incoming leads that make it unreasonable for a managing director to respond in a timely fashion.</p>
+        <p>We use an internal app to manage our schedule and availability. We don't track time, but we do plan in week increments.</p>
+        <h2 id="on-site-customer">On Site Customer</h2>
+        <p>Tools like Slack, GitHub, and Trello have made remote work much easier over the years, and we work remotely every day within thoughtbot across offices.</p>
+        <p>Remote consulting work is totally possible, but raises the degree of difficulty. One of the few requirements of Extreme Programming is that <a href="http://www.extremeprogramming.org/rules/customer.html">the customer is always available</a>.</p>
+        <p>Ideally, that means face-to-face, on site. We've set up our offices so that our clients work at the same cluster of desks as our teams. Nothing beats in-person communication.</p>
+        <p>An ideal consulting project for us is one where a member of the client team is willing to work at our office Monday-Thursday for the duration of the project. Failing that, we want to find out during the sales process how available they will be on Slack, GitHub, and Trello.</p>
+        <p>If it seems like they won't be available very often, we should seriously consider declining the project.</p>
+        <h2 id="ndas">NDAs</h2>
+        <p>If the client asks us to sign an NDA, we respond with:</p>
+        <blockquote>
+        <p>Are you willing to chat without signing an NDA?</p>
+        </blockquote>
+        <p>We've worked with hundreds of clients. We talk to hundreds of potential clients each year. It's inevitable that we hear similar ideas.</p>
+        <p>If the NDA is important to the client, ask them to tell us enough about the business to evaluate whether there's a conflict with our existing or past clients. If we determine there's no conflict, the project is a good fit, and the NDA is mutual, we sign it. If their NDA is not mutual, we use <a href="http://thoughtbot.com/nda">our NDA</a>.</p>
+        <h2 id="roles">Roles</h2>
+        <p>We offer some combination of designers, Ruby developers, and iOS developers. An advisor assists the team for a few hours a week. Everyone is <a href="http://en.wikipedia.org/wiki/T-shaped_skills">T-shaped</a>, deep in some area of expertise with the ability to collaborate across disciplines.</p>
+        <p>We are people, not &quot;resources&quot;, and avoid calling each other such because we understand we are working with each other as people.</p>
+        <p>The designer is responsible for designing interactions between users and the product. They write user interface code.</p>
+        <p>The developers make it work. They write the code that makes the app &quot;smart.&quot; They aim to make the product error-free. They monitor performance because speed is a feature of every application.</p>
+        <p>Developers keep it running. They make architectural decisions and interact with modern-day hosting companies like <a href="http://heroku.com">Heroku</a>, whose employees double as our outsourced operations team.</p>
+        <p>The developers also implement. They write and maintain HTML, CSS, JavaScript, Ruby, SQL, and lots of other code. They set and meet development standards, keep the <a href="http://www.extremeprogramming.org/rules/integrateoften.html">Continuous Integration</a> build passing, and review each others' code.</p>
+        <p>The advisor adds an impartial perspective. They run weekly meetings so that there is consistency in week-to-week communication. They keep an eye on the high-level goals of the project, which should be easier for them because they are not in the weeds of the project day-to-day. They express enthusiasm when the team is in a groove and help problem-solve when things get off track.</p>
+        <p>When appropriate, they should work with the client to either reduce or increase team size to correctly serve the project.</p>
+        <p>The advisor is not a project manager. The rest of the team does not report to them. The advisor is also not a technical or design lead. Advisors need not be Managing Directors or CXOs, but typically are due to flexibility in schedule. Anyone at thoughtbot should be able to advise a project. If the primary salesperson is not also the advisor, there should be a smooth hand-off from one to the other.</p>
+        <p>While each person plays a role, a team needs to be a team.</p>
+        <p>Everyone takes responsibility every day for delivering high quality work, for staying true to the vision for the product, for communicating their schedule and intentions, for making hard decisions, for delegating to others when they don't have the time or skill to accomplish a task, for keeping team morale up, and for being consistent.</p>
+        <h2 id="no-fixed-bids">No Fixed Bids</h2>
+        <p>Some consulting relationships start with a requirements document or RFP (&quot;Request For Proposal&quot;). The requirements are often extremely detailed.</p>
+        <p>The probability of this document containing the optimum feature set is extremely low. The right features are better learned through user interviews, prototyping, releasing actual software, and getting feedback from real users.</p>
+        <p>Based on that document, clients expect consultants in the industry to submit an exact timeframe and bid. This contract style sets the client and consultant working against each other right from day one. Instead of focusing on designing the product experience or evaluating what assumptions were wrong, they spend time negotiating about what was meant in a document written a long time ago or focusing on arbitrary deadlines. But it's worse than negotiating; it's retroactively discussing something that no one remembers the same way.</p>
+        <p>As you might have guessed, we don't do fixed-bid, fixed-feature-set proposals.</p>
+        <h2 id="budget">Budget</h2>
+        <p>We do <a href="https://medium.com/what-i-learned-today/a61ec864c898">need to know clients' budgets</a>. This is often uncomfortable for them but their budget helps determines what scope is possible. It saves time. If they don't know their budget, we discuss different options.</p>
+        <p>We talk about breaking product rollout into stages and try to improve the product's chances of success at each stage by:</p>
+        <ul>
+        <li>Focusing on a small subset of features.</li>
+        <li>Designing a valuable user experience.</li>
+        <li>Developing a meaningful relationship with users.</li>
+        <li>Budgeting for marketing tactics to tell users about the product.</li>
+        <li>Designing interactions into the product for users to bring other users to the product.</li>
+        </ul>
+        <h2 id="rate">Rate</h2>
+        <p>We price projects at a per person, per week rate. We consult 4 days per week. We use the same rate for designers and developers. The work required for each week dictates which skills are needed. The number of people needed determines the cost and how much gets done.</p>
+        <p>During the process of explaining our billing, we sometimes tell potential clients &quot;time and materials&quot; is the same as hiring an employee for their annual time except there's less risk to them because:</p>
+        <ul>
+        <li>Our team is experienced. We've interviewed more than a thousand candidates in order to find the talented group of people we work with today.</li>
+        <li>We've worked together on projects before. We have &quot;a way&quot; of doing things.</li>
+        <li>Short projects require less money.</li>
+        <li>Our time is predictable (4 days/week) and consistent.</li>
+        <li>We can quickly rotate in a new team member if someone gets sick, leaves the company, or is ready to rotate to a new project.</li>
+        </ul>
+        <p>We don't provide itemized invoices to clients showing individual pieces of work that were done. Clients always know what is happening via access to the project management system (Trello), chat room (Slack), version control system (GitHub), and ongoing communication with our teammates.</p>
+        <h2 id="typical-projects">Typical Projects</h2>
+        <p>Examples of typical projects for us are:</p>
+        <ul>
+        <li><a href="http://robots.thoughtbot.com/the-product-design-sprint">&quot;Product design sprint&quot;</a>, 2 people, 1 week</li>
+        <li>&quot;Zero to Version 1&quot;, 2 people, 4 weeks</li>
+        <li>&quot;Fill a gap until an internal team is hired&quot;, 2 people, 3 months</li>
+        <li>&quot;Staff augmentation with existing internal team&quot;, 3 people, 6 months</li>
+        <li><a href="http://www.thoughtbot.com/maintenance">&quot;Maintenance team&quot;</a>, retainer per month</li>
+        </ul>
+        <p>On many occasions we've done projects for clients who have a budget enough for a &quot;Version 1&quot; product. They followed that up with a round of beta invites, time spent learning in the market, a round of funding, or a few months of revenue. They come back for another round of design and development with a more informed sense of where the product needs to go.</p>
+        <p>The feature set of a product is not necessarily indicative of the length of time required to develop it. Sometimes to get to a very simple product, we have to iterate on it many times. We love working with clients who understand that a great product takes as long as it takes.</p>
+        <p>In return, we understand that we can never abuse a client's trust in us. We should be maximizing our productivity in order to provide them the most value for our time. Things like our &quot;Research&quot; Trello board (the source of our newsletter, <a href="http://tinyletter.com/thoughtbot">&quot;the bot cave&quot;</a>), &quot;Code&quot; internal chat room, and shared <a href="http://github.com/thoughtbot/dotfiles">dotfiles</a> ensure we have a highest common denominator set of tools and techniques ready when the situation arises again.</p>
+        <h2 id="contract">Contract</h2>
+        <p>We store contracts in Dropbox and have a series of folders for pending, current, past, and lost clients.</p>
+        <p>The consulting proposal and contract contains:</p>
+        <ul>
+        <li>A one-page summary of the expected work.</li>
+        <li>Our weekly rate.</li>
+        <li><a href="http://en.wikipedia.org/wiki/Net_15">Net 15</a> payment terms.</li>
+        <li>Payment for the first two weeks is required to start working.</li>
+        <li>After the first two weeks, invoices will go out once a week on Saturday mornings for the prior week's work.</li>
+        <li>Agreement that the client owns the week's source code once they've paid their weekly invoice.</li>
+        <li>Agreement that both parties won't use materials which break someone else's copyright.</li>
+        <li>Agreement that both parties won't publish things to the web hosting provider which are abusive or unethical.</li>
+        <li>Agreement that the contract is mutually &quot;at-will&quot; and either side can decide to stop work at the end of a week.</li>
+        <li>A page for signatures.</li>
+        </ul>
+        <h2 id="invoices">Invoices</h2>
+        <p>We use <a href="http://www.freshbooks.com">FreshBooks</a> to invoice our clients at the end of each week.</p>
+        <p>It sends recurring invoices so we don't forget to bill people at the end of the week. It automatically sends late payment notifications, limiting awkward conversations about the bill.</p>
+        <p>Clients can pay their invoice via check, credit card, or wire transfer. We use <a href="http://stripe.com">Stripe</a> to accept credit card payments in FreshBooks.</p>
+        <p>We track who at thoughtbot should receive a commission in the notes field of the client's profile in FreshBooks. We often split the 5% commission among two or three people who were involved in the sales process.</p>
+        <p>FreshBooks has <a href="http://community.freshbooks.com/addons/view/shoeboxed/">integrations</a> with services we use like <a href="http://shoeboxed.com">Shoeboxed</a> for receipts.</p>
+        <h1 id="hiring">Hiring</h1>
+        <p>We are not the permanent team solution for our clients. They often want to know:</p>
+        <ul>
+        <li>How do I find a technical co-founder?</li>
+        <li>How can I learn to &quot;do it myself&quot;?</li>
+        <li>How do I hire designers and developers?</li>
+        </ul>
+        <p>We tell them:</p>
+        <ul>
+        <li>To find a technical co-founder, network in person at user groups and online at LinkedIn and AngelList. Is what you really need a <a href="http://www.designstaff.org/articles/does-your-startup-need-a-design-co-founder-2012-01-12.html">designer founder</a>?</li>
+        <li>To learn to do what we do, sit next to us in our office for weeks at a time, pair programming and sketching together.</li>
+        <li>To hire someone, follow the same process we use, detailed below.</li>
+        </ul>
+        <h2 id="recruiting">Recruiting</h2>
+        <p>We've met our future teammates via:</p>
+        <ul>
+        <li><a href="http://github.com">GitHub</a></li>
+        <li>User groups</li>
+        <li><a href="http://devbootcamp.com">Dev Bootcamp</a></li>
+        <li><a href="http://www.authenticjobs.com">Authentic Jobs</a></li>
+        <li><a href="http://careers.stackoverflow.com">Stack Overflow Careers</a></li>
+        </ul>
+        <p>We met Josh because he submitted excellent patches to <a href="http://github.com/thoughtbot/clearance">Clearance</a>. He was in Michigan at the time. Due in part to their open source work, we've hired great people as far away as India and Thailand. We moved them to the cities where we have offices.</p>
+        <p>Many of us are regulars at Ruby, JavaScript, Vim, and Redis user groups. We met Ben, Joel, and Mason at the Boston Ruby Group.</p>
+        <p>A nice thing about those meetings are that they happen naturally. We're not trolling GitHub looking for people or fishing for talent at user groups and conferences. We're there, anyway. If we never hired again, we'd still be writing and using open source. We'd be members of mailing lists and going to events.</p>
+        <p>We know what we'll get when we hire in the above ways. We know their personality and energy level from the user group. We know their coding style from their open source work. We know they'll take initiative because they voluntarily contributed to the community.</p>
+        <p>We met Jessie and Laila via Dev Bootcamp. They went through <a href="http://apprentice.io">apprentice.io</a>, as did Adarsh, Draper, Edwin, Diana, Melissa, Joël, Lisa, Lydia, Rich, Christian, and Tony.</p>
+        <p>We've also had great luck finding designers on Authentic Jobs and iOS developers on Stack Overflow Careers.</p>
+        <h2 id="interviewing">Interviewing</h2>
+        <p>We track each candidate's progress through the interview process on a <a href="http://trello.com">Trello</a> card on our &quot;Hiring&quot; board:</p>
+        <figure>
+        <img src="images/hiring-trello_small.jpg" alt="Hiring Trello board" /><figcaption>Hiring Trello board</figcaption>
+        </figure>
+        <p>We manually create cards for personal introductions. <a href="http://thoughtbot.com/jobs">Our new teammate form</a> automatically creates cards for each submission.</p>
+        <p>Our CEO, Chad, leads the hiring process. He ensures that everyone gets a response and he speaks with everyone before they are hired.</p>
+        <p>Anyone can do an initial review of the candidate's application. In particular, they review the candidate's code sample or portfolio. If necessary, they may ask someone else (like a designer or iOS developer) for another pair of eyes on the code or portfolio.</p>
+        <p>We either send them a rejection or an email based on <a href="https://gist.github.com/croaky/3e12ff226d6b04451fe8">this template</a>, moving the Trello card to &quot;Non-Technical Interview&quot;.</p>
+        <p>Chad will pull the managing director, designers, or developers into subsequent discussions, putting their faces on the Trello cards to ensure we always know who is responsible.</p>
+        <p>We have standard questions for iOS developers, Rails developers, and designers for the technical interview. We don't use puzzles or code challenges. Instead, we prefer reviewing actual work the candidate has done, and talking to them about design process, architecting systems, and writing code; the same thing we do for work every day.</p>
+        <p>The final step for candidates is to visit us for a day. We pay for their flights and three nights of hotels (rest up Thursday night, work with us on Friday, enjoy Friday night, explore the city Saturday, fly home Sunday).</p>
+        <p>On that day, developers <a href="http://www.extremeprogramming.org/rules/pair.html">pair program</a> with one of our developers in the morning and another in the afternoon.</p>
+        <p>Designers pair in the morning and work on a small product design project throughout the day and then present at 4pm. It primarily involves sketching and working with one or two thoughtbot designers.</p>
+        <p>We do the interviews this way because there's no substitute for seeing someone actually do the work and interacting with the team. We also want candidates to experience what the company is like for themselves.</p>
+        <p>Aside from technical skill, during the entire interview process, we look for <a href="http://www.kipp.org/our-approach/strengths-and-behaviors">character strengths</a> like enthusiasm (invigorates others), focus (pays attention, resists distractions, remembers directions), composure (remains calm when critiqued, doesn't interrupt), gratitude (shows appreciation), curiosity (eager to explore, asks questions to understand, actively listens), optimism (gets over frustrations quickly), grit (finishes what he or she starts, doesn't get blocked), emotional intelligence (demonstrates respect for others' feelings, knows when and how to include others), humor (likes to laugh, makes others smile), and appreciation of beauty (notices and appreciates beauty and excellence).</p>
+        <p>To be hired, the candidate must get a unanimous &quot;yes&quot; from the existing teammates with whom they interacted.</p>
+        <h2 id="offer-and-onboarding">Offer and Onboarding</h2>
+        <p>We use <a href="https://rightsignature.com">RightSignature</a> ($14-$49/month) to send the offer and get them signed without the &quot;print and scan&quot; process on either end.</p>
+        <p>Offers are reviewed and approved by at least one member of the C-level executive team before being sent. C-level executives and Managing Directors can execute offers on behalf of thoughtbot.</p>
+        <p>When the offer is accepted, we run a custom onboarding script which we wrote. It creates the teammate's email address, gives them access to systems like GitHub and Slack, sends them their Employment Agreement, notifies <a href="http://www.accountingdepartment.com">Accounting Department</a>, sends a welcome email to the teammate, and creates a todo list for the hiring manager for any remaining manual items that we haven't been able to automate.</p>
+        <p>We assign a pair to new team members who acts as a guide on their first day. The pair helps them set up their machine, purchase any required software, and walk them through one turn of the development cycle by getting their profile added to our website. The pair also makes them feel comfortable, answers questions they may have, or points them to the person who can answer their questions.</p>
+        <h2 id="compensation">Compensation</h2>
+        <p>We are entirely bootstrapped, with no outside investors, and no debt. We are paid for consulting only four days each week.</p>
+        <p>Sustainability of the company is very important to us. We want to bring great people on at reasonable salaries and reward them as aggressively as possible for actual performance.</p>
+        <p>We may never be able to compete dollar for dollar with other tech companies but we can compete on being a great place to work, with lots of opportunities to learn, and the freedom to define and execute on our own projects.</p>
+        <h2 id="quarterly-reviews">Quarterly Reviews</h2>
+        <p>In order to continually improve ourselves and the company, all year round on every project we're on, we receive regular feedback from clients, managers, and teammates. We additionally have quarterly reviews for more formal review and potential salary increases.</p>
+        <p>During onboarding, a &quot;Quarterly Review&quot; calendar event is created, set to recur once every 3 months, starting from the hire date.</p>
+        <p>The agenda for quarterly reviews is roughly:</p>
+        <ul>
+        <li>Our performance on recent consulting projects</li>
+        <li>Our investment time contributions</li>
+        <li>Our satisfaction with our work, projects, and the company</li>
+        <li>Our questions about thoughtbot and our strategy</li>
+        <li>Our areas of focus for the next quarter</li>
+        </ul>
+        <p>Salary increases are the natural result of improvement. Our manager may increase our salary during quarterly reviews in a way that is compatible with the company's finances and individually appropriate to us based on things we've done, such as:</p>
+        <ul>
+        <li>creating great software</li>
+        <li>making users and clients happy</li>
+        <li>improving ourselves by learning something new</li>
+        <li>improving thoughtbot by bringing in sales, mentoring a teammate, contributing to an internal tool or research</li>
+        <li>improving our community by writing blog posts, contributing to open source, or attending conferences</li>
+        <li>doing the things we didn't think to put on this list</li>
+        </ul>
+        <p>We may receive an additional salary increase based on market conditions and cost of living increases.</p>
+        <p>It's important that our manager explains why a raise is being given and what, if anything, could be done to receive a higher raise next time. We don't get raises for &quot;just showing up.&quot;</p>
+        <h1 id="operations">Operations</h1>
+        <p>Running a software-based business requires more than beautiful code or a popular product. Managing cash flow and taxes can feel unimportant or difficult but getting them right is as vital to our success as product design.</p>
+        <p>Fortunately, many services exist which make things like bookkeeping, receipts, signatures, and invoicing much easier.</p>
+        <p>Some principles have helped us streamline our operations:</p>
+        <ul>
+        <li>Outsource things which are super important but we are not excellent at.</li>
+        <li>Spend time selecting a vendor and occasionally spend time reevaluating other vendors.</li>
+        <li>Automate repetitive tasks.</li>
+        <li>Give everyone &quot;admin&quot; access to as much as possible to avoid bottlenecks.</li>
+        <li>Try to avoid building internal tools. It requires time and money to build and makes us reliant on ourselves when things don't work.</li>
+        <li>Our problems are not unique. We will try manual processes first. When we do build something, it is usually after using other things for years.</li>
+        </ul>
+        <h2 id="expenses">Expenses</h2>
+        <p>Every full-time employee gets an American Express corporate card for business expenses. We've hired trustworthy people. Use your best judgement on how much to spend and what is a business expense. It saves time and treats people like adults.</p>
+        <p>We buy things. The IRS appreciates it when we track those purchases. So do we, in order to know whether we're profitable.</p>
+        <p>We use <a href="http://www.shoeboxed.com">Shoeboxed</a> to send all receipts (meals, travel, books, computers) to our accountant.</p>
+        <p>There are also handy <a href="http://shoeboxed.com/iphone">iPhone</a> and <a href="http://shoeboxed.com/android">Android</a> apps which take photos of receipts and send them on their way.</p>
+        <h2 id="email">Email</h2>
+        <p>We use <a href="http://mail.thoughtbot.com">Gmail</a> for our email.</p>
+        <h2 id="calendar">Calendar</h2>
+        <p>We use <a href="http://calendar.thoughtbot.com">Google Calendar</a> for our calendars.</p>
+        <h2 id="documents">Documents</h2>
+        <p>We use <a href="http://docs.thoughtbot.com">Google Docs</a> for our editable documents.</p>
+        <p>We prefer Google Docs because they are:</p>
+        <ul>
+        <li>Easily sharable by URL. Everyone has a browser, not everyone has MS-Office or OpenOffice installed.</li>
+        <li>Always up to date with the latest edits.</li>
+        <li>Enable real-time collaboration, like group meeting notes.</li>
+        <li>Autosaved to the cloud, so no worrying about backup.</li>
+        <li>Are as easy to find as Googling something.</li>
+        <li>Without document type versioning (e.g. xls vs. xlsx).</li>
+        <li>Cheap.</li>
+        </ul>
+        <p>These tools are not well-suited for large documents or complicated spreadsheets, which is great.</p>
+        <p>We write code and are biased toward minimal documentation and upfront specs so we shouldn't be writing long documents.</p>
+        <p>For cases where we are writing large spreadsheets, we find it's faster to snap together a small app to do the job. This is a good time to ask if such complicated analysis is really necessary.</p>
+        <p>When documents are mostly similar with slight variations (like contracts), we create templates using <a href="http://www.apple.com/iwork/pages/">Pages</a> and export to PDF for external use.</p>
+        <h2 id="meetings">Meetings</h2>
+        <p>We over-communicate with clients in-person and online to avoid having scheduled meetings. Every problem arises from poor communication.</p>
+        <p>When we need to meet for a discussion, we aim for 30 minutes spent in-person.</p>
+        <p>When working remotely, <a href="http://www.google.com/+/learnmore/hangouts/">Google Hangouts</a> are indispensable as the &quot;next best thing&quot;. They are easy to set up, sharable by URL, and let us get a look at whoever we're talking to.</p>
+        <p>Screen-sharing is also very easy, when necessary. We have used Hangouts for client meetings, candidate interviews, and company meetings.</p>
+        <p>We use conference lines that are part of our VoIP system, provided by <a href="http://www.onsip.com">OnSip</a>, for voice conferencing.</p>
+        <h2 id="accounting">Accounting</h2>
+        <p><a href="http://www.accountingdepartment.com">AccountingDepartment.com</a> provides us with an outsourced bookkeeper, controller, and tax accountant/CPA. They provide us with a hosted QuickBooks install that we can access via Remote Desktop.</p>
+        <p>We use <a href="https://www.earthclassmail.com">Earth Class Mail</a> to receive all paper mail for our offices. This service automatically opens and scans all paper mail and sends it as a PDF email attachment, which we file in Dropbox. Earth Class Mail also automatically detects checks and deposits them into our bank account.</p>
+        <p>We interact with them mostly through email. It's very efficient and we pay for what we use, which is great for scaling.</p>
+        <p>Our accountants review FreshBooks for new invoices and new payments on a daily basis and input them into QuickBooks. If any checks or wire transfers have come in, they are entered into FreshBooks and QuickBooks. FreshBooks sends payment received email notifications to both clients and the management team.</p>
+        <p>All our receipts go to them automatically.</p>
+        <p>Our CPA is excellent and provides <a href="http://www.accountingdepartment.com/bookkeeping_services">these sorts of services</a> for us:</p>
+        <ul>
+        <li>Making sure payroll happens regularly and correctly.</li>
+        <li>Gathering our accounts payable and making sure we pay partners promptly.</li>
+        <li>Preparing monthly P&amp;L statements, broken down by services and products.</li>
+        <li>Preparing our taxes.</li>
+        <li>Making sure cash flow, checking account, savings account are in order.</li>
+        </ul>
+        <p>In Sweden we are assisted by <a href="http://www.tmf-group.com/countries/sweden.aspx">TMF Group</a> for company, accounting, tax, and human resources.</p>
+        <h2 id="legal">Legal</h2>
+        <p>Our law firm is <a href="http://www.gesmer.com/home.php">Gesmer Updegrove LLP</a>. They are able to provide us with legal support for most everything we need, which is most commonly client, real estate, and company/stock matters. We also engage <a href="http://www.rcosta.com">Costa &amp; Riccio LLP</a> for US immigration matters.</p>
+        <p>In Sweden we are assisted by <a href="http://www.newcomers.se">Newcomers</a> for immigration and relocation matters.</p>
+        <h1 id="sharing">Sharing</h1>
+        <p>We've learned a ton from blog posts, tweets, and newsletters from others in the community. We should be giving back when we have something to share.</p>
+        <h2 id="blog">Blog</h2>
+        <p>Our blog is called <a href="http://robots.thoughtbot.com">GIANT ROBOTS SMASHING INTO OTHER GIANT ROBOTS</a>.</p>
+        <p>When you want to write a post, write its headline as a Trello card in the &quot;Next Up&quot; list of the Editorial Calendar board. Assign the Trello card to yourself (&quot;put your face on it&quot;).</p>
+        <figure>
+        <img src="images/editorial-calendar-trello_small.jpg" alt="Editorial Calendar Trello board" /><figcaption>Editorial Calendar Trello board</figcaption>
+        </figure>
+        <p>Spend time writing and re-writing <a href="http://www.copyblogger.com/magnetic-headlines/">a great headline</a>. It helps you narrow your focus, figure out the purpose of the post, and grab people's attention in the first place.</p>
+        <p>When you begin writing, move the Trello card to the &quot;Drafts&quot; list.</p>
+        <p>Write the post in Markdown in the our blog's GitHub repo. Add tags to the post. Tags help our readers find related blog posts.</p>
+        <p>When you're ready for feedback from the team, move the card to &quot;In Review&quot; list and share the Trello card's URL with the team in Slack. Make changes based on their feedback and your judgement.</p>
+        <p>When the post is ready to publish, give it a published date, merge, and deploy.</p>
+        <p>Our RSS feed, Zapier, Buffer accounts are set up to automatically work together to link to the post from Twitter, Facebook, Google+, and LinkedIn.</p>
+        <p>Link to the post from your Google+ profile in order to set up <a href="http://robots.thoughtbot.com/google-authorship-on-giant-robots">Google Authorship</a>. Link to the post from Hacker News, Reddit, Delicious, Pinboard, or other appropriate sites.</p>
+        <p>Move the Trello card to &quot;Live.&quot;</p>
+        <h2 id="twitter">Twitter</h2>
+        <p>You can tweet from our <a href="http://twitter.com/thoughtbot">thoughtbot</a> Twitter account at any time. If the tweet is not time-sensitive, add the tweet to our queue of tweets using Buffer.</p>
+        <p>Be conversational, casual, and real on the Twitter account. Talk the same way as you would in person amongst ourselves. Be good-humored. Puns are encouraged. Keep the quality high. Aim for every tweet to be a hit. Avoid spelling mistakes. Use punctuation if writing sentences. Respect the people who follow us. To reach the largest audience, don't begin a tweet with a Twitter username.</p>
+        <p>Some tweet ideas include announcing meetups, open source releases, enthusiasm about a new tool or technique, tips on Git, Unix, and Vim, links to our blog posts, links to others' blog posts if they are excellent and not on the current Hacker News or Twitter cycle at the moment, and Funkmaster Flex.</p>
+        <p>We have a verified Twitter account and are a <a href="http://ads.twitter.com">Twitter Ads</a> customer. Use the <span class="citation" data-cites="thoughtbot">@thoughtbot</span> credentials in 1Password to see analytics such as number of retweets, favorites, replies, clicks, follows, unfollows, and how tweets compare in terms of engagement.</p>
+        <p>Promoted Tweets campaigns are best for short term campaigns to drive traffic to a website. Target 10-25 similar, relevant <span class="citation" data-cites="usernames">@usernames</span> in each campaign. Create different campaigns for different themes of people so that we can track performance per theme.</p>
+        <h2 id="research">Research</h2>
+        <p>Ongoing experiments are managed in our &quot;Research&quot; Trello board:</p>
+        <figure>
+        <img src="images/research-trello_small.jpg" alt="Research Trello board" /><figcaption>Research Trello board</figcaption>
+        </figure>
+        <p>We rigorously research, discuss, and conclude experiments on new tools and techniques. Write up these experiments on the blog at your discretion.</p>
+        <h2 id="open-source">Open Source</h2>
+        <p>We've created a number of <a href="https://github.com/thoughtbot">open source libraries</a> to help us perform common tasks and give back to the community.</p>
+        <p>Our open source libraries do better when there's one person that really steps up to maintain them. Each of our repositories has a leader that tries to keep the repository moving forward. The leader doesn't necessarily do the bulk of the actual work; responsibilities include:</p>
+        <ul>
+        <li>Understand the underlying code and goal of the library</li>
+        <li>Review and merge pull requests</li>
+        <li>Respond to and close issues</li>
+        <li>Push new releases of gems when appropriate</li>
+        <li>Encourage people to take on useful tasks for the library</li>
+        <li>Blog, tweet, and otherwise advertise new releases and tips</li>
+        </ul>
+        <p>The current open source leaders are listed in Basecamp.</p>
+        <p>Every thoughtbot developer, designer, and apprentice has commit access to our open source repositories. Some guidelines:</p>
+        <ul>
+        <li>You may want to check with the project leader to see what would be most useful, or whether or not they're on board with your idea.</li>
+        <li>Send pull requests rather than committing straight to master.</li>
+        <li>Try helping out with existing pull requests or bug reports.</li>
+        <li>Documentation patches are a great way to get familiar with a project.</li>
+        </ul>
+        <p>Got an idea for a new library? Found something useful in a client project that you think is reusable? Great! Some guidelines:</p>
+        <ul>
+        <li>Extractions are more likely to be useful than Brave New World ideas, because you're extracting something that has already proven useful once.</li>
+        <li>If you create a new library, you're expected to lead it, at least for the beginning of its life. Make sure you have time to maintain it.</li>
+        <li>Try not to duplicate something that's already been done well. Look around to make sure your problem hasn't already been solved.</li>
+        <li>Fixing bugs that affect client projects or introducing small features that would really help a client project is fine during client time. Most open source work should be conducted during investment time.</li>
+        <li>Think about whether your idea makes more sense as a pull request to an existing project.</li>
+        </ul>
+        <h1 id="goodbye">Goodbye</h1>
+        <p>thoughtbot is primarily a group of people who care about making awesome software. Thank you for being a part of it.</p>
+      </section>
+
+    <footer>
+      <p>Don't just sit there. <a href='http://learn.thoughtbot.com'>Learn something</a>.</p>
+      <nav>
+        <a href='#promo' id='contact'>PDF, MOBI, & EPUB</a>
+      </nav>
+    </footer>
+
+    <script type='text/javascript'>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1485842-1']);
+      _gaq.push(['_setDomainName', 'playbook.thoughtbot.com']);
+      _gaq.push(['_trackPageview']);
+
+      // Remove render-blocking JavaScripts
+      // https://developers.google.com/speed/docs/insights/BlockingJS
+      (function() {
+        function loadScript(url, callback) {
+          var script = document.createElement('script')
+          script.type = 'text/javascript';
+          script.async = true;
+
+          if (script.readyState) { // IE
+            script.onreadystatechange = function() {
+              if (script.readyState == 'loaded' || script.readyState == 'complete') {
+                script.onreadystatechange = null;
+                callback();
+              }
+            };
+          } else { // Others
+            script.onload = function() {
+              callback();
+            };
+          }
+
+          script.src = url;
+          document.getElementsByTagName('head')[0].appendChild(script);
+        }
+
+        loadScript('/js/jquery.min.js', function() {
+         loadScript('/js/table-of-contents.js', function() {});
+          if (window.innerWidth > 480) {
+          loadScript('/js/zoom-images.js', function() {});
+          loadScript('/js/imagesloaded.pkgd.min.js', function() {
+             loadScript('/js/jquery.fluidbox.min.js', function() {
+                $('a[rel="lightbox"]').fluidbox();
+             });
+           });
+          }
+        });
+
+        loadScript('/js/highlight.pack.js', function() {
+          hljs.initHighlightingOnLoad();
+        });
+
+        window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8", window.analytics.load("eb4i17kyj4");
+
+        window.analytics.page();
+
+        var google_conversion_id = 986432894;
+        var google_conversion_label = 'mGu-CIrpywgQ_oqv1gM';
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+
+        loadScript('//www.googleadservices.com/pagead/conversion.js', function() {});
+      })();
+    </script>
+
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/986432894/?value=0&amp;label=mGu-CIrpywgQ_oqv1gM&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+
+        <div id="TOC">
+      <ul>
+      <li><a href="#hello">Hello</a></li>
+      <li><a href="#guiding-principles">Guiding Principles</a></li>
+      <li><a href="#time">Time</a><ul>
+      <li><a href="#consulting">Consulting</a></li>
+      <li><a href="#investment">Investment</a></li>
+      </ul></li>
+      <li><a href="#product-design-sprint">Product Design Sprint</a><ul>
+      <li><a href="#prep-work">Prep Work</a></li>
+      <li><a href="#understand">Understand</a></li>
+      <li><a href="#diverge">Diverge</a></li>
+      <li><a href="#converge">Converge</a></li>
+      <li><a href="#prototype">Prototype</a></li>
+      <li><a href="#test-and-learn">Test and Learn</a></li>
+      </ul></li>
+      <li><a href="#choose-platforms">Choose Platforms</a><ul>
+      <li><a href="#web-apps">Web Apps</a></li>
+      <li><a href="#mobile-apps">Mobile Apps</a></li>
+      <li><a href="#programming-languages">Programming Languages</a></li>
+      <li><a href="#frameworks">Frameworks</a></li>
+      <li><a href="#databases">Databases</a></li>
+      <li><a href="#licenses">Licenses</a></li>
+      </ul></li>
+      <li><a href="#laptop-setup">Laptop Setup</a><ul>
+      <li><a href="#laptop">Laptop</a></li>
+      <li><a href="#dotfiles">Dotfiles</a></li>
+      <li><a href="#text-editor">Text Editor</a></li>
+      </ul></li>
+      <li><a href="#planning">Planning</a><ul>
+      <li><a href="#daily-standups">Daily Standups</a></li>
+      <li><a href="#tasks">Tasks</a></li>
+      <li><a href="#weekly-retrospectives">Weekly Retrospectives</a></li>
+      <li><a href="#planning-meeting">Planning Meeting</a></li>
+      <li><a href="#altering-the-process">Altering the Process</a></li>
+      </ul></li>
+      <li><a href="#designing">Designing</a><ul>
+      <li><a href="#sketches">Sketches</a></li>
+      <li><a href="#wireframes">Wireframes</a></li>
+      <li><a href="#user-interface">User Interface</a></li>
+      <li><a href="#interaction-design">Interaction Design</a></li>
+      <li><a href="#visual-design">Visual Design</a></li>
+      <li><a href="#usability-testing">Usability Testing</a></li>
+      </ul></li>
+      <li><a href="#developing">Developing</a><ul>
+      <li><a href="#version-control">Version Control</a></li>
+      <li><a href="#style-guide">Style Guide</a></li>
+      <li><a href="#pair-programming">Pair Programming</a></li>
+      <li><a href="#test-driven-development">Test-Driven Development</a></li>
+      <li><a href="#acceptance-tests">Acceptance Tests</a></li>
+      <li><a href="#refactoring">Refactoring</a></li>
+      <li><a href="#code-reviews">Code Reviews</a></li>
+      <li><a href="#continuous-integration">Continuous Integration</a></li>
+      </ul></li>
+      <li><a href="#production">Production</a><ul>
+      <li><a href="#checklist">Checklist</a></li>
+      <li><a href="#domain-names">Domain Names</a></li>
+      <li><a href="#ssl-certificates">SSL Certificates</a></li>
+      <li><a href="#hosting">Hosting</a></li>
+      <li><a href="#performance-monitoring">Performance Monitoring</a></li>
+      <li><a href="#error-tracking">Error Tracking</a></li>
+      <li><a href="#transactional-email">Transactional Email</a></li>
+      <li><a href="#payment-processing">Payment Processing</a></li>
+      </ul></li>
+      <li><a href="#measuring">Measuring</a><ul>
+      <li><a href="#aarrr">AARRR</a></li>
+      <li><a href="#instrumentation">Instrumentation</a></li>
+      <li><a href="#subscription-metrics">Subscription Metrics</a></li>
+      <li><a href="#ab-testing">A/B Testing</a></li>
+      <li><a href="#feature-flags">Feature Flags</a></li>
+      </ul></li>
+      <li><a href="#sales">Sales</a><ul>
+      <li><a href="#leads">Leads</a></li>
+      <li><a href="#understanding-product-vision">Understanding Product Vision</a></li>
+      <li><a href="#on-site-customer">On Site Customer</a></li>
+      <li><a href="#ndas">NDAs</a></li>
+      <li><a href="#roles">Roles</a></li>
+      <li><a href="#no-fixed-bids">No Fixed Bids</a></li>
+      <li><a href="#budget">Budget</a></li>
+      <li><a href="#rate">Rate</a></li>
+      <li><a href="#typical-projects">Typical Projects</a></li>
+      <li><a href="#contract">Contract</a></li>
+      <li><a href="#invoices">Invoices</a></li>
+      </ul></li>
+      <li><a href="#hiring">Hiring</a><ul>
+      <li><a href="#recruiting">Recruiting</a></li>
+      <li><a href="#interviewing">Interviewing</a></li>
+      <li><a href="#offer-and-onboarding">Offer and Onboarding</a></li>
+      <li><a href="#compensation">Compensation</a></li>
+      <li><a href="#quarterly-reviews">Quarterly Reviews</a></li>
+      </ul></li>
+      <li><a href="#operations">Operations</a><ul>
+      <li><a href="#expenses">Expenses</a></li>
+      <li><a href="#email">Email</a></li>
+      <li><a href="#calendar">Calendar</a></li>
+      <li><a href="#documents">Documents</a></li>
+      <li><a href="#meetings">Meetings</a></li>
+      <li><a href="#accounting">Accounting</a></li>
+      <li><a href="#legal">Legal</a></li>
+      </ul></li>
+      <li><a href="#sharing">Sharing</a><ul>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#twitter">Twitter</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#open-source">Open Source</a></li>
+      </ul></li>
+      <li><a href="#goodbye">Goodbye</a></li>
+      </ul>
+    </div>
+      </body>
+</html>
