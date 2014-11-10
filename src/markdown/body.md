@@ -4,13 +4,14 @@
 
 ## Hello
 
-You work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development team and how we make our products together. It is a living document that you can edit in a private GitHub repo.
+You work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.
 
 It's filled with things we've learned based on our own experience and study of others' experiences.
 
 Some of our work is very technical, but can be public, such as our encryption protocols or git policy. Look in our public https://github.com/SocietyPro/Playbook/guides GitHub repo folder for that kind of information.
 
-##Scrum
+
+#Scrum
 
 ### Schedules
 
@@ -30,14 +31,14 @@ Some of our work is very technical, but can be public, such as our encryption pr
   * Concise crisp updates: Short focused on task at hand.
   * Developer with conch has voice
 
-===== Sprint Retrospective Meeting =====
+##Sprint Retrospective Meeting
 
   * Agenda: Team and process self reflection - each team member identifies things the team should: Start, Stop or Continue Doing
   * Timebox per Dev: 5 minutes
   * Timebox goal of meeting: 30 Minutes
   * Developer with conch has voice
 
-===== Sprint / Poker Planning =====
+##Sprint / Poker Planning
  
   * Desired Outcome: Estimate the difficulty of the stories backlogged for the upcoming sprint & Determine Sprint Goal or Forecast
   * Product owner reads the story, team estimates difficulty
@@ -54,7 +55,7 @@ Some of our work is very technical, but can be public, such as our encryption pr
     * 8: Epic (many days. Break this up.)
 
 
-===== Default Meeting Rules =====
+##Default Meeting Rules
 
   * All meetings of Society Pro stakeholders follow these rules by default. They can be overriden by meeting-specific rules, or if the meeting’s participants agree to use other rules.
   * The default timebox is 15 minutes.
@@ -67,7 +68,7 @@ Some of our work is very technical, but can be public, such as our encryption pr
   * If neither the Product Owner or Scrum Master are present, the meeting participants can choose a chairman for the meeting, or simply rely on their politeness to get things done without any chairman.
   * Participants who do not have the conch, who want to bring something up, should write down the thought on a notecard to bring up at an appropriate time.
 
-===== Daily Scrum Meeting =====
+##Daily Scrum Meeting
 
   * Desired Outcome: Communication Vehicle for Team Members
   * Meeting Timebox: 15 Minutes
@@ -77,9 +78,6 @@ Some of our work is very technical, but can be public, such as our encryption pr
   * Team member with Conch has Voice, everyone else is Muted
 
 
-   
-
-
 ##Developing
 
 We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches. We use GitHub for hosting our git repositories.
@@ -87,7 +85,7 @@ We always use source code control. It's like a time machine. We can work in para
 ###Version Control
 We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches. We use GitHub for hosting our git repositories.
 
-###Playbook edit process
+###Playbook edit proces
 Open at issue at [issue link]
 
 The Title of the issue should be a proposed change to this playbook
@@ -100,12 +98,6 @@ The team will review the edits and come to a consensus on it.
 
 
 
-
-###License
+###License⧸⧸
 This Playbook is a CC BY-NC 3.0 work by Society Pro,
 derived from the original work by http://playbook.thoughtbot.com/ under the terms of its Creative Commons Attribution-NonCommercial license
-
-========================================
-
-
-
