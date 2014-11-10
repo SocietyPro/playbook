@@ -10,6 +10,7 @@ Developer Usage
 You first need npm and nodejs.
 
 ### Build the Playbook:
+
 ```
 npm install -g marked jade
 cd src
@@ -21,4 +22,4 @@ jade playbook.jade
 
 ### Add Jade code that loads the markdown into a template 
 In general you will add a line like: `include:md teamwork/test.md`
-See also: [jade reference](), [markdown reference]()
+See also: [jade reference](http://jade-lang.com/api/), [markdown reference](http://daringfireball.net/projects/markdown/syntax)
