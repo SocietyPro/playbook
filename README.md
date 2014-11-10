@@ -12,9 +12,11 @@ You first need npm and nodejs.
 ### Build the Playbook:
 
 ```
-npm install -g marked jade
-cd src
-jade playbook.jade
+npm install -g grunt grunt-cli
+cd playbook
+npm install
+grunt bower:install
+grunt
 ```
 
 ### Edit or add Markdown under the src directory
