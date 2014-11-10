@@ -1,0 +1,14 @@
+{
+  "name": "playbook",
+  "description": "Scripts and content to build the SoPro Playbook",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SocietyPro/playbook.git"
+  },
+  "dependencies": {
+    "sopro-material": "https://github.com/sopro-components/sopro-material.git#0.1.6",
+    "roboto": "https://github.com/sopro-components/roboto.git#0.1.0"
+  },
+  "devDependencies": {}
+}
