@@ -1,124 +1,101 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Playbook by SocietyPro</title>
+    <title>SocietyPro Playbook</title>
+    <link rel="stylesheet" href="assets/playbook.css">
+    <link rel="stylesheet" href="bower_components/sopro-material/angular-material.css">
+    <script src="//localhost:35729/livereload.js" type="text/javascript"></script>
   </head>
+  <body><h1 id="society-super-pro-super-playbook">Society<super>PRO</super> Playbook</h1>
+<h1 id="playbook">PLAYBOOK</h1>
+<p>[TOC]</p>
+<h2 id="hello">Hello</h2>
+<p>You work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.</p>
+<p>It&#39;s filled with things we&#39;ve learned based on our own experience and study of others&#39; experiences.</p>
+<p>Some of our work is very technical, but can be public, such as our encryption protocols or git policy. Look in our public <a href="https://github.com/SocietyPro/Playbook/guides">https://github.com/SocietyPro/Playbook/guides</a> GitHub repo folder for that kind of information.</p>
+<h1 id="scrum">Scrum</h1>
+<h3 id="schedules">Schedules</h3>
+<ul>
+<li>Scrum Master: klaus</li>
+<li>Product Owner: Hiro</li>
+<li>Core Team: Voodoo, Plato, Jorge and Gilberto</li>
+<li>Daily Scrum: 10:45am / 5:00pm (Offset team)</li>
+<li>Sprint Length: 1 Week</li>
+<li>Sprint Start: Monday</li>
+<li>Sprint Review / Retrospective: Mondays 10:45am</li>
+</ul>
+<h3 id="weekly-sprint-review">Weekly Sprint Review</h3>
+<ul>
+<li>Agenda: Show what was Accomplished, assess against the Sprint Goal.</li>
+<li>Timebox per Dev: 10 minutes</li>
+<li>Timebox goal of meeting:  45 Minutes (Timebox per dev has priority over full timebox goal)</li>
+<li>Concise crisp updates: Short focused on task at hand.</li>
+<li>Developer with conch has voice</li>
+</ul>
+<h2 id="sprint-retrospective-meeting">Sprint Retrospective Meeting</h2>
+<ul>
+<li>Agenda: Team and process self reflection - each team member identifies things the team should: Start, Stop or Continue Doing</li>
+<li>Timebox per Dev: 5 minutes</li>
+<li>Timebox goal of meeting: 30 Minutes</li>
+<li>Developer with conch has voice</li>
+</ul>
+<h2 id="sprint-poker-planning">Sprint / Poker Planning</h2>
+<ul>
+<li>Desired Outcome: Estimate the difficulty of the stories backlogged for the upcoming sprint &amp; Determine Sprint Goal or Forecast</li>
+<li>Product owner reads the story, team estimates difficulty</li>
+<li>Meeting timebox: 30 minutes</li>
+<li>If all stories cannot be estimated within 30 minutes, the meeting ends after 30 minutes, and the team can take a break and have another meeting shortly after.</li>
+<li>Per-story Timer: 2 minutes plus 1 overflow minute per story</li>
+<li>If a story cannot be estimated in time, the chairman (usually the Scrum Master) moves the team on to the next story. Handle these inestimable stories at the end of the meeting.<ul>
+<li>Difficulty rules of thumb: (as per wiki)</li>
+<li>0: Trivial</li>
+<li>1: Easy</li>
+<li>2: Fairly Easy</li>
+<li>3: Average (a day or more);</li>
+<li>5: Hard (multiple days)</li>
+<li>8: Epic (many days. Break this up.)</li>
+</ul>
+</li>
+</ul>
+<h2 id="default-meeting-rules">Default Meeting Rules</h2>
+<ul>
+<li>All meetings of Society Pro stakeholders follow these rules by default. They can be overriden by meeting-specific rules, or if the meeting’s participants agree to use other rules.</li>
+<li>The default timebox is 15 minutes.</li>
+<li>The “Conch” marks the person who is allowed to talk at any given time.</li>
+<li>Every meeting has a chairman.</li>
+<li>No one except the chairman of the meeting can interrupt or talk over the Conch-Holder.</li>
+<li>The chairman of the meeting decides the topics of discussion and has the authority to grant or revoke the Conch. He is responsible for preventing the meeting from exceeding the timebox.</li>
+<li>If he is present at a Scrum meeting, the Scrum Master is the chairman of the meeting.</li>
+<li>At non-Scrum meetings, the chairman is the team member who called the meeting. This chairman is responsible for telling the team the meeting’s agenda at the beginning of the meeting.</li>
+<li>If neither the Product Owner or Scrum Master are present, the meeting participants can choose a chairman for the meeting, or simply rely on their politeness to get things done without any chairman.</li>
+<li>Participants who do not have the conch, who want to bring something up, should write down the thought on a notecard to bring up at an appropriate time.</li>
+</ul>
+<h2 id="daily-scrum-meeting">Daily Scrum Meeting</h2>
+<ul>
+<li>Desired Outcome: Communication Vehicle for Team Members</li>
+<li>Meeting Timebox: 15 Minutes</li>
+<li>Individual Developer Update Timebox: 3 minutes</li>
+<li>No discussions in the meeting, take them up after the meeting.</li>
+<li>Concise crisp updates: Short focused on task at hand.</li>
+<li>Team member with Conch has Voice, everyone else is Muted</li>
+</ul>
+<h2 id="developing">Developing</h2>
+<p>We always use source code control. It&#39;s like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It&#39;s fast and great for working in branches. We use GitHub for hosting our git repositories.</p>
+<h3 id="version-control">Version Control</h3>
+<p>We always use source code control. It&#39;s like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It&#39;s fast and great for working in branches. We use GitHub for hosting our git repositories.</p>
+<h3 id="playbook-edit-proces">Playbook edit proces</h3>
+<p>Open at issue at [issue link]</p>
+<p>The Title of the issue should be a proposed change to this playbook
+The Description of the issue should be in the format of:
+&quot;As an X, I want Y, So that Z&quot;
+Documentation supporting your change
+Any alternative solutions you have considered or that should be mentioned.
+Any other background, context or related info.
+The team will review the edits and come to a consensus on it.</p>
+<h3 id="license-">License⧸⧸</h3>
+<p>This Playbook is a CC BY-NC 3.0 work by Society Pro,
+derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a> under the terms of its Creative Commons Attribution-NonCommercial license</p>
+<p>This Playbook is a CC BY-NC 3.0 work by <a href="http://societypro.github.io">Society Pro</a>,<br>derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a>,<br>under the terms of its Creative Commons Attribution-NonCommercial license.</p>
 
-  <body>
-    <a id="forkme_banner" href="https://github.com/SocietyPro/playbook">View on GitHub</a>
-    <div class="shell">
-
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>SocietyPro </h1>
-            <h2>Developer Playbook</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/SocietyPro/playbook/zipball/master" class="zip"><em>download</em> .ZIP</a>
-          <a href="https://github.com/SocietyPro/playbook/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
-      <!--
-      -->
-      <span class="banner-fix"></span>
-
-      <section id="main_content">
-        <hr>
-        <article id="intro" class="markdown-body entry-content" itemprop="mainContentOfPage">
-
-          <h1>
-          <a id="user-content-hello" class="anchor" href="#intro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hello
-          </h1>
-
-          <p>You work on SocietyPro. This is your playbook. It details how you and your teammates try and run our software development project. And how we make our products together. It is a living document that you can edit in a private GitHub repo.</p>
-
-          <p>It's filled with things we've learned based on our own experience and study of others' experiences.</p>
-
-          <p>Some of our work is very technical, but can be public, such as our encryption protocols or git policy. Look in our public <a href="https://github.com/SocietyPro/Playbook/guides">https://github.com/SocietyPro/Playbook/guides</a> GitHub repo folder for that kind of information.</p>
-        </article>
-        <article id="toc" class="markdown-body">
-          <h1>
-          <a id="welcome-to-github-pages" class="anchor" href="#toc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of Contents
-          </h1>
-          <ul>
-            <li><a href="#developing">Developing</a>
-            </li>
-          </ul>
-
-          <h2>
-          <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developing
-          </h2>
-
-          <p>We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong.
-
-          Git is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches.
-
-          We use GitHub for hosting our git repositories.
-          </p>
-        
-
-          <h3>
-          <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version Control
-          </h3>
-
-          <p>We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong.
-
-          Git is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches.
-
-          We use GitHub for hosting our git repositories.
-          </p>
-        
-          <h3>
-            <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Playbook edit process
-          </h3>
-
-          <p>
-            Open at issue at [issue link]
-            <ul>
-              <li>The Title of the issue should be a proposed change to this playbook</li>
-              <li>The Description of the issue should be in the format of:<br>
-              <ul>
-                <li>"As an X, I want Y, So that Z"</li>
-                <li>Documentation supporting your change</li>
-                <li>Any alternative solutions you have considered or that should be mentioned.</li>
-                <li>Any other background, context or related info.</li>
-              </ul>
-              <li>The team will review the edits and come to a consensus on it.</li>
-              </li>
-            </ul>
-          </p>
-
-
-          <h3>
-          <a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
-
-          <p>This Playbook is a CC BY-NC 3.0 work by <a href="http://societypro.github.io">Society Pro</a>,<br>
-          derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a> under the terms of its Creative Commons Attribution-NonCommercial license</p>
-        </article>
-      </section>
-    </div>
   </body>
 </html>
