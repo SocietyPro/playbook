@@ -15,7 +15,7 @@ It's filled with things we've learned based on our own experience and study of o
 Some of our work is very technical, but can be public, such as our encryption protocols or git policy. Look in our public https://github.com/SocietyPro/Playbook/guides GitHub repo folder for that kind of information.
 
 
- - Developing⧸⧸##Scrum
+#Scrum
 
 ### Schedules
 
