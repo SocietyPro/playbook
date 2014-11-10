@@ -20,31 +20,29 @@ module.exports = function(grunt) {
       pull: {
         command: 'pull origin stackedit',
         options: {
+          cwd: '..',
           stdout: true,
           stderr: true
         },
       },
     },
     watch: {
-      
       jade: {
-        options: {
-          livereload: true,
-          spawn: true
-        },
-        files: ['src/*.md', 'src/**/*.md'],
-        tasks: ['jade:compile']
-      },
-      all:{
-        files: ['src/*.md', 'src/**/*.md', 'src/assets/*.css'],
+        files: ['markdown/**/*.md'],
         tasks: ['jade:compile'],
         options: {
           livereload: true,
           spawn: true
         },
-      }
-
-      
+      },
+      all:{
+        files: ['markdown/**/*.md', 'assets/**/*.css'],
+        tasks: ['jade:compile'],
+        options: {
+          livereload: true,
+          spawn: true
+        },
+      },
     },
     jade: {
       compile: {
@@ -56,7 +54,7 @@ module.exports = function(grunt) {
         },
         files: {
           //"src/playbook.html": "src/playbook.jade"
-          "src/playbook.html": ["src/playbook.jade"]
+          "../index.html": ["./index.jade"]
         }        
 
       },
