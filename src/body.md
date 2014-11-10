@@ -1,16 +1,21 @@
 #PLAYBOOK
 
+## Hello there
+
+You work on SocietyPro.
+
 [TOC]
 
 ## Hello
 
-You work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development team and how we make our products together. It is a living document that you can edit in a private GitHub repo.
+You work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.
 
 It's filled with things we've learned based on our own experience and study of others' experiences.
 
 Some of our work is very technical, but can be public, such as our encryption protocols or git policy. Look in our public https://github.com/SocietyPro/Playbook/guides GitHub repo folder for that kind of information.
 
-##Scrum
+
+ - Developing⧸⧸##Scrum
 
 ### Schedules
 
@@ -77,7 +82,7 @@ Some of our work is very technical, but can be public, such as our encryption pr
   * Team member with Conch has Voice, everyone else is Muted
 
 
-   
+   ⧸⧸
 
 
 ##Developing
@@ -87,7 +92,7 @@ We always use source code control. It's like a time machine. We can work in para
 ###Version Control
 We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches. We use GitHub for hosting our git repositories.
 
-###Playbook edit process
+###Playbook edit ⧸⧸process0⧸⧸process⧸⧸
 Open at issue at [issue link]
 
 The Title of the issue should be a proposed change to this playbook
@@ -98,14 +103,9 @@ Any alternative solutions you have considered or that should be mentioned.
 Any other background, context or related info.
 The team will review the edits and come to a consensus on it.
 
+⧸⧸###License⧸⧸
 
 
-
-###License
+###License⧸⧸
 This Playbook is a CC BY-NC 3.0 work by Society Pro,
 derived from the original work by http://playbook.thoughtbot.com/ under the terms of its Creative Commons Attribution-NonCommercial license
-
-========================================
-
-
-
