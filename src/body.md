@@ -1,9 +1,5 @@
 #PLAYBOOK
 
-## Hello there
-
-You work on SocietyPro.
-
 [TOC]
 
 ## Hello
