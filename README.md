@@ -14,9 +14,12 @@ You first need npm and nodejs.
 ```
 npm install -g grunt grunt-cli
 cd playbook
+git checkout stackedit
 npm install
 grunt bower:install
 grunt
+http-server
+firefox localhost:8080/src/playbook.html
 ```
 
 ### Edit or add Markdown under the src directory
