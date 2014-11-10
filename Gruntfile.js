@@ -16,13 +16,33 @@ module.exports = function(grunt) {
         }
       },
     },
+    gta: {
+      pull: {
+        command: 'pull origin stackedit',
+        options: {
+          stdout: true,
+          stderr: true
+        },
+      },
+    },
     watch: {
       
       jade: {
+        options: {
+          livereload: true,
+          spawn: true
+        },
         files: ['src/*.md', 'src/**/*.md'],
         tasks: ['jade:compile']
       },
-      
+      all:{
+        files: ['src/*.md', 'src/**/*.md', 'src/assets/*.css'],
+        tasks: ['jade:compile'],
+        options: {
+          livereload: true,
+          spawn: true
+        },
+      }
 
       
     },
@@ -42,51 +62,22 @@ module.exports = function(grunt) {
       },
     },
   });
-          /*
-        src: "playbook.jade",
-        dest: "./"
-
-        files: {
-          "src/playbook.html": "src/playbook.jade"
-          "src/playbook.html": ["src/playbook.jade"]
-        }
-          */
-        /*
-        files: [
-          {
-            cwd: 'src',
-            src: 'playbook.jade',
-            dest: '.',
-            expand: true,
-            ext: '.html'
-          },
-        ],
-        */
-
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-git-them-all');
   //grunt.loadNpmTasks('grunt-jade');
 
   // Default task.
-  /*
   grunt.registerTask('default', [
+    'gta:pull',
+    'jade:compile',
+    'watch:all'
+  ]);
+
+  grunt.registerTask('bower-install', [
     'bower:install',
-    'jade:compile',
-    'watch:jade'
-  ]);
-  */
-
-  // watch task.
-  grunt.registerTask('watch-jade', [
-    'jade:compile',
-    'watch:jade',
-  ]);
-
-  // Compile task.
-  grunt.registerTask('compile-jade', [
-    'jade:compile',
   ]);
 };

@@ -2,3 +2,7 @@ body {  width: 100%;  }
 @media screen and (min-width: 800px){
   body {  width: 800px;  }
 }
+
+body{
+background-color: #22aadd;
+}
