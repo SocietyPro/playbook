@@ -6,3 +6,7 @@ body {  width: 100%;  }
 body{
   background-color: #22aadd;
 }
+
+#main{
+  overflow-y: scroll;
+}
