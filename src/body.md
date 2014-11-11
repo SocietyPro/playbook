@@ -10,33 +10,51 @@ It's filled with things we've learned based on our own experience and study of o
 
 Some of our work is very technical, but can be public, such as our encryption protocols or git policy. Look in our public https://github.com/SocietyPro/Playbook/guides GitHub repo folder for that kind of information.
 
+#Productivity
 
-#Scrum
+##Pomodoros
 
-### Schedules
+We like to use a time boxing technique called Pomodoros.  A nice webapp timer we recommend is: http://tomatoi.st/mkni
+
+Here is the technique in general:
+
+1) Pick a task to do
+2) Start the timer with a 25 minute countdown
+3) Work on this task without interruptions
+4) If you get an interruption, restart the timer
+5) After the timer ends, mark an X next to the task
+6) Force yourself to take a 5 minute break: go for walk, stretch, get mind off work.
+7) Repeat 4 times. After the 4th pomodoro, take a forced 30 minute break.
+
+# Development
+
+## Scrum Team Information
 
 * Scrum Master: klaus
 * Product Owner: Hiro
-* Core Team: Voodoo, Plato, Jorge and Gilberto
+* Core Team: Voodoo, Plato, Jorge and Gilberto, Jonathan
 * Daily Scrum: 10:45am / 5:00pm (Offset team)
 * Sprint Length: 1 Week
 * Sprint Start: Monday
 * Sprint Review / Retrospective: Mondays 10:45am
 
-### Weekly Sprint Review
+## Weekly Sprint Review
  
-  * Agenda: Show what was Accomplished, assess against the Sprint Goal.
-  * Timebox per Dev: 10 minutes
-  * Timebox goal of meeting:  45 Minutes (Timebox per dev has priority over full timebox goal)
-  * Concise crisp updates: Short focused on task at hand.
-  * Developer with conch has voice
+ * When: Every Monday 10:45am
+ * Agenda: Show what was Accomplished, assess against the Sprint Goal.
+ * Timebox per Dev: 10 minutes
+ * Timebox goal of meeting:  45 Minutes (Timebox per dev has priority over full timebox goal)
+ * Concise crisp updates: Short focused on task at hand.
+ * Developer with conch has voice
 
-##Sprint Retrospective Meeting
+## Weekly Sprint Retrospective Meeting
 
+  * When: Every Monday 11:45am following break after Weekly Sprint Review
   * Agenda: Team and process self reflection - each team member identifies things the team should: Start, Stop or Continue Doing
   * Timebox per Dev: 5 minutes
   * Timebox goal of meeting: 30 Minutes
   * Developer with conch has voice
+
 
 ##Sprint / Poker Planning
  
@@ -68,24 +86,10 @@ Some of our work is very technical, but can be public, such as our encryption pr
   * If neither the Product Owner or Scrum Master are present, the meeting participants can choose a chairman for the meeting, or simply rely on their politeness to get things done without any chairman.
   * Participants who do not have the conch, who want to bring something up, should write down the thought on a notecard to bring up at an appropriate time.
 
-##Daily Scrum Meeting
-
-  * Desired Outcome: Communication Vehicle for Team Members
-  * Meeting Timebox: 15 Minutes
-  * Individual Developer Update Timebox: 3 minutes
-  * No discussions in the meeting, take them up after the meeting.
-  * Concise crisp updates: Short focused on task at hand.
-  * Team member with Conch has Voice, everyone else is Muted
-
-
-##Developing
-
+##Version Control
 We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches. We use GitHub for hosting our git repositories.
 
-###Version Control
-We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches. We use GitHub for hosting our git repositories.
-
-###Playbook edit proces
+##Playbook edit proces
 Open at issue at [issue link]
 
 The Title of the issue should be a proposed change to this playbook
