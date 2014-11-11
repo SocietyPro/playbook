@@ -15,27 +15,25 @@
     <script src="assets/playbook.js" type="text/javascript"></script>
   </head>
   <body layout="horizontal" ng-controller="playbookCtrl" layout-fill>
-    <md-sidenav>
+    <md-sidenav component-id="left" is-locked-open="false" class="md-sidenav-left md-whiteframe-z2">
       <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools">Sidenav Left</h1>
+        <h1 ng-click="close()" class="md-toolbar-tools">Table of Contents</h1>
       </md-toolbar>
       <md-content ng-controller="LeftCtrl" class="md-padding">
-        <md-button ng-click="close()" hide-md class="md-primary">Close Sidenav Left</md-button>
-        <p hide show-md>
-          <This>sidenav is locked open on your device. To go back to the default behavior,</This>
-          <narrow>your display.</narrow>
-        </p>
+        <section id="toc"> 
+          <div class="toc"><ul><li><a href="#a-markdown-card">A Markdown Card</a></li><li><a href="#hello">Hello</a></li><li><a href="#pomodoros">Pomodoros</a></li><li><a href="#scrum-team-information">Scrum Team Information</a></li><li><a href="#weekly-sprint-review">Weekly Sprint Review</a></li><li><a href="#weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></li><li><a href="#sprint-poker-planning">Sprint / Poker Planning</a></li><li><a href="#default-meeting-rules">Default Meeting Rules</a></li><li><a href="#version-control">Version Control</a></li><li><a href="#playbook-edit-process">Playbook edit process</a></li><li><a href="#license">License</a></li></ul></div>
+        </section>
       </md-content>
     </md-sidenav>
     <div id="main" layout="vertical" layout-fill>
-      <md-toolbar class="md-theme-indigo"><h2 id="society-super-pro-super-playbook">Society<super>PRO</super> Playbook</h2>
-
-      </md-toolbar>
+      <md-toolbar class="md-theme-indigo"><span layout="horizontal" class="md-toolbar-tools">
+          <md-button ng-click="toggleLeft()" flex="20" class="md-raised">TOC</md-button><span flex="60" offset="20" id="playbookTitle">Society<super>PRO</super> Playbook</span></span></md-toolbar>
       <md-content flex>
         <div id="innerContent">
-          <h1>Hello Team!</h1>
-          <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1">
-            <md-card><h2 id="a-markdown-card">A Markdown Card</h2>
+          <section id="playbook">
+            <h1>Hello Team!</h1>
+            <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1">
+              <md-card flex><h2 id="a-markdown-card"><a href="#a-markdown-card" name="a-markdown-card">A Markdown Card</a></h2>
 <p>This card is written in markdown.<br>It&#39;s a standalone file.</p>
 <ul>
 <li>With</li>
@@ -43,17 +41,17 @@
 <li><strong>List!</strong></li>
 </ul>
 <meta name="sort-order" value="100">
-            </md-card>
-            <md-card><p><strong>X</strong>treme<br><strong>P</strong>rogramming<br><strong>TEAM</strong></p>
+              </md-card>
+              <md-card flex><p><strong>X</strong>treme<br><strong>P</strong>rogramming<br><strong>TEAM</strong></p>
 
-            </md-card>
-            <md-card><p>These cards made with <strong>angular-material</strong>,<br><strong>Markdown</strong>, <strong>Jade</strong>, and <strong>Grunt</strong><br>for <em>fast</em> and <em>flexible</em> <strong>material design prototyping</strong>.</p>
+              </md-card>
+              <md-card flex><p>These cards made with <strong>angular-material</strong>,<br><strong>Markdown</strong>, <strong>Jade</strong>, and <strong>Grunt</strong><br>for <em>fast</em> and <em>flexible</em> <strong>material design prototyping</strong>.</p>
 
-            </md-card>
-          </md-whiteframe>
-          <h1>The code for the above cards:</h1>
-          <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1">
-            <pre><code>h1 Hello Team!
+              </md-card>
+            </md-whiteframe>
+            <h1>The code for the above cards:</h1>
+            <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1">
+              <pre><code>h1 Hello Team!
   md-whiteframe.md-whiteframe-z1(layout, layout-align="center center")
     md-card
       include:md ../markdown/card-demo.md
@@ -67,14 +65,14 @@
         These cards made with **angular-material**,  
         **Markdown**, **Jade**, and **Grunt**  
         for *fast* and *flexible* **material design prototyping**.</code></pre>
-          </md-whiteframe><h1 id="playbook">PLAYBOOK</h1>
+            </md-whiteframe><h1 id="playbook">PLAYBOOK</h1>
 <p>[TOC]</p>
-<h2 id="hello">Hello</h2>
+<h2 id="hello"><a href="#hello" name="hello">Hello</a></h2>
 <p>You work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.</p>
 <p>It&#39;s filled with things we&#39;ve learned based on our own experience and study of others&#39; experiences.</p>
 <p>Some of our work is very technical, but can be public, such as our encryption protocols or git policy. Look in our public <a href="https://github.com/SocietyPro/Playbook/guides">https://github.com/SocietyPro/Playbook/guides</a> GitHub repo folder for that kind of information.</p>
 <h1 id="productivity">Productivity</h1>
-<h2 id="pomodoros">Pomodoros</h2>
+<h2 id="pomodoros"><a href="#pomodoros" name="pomodoros">Pomodoros</a></h2>
 <p>We like to use a time boxing technique called Pomodoros.  A nice webapp timer we recommend is: <a href="http://tomatoi.st/mkni">http://tomatoi.st/mkni</a></p>
 <p>Here is the technique in general:</p>
 <p>1) Pick a task to do
@@ -85,7 +83,7 @@
 6) Force yourself to take a 5 minute break: go for walk, stretch, get mind off work.
 7) Repeat 4 times. After the 4th pomodoro, take a forced 30 minute break.</p>
 <h1 id="agile-development">Agile Development</h1>
-<h2 id="scrum-team-information">Scrum Team Information</h2>
+<h2 id="scrum-team-information"><a href="#scrum-team-information" name="scrum-team-information">Scrum Team Information</a></h2>
 <ul>
 <li>Scrum Master: klaus</li>
 <li>Product Owner: Hiro</li>
@@ -95,7 +93,7 @@
 <li>Sprint Start: Monday</li>
 <li>Sprint Review / Retrospective: Mondays 10:45am</li>
 </ul>
-<h2 id="weekly-sprint-review">Weekly Sprint Review</h2>
+<h2 id="weekly-sprint-review"><a href="#weekly-sprint-review" name="weekly-sprint-review">Weekly Sprint Review</a></h2>
 <ul>
 <li>When: Every Monday 10:45am</li>
 <li>Agenda: Show what was Accomplished, assess against the Sprint Goal.</li>
@@ -104,7 +102,7 @@
 <li>Concise crisp updates: Short focused on task at hand.</li>
 <li>Developer with conch has voice</li>
 </ul>
-<h2 id="weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</h2>
+<h2 id="weekly-sprint-retrospective-meeting"><a href="#weekly-sprint-retrospective-meeting" name="weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></h2>
 <ul>
 <li>When: Every Monday 11:45am following break after Weekly Sprint Review</li>
 <li>Agenda: Team and process self reflection - each team member identifies things the team should: Start, Stop or Continue Doing</li>
@@ -112,7 +110,7 @@
 <li>Timebox goal of meeting: 30 Minutes</li>
 <li>Developer with conch has voice</li>
 </ul>
-<h2 id="sprint-poker-planning">Sprint / Poker Planning</h2>
+<h2 id="sprint-poker-planning"><a href="#sprint-poker-planning" name="sprint-poker-planning">Sprint / Poker Planning</a></h2>
 <ul>
 <li>Desired Outcome: Estimate the difficulty of the stories backlogged for the upcoming sprint &amp; Determine Sprint Goal or Forecast</li>
 <li>Product owner reads the story, team estimates difficulty</li>
@@ -130,7 +128,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="default-meeting-rules">Default Meeting Rules</h2>
+<h2 id="default-meeting-rules"><a href="#default-meeting-rules" name="default-meeting-rules">Default Meeting Rules</a></h2>
 <ul>
 <li>All meetings of Society Pro stakeholders follow these rules by default. They can be overriden by meeting-specific rules, or if the meeting’s participants agree to use other rules.</li>
 <li>The default timebox is 15 minutes.</li>
@@ -144,9 +142,9 @@
 <li>Participants who do not have the conch, who want to bring something up, should write down the thought on a notecard to bring up at an appropriate time.</li>
 </ul>
 <h1 id="development">Development</h1>
-<h2 id="version-control">Version Control</h2>
+<h2 id="version-control"><a href="#version-control" name="version-control">Version Control</a></h2>
 <p>We always use source code control. It&#39;s like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It&#39;s fast and great for working in branches. We use GitHub for hosting our git repositories.</p>
-<h2 id="playbook-edit-process">Playbook edit process</h2>
+<h2 id="playbook-edit-process"><a href="#playbook-edit-process" name="playbook-edit-process">Playbook edit process</a></h2>
 <p>Open at issue at [issue link]</p>
 <p>The Title of the issue should be a proposed change to this playbook
 The Description of the issue should be in the format of:
@@ -155,11 +153,12 @@ Documentation supporting your change
 Any alternative solutions you have considered or that should be mentioned.
 Any other background, context or related info.
 The team will review the edits and come to a consensus on it.</p>
-<h2 id="license">License</h2>
+<h2 id="license"><a href="#license" name="license">License</a></h2>
 <p>This Playbook is a CC BY-NC 3.0 work by Society Pro,
 derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a> under the terms of its Creative Commons Attribution-NonCommercial license</p>
 <p>This Playbook is a CC BY-NC 3.0 work by <a href="http://societypro.github.io">Society Pro</a>,<br>derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a>,<br>under the terms of its Creative Commons Attribution-NonCommercial license.</p>
 
+          </section>
         </div>
       </md-content>
     </div>

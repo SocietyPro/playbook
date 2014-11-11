@@ -14,20 +14,30 @@ html(ng-app="playbookModule" layout-fill)
     script(src="bower_components/angular-material/angular-material.js", type="text/javascript")
     script(src="assets/playbook.js", type="text/javascript")
   body(layout="horizontal", ng-controller="playbookCtrl" layout-fill)
-    md-sidenav
+    md-sidenav.md-sidenav-left.md-whiteframe-z2(
+      component-id="left",
+      is-locked-open="false",
+    )
       md-toolbar.md-theme-indigo
-        h1.md-toolbar-tools Sidenav Left
+        h1.md-toolbar-tools(
+          ng-click="close()", 
+        ) Table of Contents
       md-content.md-padding(ng-controller="LeftCtrl")
-        md-button(ng-click="close()", class="md-primary", hide-md) Close Sidenav Left
-        p(hide show-md)
-          This sidenav is locked open on your device. To go back to the default behavior,
-          narrow your display.
+        section#toc 
+          // TOC 
     div#main(layout="vertical" layout-fill)
       md-toolbar.md-theme-indigo
-        include:md markdown/header.md
+        span.md-toolbar-tools(layout="horizontal")
+          md-button(
+            ng-click="toggleLeft()",
+            flex="20",
+            class="md-raised"
+          ) TOC
+          span(flex="60", offset="20", id="playbookTitle") Society<super>PRO</super> Playbook
       md-content(flex)
         div#innerContent
-          include jade/demo-cards.jade
-          include jade/demo-card-2.jade
-          include:md markdown/body.md
-          include:md markdown/footer.md
+          section#playbook
+            include jade/demo-cards.jade
+            include jade/demo-card-2.jade
+            include:md markdown/body.md
+            include:md markdown/footer.md

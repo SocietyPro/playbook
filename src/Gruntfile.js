@@ -37,7 +37,7 @@ module.exports = function(grunt) {
       },
       all:{
         files: ['./**/*.jade', 'markdown/**/*.md', 'assets/**/*'],
-        tasks: ['jade:compile', 'copy:assets'],
+        tasks: ['jade:compile', 'maketoc', 'copy:assets'],
         options: {
           livereload: true,
           spawn: true
@@ -83,11 +83,23 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-git-them-all');
   //grunt.loadNpmTasks('grunt-jade');
 
+  grunt.task.registerTask('maketoc', 'Build the TOC', function() {
+    // var done = this.async(); // if we need to asynchronously tell grunt success/fail
+    var toc = require('toc');
+    var fs = require('fs');
+    var generatedIndex = fs.readFileSync('../index.html', 'utf8');
+    var indexWithTOC = toc.process(generatedIndex); // looks for /<!--\s*toc\s*-->/gi
+    grunt.log.writeln('generated toc');
+    fs.writeFileSync('../index.html', indexWithTOC, {encoding:'utf8'});
+    return true;
+  });
+
   // Default task.
   grunt.registerTask('default', [
     'gta:pull',
     'bower:install',
     'jade:compile',
+    'maketoc',
     'copy:bower',
     'copy:assets',
     'watch:all'
@@ -98,3 +110,4 @@ module.exports = function(grunt) {
   ]);
 */
 };
+

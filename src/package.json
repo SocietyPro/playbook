@@ -18,7 +18,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-git-them-all": "0.0.12",
     "grunt-jade": "^0.5.1",
-    "marked": "^0.3.2"
+    "marked": "^0.3.2",
+    "toc": "^0.4.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
