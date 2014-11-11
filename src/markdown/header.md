@@ -1,2 +1,1 @@
-Society<super>PRO</super> Playbook
-========
+##Society<super>PRO</super> Playbook

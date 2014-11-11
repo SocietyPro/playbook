@@ -1,12 +1,20 @@
-body {  width: 100%;  }
-@media screen and (min-width: 800px){
-  body {  
-  }
-}
+
 body{
   background-color: #22aadd;
 }
 
-#main{
-  overflow-y: scroll;
+#main > md-content {
+  width: 100%;  
+
+}
+@media screen and (min-width: 800px){
+  #main #innerContent {
+    width: 800px;  
+    margin: auto;
+  }
+}
+
+#main md-whiteframe {
+  margin-left: 16px;
+  margin-right: 16px;
 }

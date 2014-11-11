@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         },
       },
       all:{
-        files: ['index.jade', 'markdown/**/*.md', 'assets/**/*'],
+        files: ['./**/*.jade', 'markdown/**/*.md', 'assets/**/*'],
         tasks: ['jade:compile', 'copy:assets'],
         options: {
           livereload: true,

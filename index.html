@@ -27,11 +27,47 @@
         </p>
       </md-content>
     </md-sidenav>
-    <div id="main" layout="vertical">
-      <md-content>
-        <md-toolbar class="md-theme-indigo"><h1 id="society-super-pro-super-playbook">Society<super>PRO</super> Playbook</h1>
+    <div id="main" layout="vertical" layout-fill>
+      <md-toolbar class="md-theme-indigo"><h2 id="society-super-pro-super-playbook">Society<super>PRO</super> Playbook</h2>
 
-        </md-toolbar><h1 id="playbook">PLAYBOOK</h1>
+      </md-toolbar>
+      <md-content flex>
+        <div id="innerContent">
+          <h1>Hello Team!</h1>
+          <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1">
+            <md-card><h2 id="a-markdown-card">A Markdown Card</h2>
+<p>This card is written in markdown.<br>It&#39;s a standalone file.</p>
+<ul>
+<li>With</li>
+<li>A</li>
+<li><strong>List!</strong></li>
+</ul>
+<meta name="sort-order" value="100">
+            </md-card>
+            <md-card><p><strong>X</strong>treme<br><strong>P</strong>rogramming<br><strong>TEAM</strong></p>
+
+            </md-card>
+            <md-card><p>These cards made with <strong>angular-material</strong>,<br><strong>Markdown</strong>, <strong>Jade</strong>, and <strong>Grunt</strong><br>for <em>fast</em> and <em>flexible</em> <strong>material design prototyping</strong>.</p>
+
+            </md-card>
+          </md-whiteframe>
+          <h1>The code for the above cards:</h1>
+          <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1">
+            <pre><code>h1 Hello Team!
+  md-whiteframe.md-whiteframe-z1(layout, layout-align="center center")
+    md-card
+      include:md ../markdown/card-demo.md
+    md-card
+      :markdown
+        **X**treme  
+        **P**rogramming  
+        **TEAM**
+    md-card
+      :markdown
+        These cards made with **angular-material**,  
+        **Markdown**, **Jade**, and **Grunt**  
+        for *fast* and *flexible* **material design prototyping**.</code></pre>
+          </md-whiteframe><h1 id="playbook">PLAYBOOK</h1>
 <p>[TOC]</p>
 <h2 id="hello">Hello</h2>
 <p>You work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.</p>
@@ -124,6 +160,7 @@ The team will review the edits and come to a consensus on it.</p>
 derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a> under the terms of its Creative Commons Attribution-NonCommercial license</p>
 <p>This Playbook is a CC BY-NC 3.0 work by <a href="http://societypro.github.io">Society Pro</a>,<br>derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a>,<br>under the terms of its Creative Commons Attribution-NonCommercial license.</p>
 
+        </div>
       </md-content>
     </div>
   </body>

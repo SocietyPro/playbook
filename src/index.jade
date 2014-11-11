@@ -22,9 +22,12 @@ html(ng-app="playbookModule" layout-fill)
         p(hide show-md)
           This sidenav is locked open on your device. To go back to the default behavior,
           narrow your display.
-    div#main(layout="vertical")
-      md-content
-        md-toolbar.md-theme-indigo
-          include:md markdown/header.md
-        include:md markdown/body.md
-        include:md markdown/footer.md
+    div#main(layout="vertical" layout-fill)
+      md-toolbar.md-theme-indigo
+        include:md markdown/header.md
+      md-content(flex)
+        div#innerContent
+          include jade/demo-cards.jade
+          include jade/demo-card-2.jade
+          include:md markdown/body.md
+          include:md markdown/footer.md
