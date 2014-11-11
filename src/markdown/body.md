@@ -26,7 +26,7 @@ Here is the technique in general:
 6) Force yourself to take a 5 minute break: go for walk, stretch, get mind off work.
 7) Repeat 4 times. After the 4th pomodoro, take a forced 30 minute break.
 
-# Development
+# Agile Development
 
 ## Scrum Team Information
 
@@ -85,6 +85,9 @@ Here is the technique in general:
   * At non-Scrum meetings, the chairman is the team member who called the meeting. This chairman is responsible for telling the team the meeting’s agenda at the beginning of the meeting.
   * If neither the Product Owner or Scrum Master are present, the meeting participants can choose a chairman for the meeting, or simply rely on their politeness to get things done without any chairman.
   * Participants who do not have the conch, who want to bring something up, should write down the thought on a notecard to bring up at an appropriate time.
+
+#Development
+
 
 ##Version Control
 We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches. We use GitHub for hosting our git repositories.
