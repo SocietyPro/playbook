@@ -89,7 +89,7 @@ Here is the technique in general:
 ##Version Control
 We always use source code control. It's like a time machine. We can work in parallel universes of our source code, experimenting without fear of losing work. Roll back if something goes wrong. Git is an open source source code control system written by Linus Torvalds. It's fast and great for working in branches. We use GitHub for hosting our git repositories.
 
-##Playbook edit proces
+##Playbook edit process
 Open at issue at [issue link]
 
 The Title of the issue should be a proposed change to this playbook
@@ -102,6 +102,6 @@ The team will review the edits and come to a consensus on it.
 
 
 
-###License⧸⧸
+##License
 This Playbook is a CC BY-NC 3.0 work by Society Pro,
 derived from the original work by http://playbook.thoughtbot.com/ under the terms of its Creative Commons Attribution-NonCommercial license
