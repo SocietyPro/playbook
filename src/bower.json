@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "roboto": "https://github.com/sopro-components/roboto.git#0.1.0",
-    "angular-material": "angular/bower-material#0.5.1"
+    "angular-material": "angular/bower-material#0.5.1",
+    "jquery": "2.x"
   },
   "devDependencies": {}
 }

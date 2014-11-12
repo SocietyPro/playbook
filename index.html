@@ -2,11 +2,13 @@
 <html ng-app="playbookModule" layout-fill>
   <head>
     <title>SocietyPro Playbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/playbook.css">
     <link rel="stylesheet" href="bower_components/sopro-material/css/angular-material.css">
     <link rel="stylesheet" href="bower_components/angular-material/themes/indigo-theme.css">
     <link rel="stylesheet" href="bower_components/roboto/2014/roboto-woff.css">
     <script src="//localhost:35729/livereload.js" type="text/javascript"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
     <script src="bower_components/hammerjs/hammer.min.js" type="text/javascript"></script>
     <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js" type="text/javascript"></script>
@@ -15,7 +17,7 @@
     <script src="assets/playbook.js" type="text/javascript"></script>
   </head>
   <body layout="horizontal" ng-controller="playbookCtrl" layout-fill>
-    <md-sidenav component-id="left" is-locked-open="false" class="md-sidenav-left md-whiteframe-z2">
+    <md-sidenav id="leftSideNav" component-id="left" is-locked-open="false" class="md-sidenav-left md-whiteframe-z2">
       <md-toolbar class="md-theme-indigo">
         <h1 ng-click="close()" class="md-toolbar-tools">Table of Contents</h1>
       </md-toolbar>
