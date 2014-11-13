@@ -76,3 +76,5 @@ Here is the technique in general:
     * 3: Average (a day or more);
    (Usually the Scrum Master) Moves the team on to the Next Story Handle THESE Inestimable Stories at the end of the Meeting .. * Difficulty Rules of thumb: (as per Wiki) * 0: Trivial * 1: Easy * 2: Fairly Easy * 3: Average (a Day or more); * 5: Hard (multiple days)
     * 8: Epic (many days. Break this up.)
+
+hello
