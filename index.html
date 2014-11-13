@@ -18,12 +18,12 @@
   </head>
   <body layout="horizontal" ng-controller="playbookCtrl" layout-fill>
     <md-sidenav id="leftSideNav" component-id="left" is-locked-open="false" class="md-sidenav-left md-whiteframe-z2">
-      <md-toolbar class="md-theme-indigo">
-        <h1 ng-click="close()" class="md-toolbar-tools">Table of Contents</h1>
+      <md-toolbar ng-click="toggleLeft()" class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Table of Contents</h1>
       </md-toolbar>
       <md-content ng-controller="LeftCtrl" class="md-padding">
         <section id="toc"> 
-          <div class="toc"><ul><li><a href="#a-markdown-card">A Markdown Card</a></li><li><a href="#pomodoros">Pomodoros</a></li><li><a href="#scrum-team-information">Scrum Team Information</a></li><li><a href="#weekly-sprint-review">Weekly Sprint Review</a></li><li><a href="#weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></li><li><a href="#sprint-poker-planning">Sprint / Poker Planning</a></li></ul></div>
+          <div class="toc"><ul><li><a href="#commits">Commits</a></li><li><a href="#branches">Branches</a><ul><li><a href="#master">master</a></li><li><a href="#dev">dev</a></li><li><a href="#xp-dev">xp-dev</a></li><li><a href="#roatan-dev">roatan-dev</a></li></ul></li><li><a href="#syncing-branches">Syncing Branches</a></li><li><a href="#a-markdown-card">A Markdown Card</a></li><li><a href="#pomodoros">Pomodoros</a></li><li><a href="#scrum-team-information">Scrum Team Information</a></li><li><a href="#weekly-sprint-review">Weekly Sprint Review</a></li><li><a href="#weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></li><li><a href="#sprint-poker-planning">Sprint / Poker Planning</a></li></ul></div>
         </section>
       </md-content>
     </md-sidenav>
@@ -33,8 +33,68 @@
       <md-content flex>
         <div id="innerContent">
           <section id="playbook">
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="git-tools-and-policies">Git Tools and Policies</h1>
+<h2 id="commits"><a href="#commits" name="commits">Commits</a></h2>
+<h2 id="branches"><a href="#branches" name="branches">Branches</a></h2>
+<p>Every branch has an owner and a commit policy. The owner decides the commit policy.</p>
+<h3 id="-master-"><a href="#master" name="master"><strong>master</strong></a></h3>
+<p>This branch is the public face of the Society Pro project.</p>
+<ul>
+<li>Owner:<br>Hiro</li>
+<li>Commit Policy:<br>The <strong>master</strong> branch contains only &quot;releasable&quot; code that builds and passes all tests on Windows, Linux, and Mac.<br>The only commits to <code>master</code> should be merge commits from <code>xp-dev</code> or <code>xp-roatan</code>.<br>Releasable means that a customer could run into the room as soon as the commit happens, say &quot;Great! Let&#39;s go live now!&quot;, and nobody in the team will say &quot;no, but wait&quot;.</li>
+</ul>
+<h3 id="-dev-"><a href="#dev" name="dev"><strong>dev</strong></a></h3>
+<p>Currently under discussion</p>
+<h3 id="-xp-dev-"><a href="#xp-dev" name="xp-dev"><strong>xp-dev</strong></a></h3>
+<p>This branch is the staging point for sharing code between XP Squad Developers.</p>
+<ul>
+<li>Owner:<br>Jorge</li>
+<li>Commit Policy:<br>Code must have comments, placed before the code block.<br>Code must have tests.</li>
+</ul>
+<h3 id="-roatan-dev-"><a href="#roatan-dev" name="roatan-dev"><strong>roatan-dev</strong></a></h3>
+<p>This branch is the staging point for sharing code between XP Squad Developers.</p>
+<ul>
+<li>Owner:<br>Dan</li>
+<li>Commit Policy:<br>TBD</li>
+</ul>
+<h2 id="syncing-branches"><a href="#syncing-branches" name="syncing-branches">Syncing Branches</a></h2>
+<p>Since our project has multiple teams, we need a way to sync the different code we write.
+This strategy encourages frequent commits and easy merge resolutions:</p>
+<ul>
+<li>Every commit to <code>master</code> should be either a merge commit from <code>xp-dev</code> or a merge commit from <code>roatan-dev</code>.</li>
+<li>On every commit to master, every team and team member is responsible for rebasing their branches with the new code. The sooner you resync your branch, the fewer conflicts you&#39;ll have.</li>
+<li>Thus, if X commits a feature to master before Y, it is Y&#39;s responsibility to include X&#39;s new feature in all future commits that are merged from Y&#39;s development branch to master.</li>
+</ul>
+<p><img src="assets/images/multi-team-sourcecontrol.gif"/></p>
+<p>Example code:</p>
+<pre><code>$ ## XP Squad develops a new features:
+$ git checkout xp-dev
+$ git echo &quot;conflicting change&quot; &gt; README.md
+$ git commit -m &quot;Change readme&quot;
+
+$ ## After all builds and tests green, XP Squad deploys the feature to master:
+$ git checkout master
+$ git merge xp-dev
+$ git push
+
+$ ## Roatan Team begins development: 
+$ git checkout roatan-dev
+$ git echo &quot;new code&quot; &gt;&gt; ICrypto.cpp
+$ git commit -m &quot;ICrypto changes&quot;
+
+$ ## Roatan Team notices a new feature since their last master commit and updates roatan-dev branch:
+$ git fetch origin
+$ git rebase origin/master
+
+$ ## Roatan Team resolves any merge conflicts
+$ ## Roatan Team completes their feature, gets green builds and tests, deploys to master
+$ git checkout master
+$ git merge roatan-dev
+$ git push
+</code></pre>
+            </md-whiteframe>
             <h1>Hello Team!</h1>
-            <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1">
+            <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1 card-frame">
               <md-card flex><h2 id="a-markdown-card"><a href="#a-markdown-card" name="a-markdown-card">A Markdown Card</a></h2>
 <p>This card is written in markdown.<br>It&#39;s a standalone file.</p>
 <ul>
@@ -52,7 +112,7 @@
               </md-card>
             </md-whiteframe>
             <h1>The code for the above cards:</h1>
-            <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1">
+            <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1 card-frame">
               <pre><code>h1 Hello Team!
   md-whiteframe.md-whiteframe-z1(layout, layout-align="center center")
     md-card
@@ -67,7 +127,8 @@
         These cards made with **angular-material**,  
         **Markdown**, **Jade**, and **Grunt**  
         for *fast* and *flexible* **material design prototyping**.</code></pre>
-            </md-whiteframe><p>⧸⧸#PLAYBOOK</p>
+            </md-whiteframe>
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><p>⧸⧸#PLAYBOOK</p>
 <p>[TOC] </p>
 <h1 id="-hello"># Hello</h1>
 <p>You Work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.  It&#39;s filled with things we&#39;ve learned based on our own experience and study of others&#39; experiences.</p>
@@ -140,7 +201,8 @@
 </ul>
 </li>
 </ul>
-<p>This Playbook is a CC BY-NC 3.0 work by <a href="http://societypro.github.io">Society Pro</a>,<br>derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a>,<br>under the terms of its Creative Commons Attribution-NonCommercial license.</p>
+
+            </md-whiteframe><p>This Playbook is a CC BY-NC 3.0 work by <a href="http://societypro.github.io">Society Pro</a>,<br>derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a>,<br>under the terms of its Creative Commons Attribution-NonCommercial license.</p>
 
           </section>
         </div>
