@@ -1,9 +1,9 @@
-#PLAYBOOK
+⧸⧸#PLAYBOOK
 
 
 [TOC] 
 
-## Hello 
+# # Hello 
 
 You Work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.  It's filled with things we've learned based on our own experience and study of others' experiences.
 
@@ -77,4 +77,5 @@ Here is the technique in general:
    (Usually the Scrum Master) Moves the team on to the Next Story Handle THESE Inestimable Stories at the end of the Meeting .. * Difficulty Rules of thumb: (as per Wiki) * 0: Trivial * 1: Easy * 2: Fairly Easy * 3: Average (a Day or more); * 5: Hard (multiple days)
     * 8: Epic (many days. Break this up.)
 
-hello
+
+
