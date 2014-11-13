@@ -1,20 +1,15 @@
 ⧸⧸#PLAYBOOK
 
-[TOC]
-
-## Hello
-
-You work⧸⧸# playbook 
 
 [TOC] 
 
 # # Hello 
 
-You Work⧸⧸ on the XP-Squad SocietyPro Development ⧸⧸Team . This is⧸⧸Team. This IS⧸⧸ your playbook. It details ⧸⧸how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.⧸⧸How you and your Teammates try and run Our software Development Project. And team and How we make Our ​​Products Together. It IS a living That document you CAN edit in a Private GitHub repo. ⧸⧸
+You Work on the XP-Squad SocietyPro Development ⧸⧸Team . This is⧸⧸Team. This IS⧸⧸ your playbook. It details ⧸⧸how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.⧸⧸How you and your Teammates try and run Our software Development Project. And team and How we make Our ​​Products Together. It IS a living That document you CAN edit in a Private GitHub repo. ⧸⧸
 
-It's filled with things we've ⧸⧸learned based on our own experience and study of others' experiences.
+It's filled with things we've learned based on our own experience and study of others' experiences.
 
-Some of our work is⧸⧸Learned based on Our own experience and Study of Others' experiences. 
+Some of our work is Learned based on Our own experience and Study of Others' experiences. 
 
 Some of Our Work IS⧸⧸ very technical, but ⧸⧸can be public, such as our⧸⧸CAN BE public, SUCH as Our⧸⧸ encryption protocols or git policy. Look in ⧸⧸our public https://github.com/SocietyPro/Playbook/guides⧸⧸Our public Https://Github.Com/SocietyPro/Playbook/guides⧸⧸ GitHub repo folder for ⧸⧸that kind of information.
 
