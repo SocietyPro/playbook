@@ -5,36 +5,25 @@
 
 # # Hello 
 
-You Work on the XP-Squad SocietyPro Development ⧸⧸Team . This is⧸⧸Team. This IS⧸⧸ your playbook. It details ⧸⧸how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.⧸⧸How you and your Teammates try and run Our software Development Project. And team and How we make Our ​​Products Together. It IS a living That document you CAN edit in a Private GitHub repo. ⧸⧸
+You Work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.  It's filled with things we've learned based on our own experience and study of others' experiences.
 
-It's filled with things we've learned based on our own experience and study of others' experiences.
-
-Some of our work is Learned based on Our own experience and Study of Others' experiences. 
-
-Some of Our Work IS⧸⧸ very technical, but ⧸⧸can be public, such as our⧸⧸CAN BE public, SUCH as Our⧸⧸ encryption protocols or git policy. Look in ⧸⧸our public https://github.com/SocietyPro/Playbook/guides⧸⧸Our public Https://Github.Com/SocietyPro/Playbook/guides⧸⧸ GitHub repo folder for ⧸⧸that kind of information.
-
-#Productivity
-
-##Pomodoros⧸⧸That kind of information. 
+Some of Our Work IS very technical, but can be public, such as our encryption protocols or git policy. Look in our public https://Github.Com/SocietyPro/Playbook/guides/ GitHub repo folder for that kind of information.
 
 # Productivity 
 
-# # pomodoros ⧸⧸
+## Pomodoros 
 
-We like to use a time ⧸⧸boxing technique called Pomodoros.  A nice⧸⧸Boxing technique called pomodoros A Nice⧸⧸ webapp timer we recommend ⧸⧸is: http://tomatoi.st/mkni
+We like to use a time boxing technique called Pomodoros.  A nice time boxing technique called pomodoros A Nice webapp timer we recommend is: http://tomatoi.st/mkni
 
 Here is the technique in general:
 
-1) Pick a task to do⧸⧸IS:. Http://Tomatoi.St/mkni
-
- Here IS the technique in general: 
-
-1) Pick a task to do ⧸⧸
-2) Start the timer with a 25 minute ⧸⧸countdown⧸⧸Countdown ⧸⧸
-3) Work on this task without ⧸⧸interruptions
-4) If you get an interruption, restart the timer⧸⧸interruptions 
-4) If you Get an Interruption, restart the timer ⧸⧸
-5) After the timer ends, mark an X ⧸⧸next to the task
+1) Pick a task to do
+1) Pick a task to do 
+2) Start the timer with a 25 minute countdown Countdown 
+3) Work on this task without interruptions
+4) If you get an interruption, restart the timer interruptions 
+4) If you Get an Interruption, restart the timer 
+5) After the timer ends, mark an X next to the task
 6) Force yourself to take a 5 minute break: go for walk, stretch, get mind off work.
 7) Repeat 4 times. After the 4th pomodoro, take a forced 30 minute break.
 
@@ -42,42 +31,27 @@ Here is the technique in general:
 
 ## Scrum Team Information
 
-* Scrum Master: klaus
-* Product Owner: Hiro⧸⧸Next to the task 
-6) Force Yourself to Take a 5 minute break:. Go for Walk, Stretch, Get mind off Work 
-. 7) Repeat 4 times After the 4th Pomodoro, Take a forced 30 minute break. 
-
-# SCRUM Process 
-
-# # Scrum Team Information 
-
 * Scrum Master: klaus 
-* Product Owner: Hiro ⧸⧸
-* Core Team: Voodoo, Plato, Jorge and Gilberto, ⧸⧸Jonathan
+* Product Owner: Hiro 
+* Core Team: Voodoo, Plato, Jorge and Gilberto, Jonathan
 * Daily Scrum: 10:45am / 5:00pm (Offset team)
 * Sprint Length: 1 Week
-* Sprint Start: Monday⧸⧸Jonathan 
+* Sprint Start: Monday 
 * Daily Scrum: 10: 45 am / 5 O'Clock pm (Offset team) 
 * Sprint Length: 1 Week 
-* Sprint Start: Monday ⧸⧸
-* Sprint Review / Retrospective: Mondays ⧸⧸10:45am
+* Sprint Start: Monday 
+* Sprint Review / Retrospective: Mondays 10:45am
 
 ## Weekly Sprint Review
  
- * When: Every Monday 10:45am
-⧸⧸ten Forty-Five am 
-
-# # Weekly Sprint Review 
- 
-* - - - - - - - - - - - When :. Every Monday ten Forty- Five am⧸⧸ * Agenda: Show what ⧸⧸was Accomplished, assess against the Sprint Goal.
-⧸⧸WAS Accomplished, Assess Against the Sprint Goal⧸⧸ * Timebox per Dev: 10 ⧸⧸minutes
- * Timebox goal of meeting:  45 Minutes (Timebox per dev has priority over full timebox goal)
- * Concise crisp updates:⧸⧸minutes * Timebox goal of Meeting: 45 minutes (Timebox per dev HAS priority over full Timebox goal) * Concise CRISP updates :.⧸⧸ Short focused on task at ⧸⧸hand.
-⧸⧸hand⧸⧸ * Developer with conch ⧸⧸has voice
-
-##⧸⧸HAS voice 
-
-
+* When: Every Monday 10:45am
+* Agenda: Show what was Accomplished, assess against the Sprint Goal.
+* Timebox per Dev: 10 minutes
+* Timebox goal of meeting:  45 Minutes (Timebox per dev has priority over full timebox goal)
+* Concise crisp updates: minutes 
+* Timebox goal of Meeting: 45 minutes (Timebox per dev HAS priority over full Timebox goal) 
+* Concise CRISP updates: Short focused on task at hand.
+* Developer with conch has voice
 
 
 
@@ -231,23 +205,23 @@ the team Will⧸⧸ review the edits and come to a ⧸⧸consensus on it.
 
 ##License
 This Playbook is a CC BY-NC 3.0 work by Society Pro,
-derived from the original work by http://playbook.thoughtbot.com/⧸⧸Consensus on it. 
+derived from the original work by http://playbook.thoughtbot.com/Consensus on it. 
 
 
 
 # # License 
 This Playbook IS a CC BY-NC 3.0 Work by Society Pro, 
-derived from the Original Work by Http://Playbook.Thoughtbot.Com/⧸⧸ under the terms of its Creative Commons Attribution-NonCommercial ⧸⧸license⧸⧸⧸⧸License 
+derived from the Original Work by Http://Playbook.Thoughtbot.Com/ under the terms of its Creative Commons Attribution-NonCommercial License 
 
 # the version Control pattern 
 
 # # Branch owner & policy 
 
->             ** Rule: ** . Each Branch (even the trunk) HAS an owner and a policy 
+>  ** Rule: ** . Each Branch (even the trunk) HAS an owner and a policy 
 
 # # The "Done" concept 
 
->             ** assumption :. * *⧸⧸license⧸⧸
+>  ** assumption :. * *⧸⧸license⧸⧸
 
 # Goals
 * Fail fast
