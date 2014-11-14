@@ -93,6 +93,28 @@ $ git merge roatan-dev
 $ git push
 </code></pre>
             </md-whiteframe>
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="automated-testing">Automated Testing</h1>
+<ul>
+<li>Fast builds <ul>
+<li>unit/integration tests, runs in less than 5 minutes</li>
+<li>notification is sent to the team lead and to developers having committed changes.</li>
+</ul>
+</li>
+<li>Slow builds <ul>
+<li>acceptance test builds, run after the fast builds </li>
+<li>notification is sent to team lead, testers, and developers having committed changes.</li>
+</ul>
+</li>
+<li>Nightly builds <ul>
+<li>QA metrics, performance tests, and so on</li>
+<li>only run if the other builds work</li>
+<li>status available to all team members</li>
+<li>these provide a snapshot picture of project health before the daily scrum meeting.</li>
+</ul>
+</li>
+</ul>
+
+            </md-whiteframe>
             <h1>Hello Team!</h1>
             <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1 card-frame">
               <md-card flex><h2 id="a-markdown-card"><a href="#a-markdown-card" name="a-markdown-card">A Markdown Card</a></h2>
