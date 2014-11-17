@@ -61,7 +61,21 @@ module.exports = function(grunt) {
       bower: {
         files: [
           // includes files within path and its sub-directories
-          {expand: true, src: ['bower_components/**'], dest: '../'},
+          {
+            expand: true, 
+            src: [
+              'bower_components/angular/angular.min.js',
+              'bower_components/angular-material/angular-material.min.js',
+              'bower_components/angular-material/angular-material.min.css',
+              'bower_components/angular-animate/angular-animate.min.js',
+              'bower_components/angular-aria/angular-aria.min.js',
+              'bower_components/angular-material/themes/**/*',
+              'bower_components/hammerjs/hammer.min.js',
+              'bower_components/roboto/**/*',
+              'bower_components/jquery/dist/jquery.min.js',
+            ], 
+            dest: '../'
+          },
 
           // flattens results to a single level
           // {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},
