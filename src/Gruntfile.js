@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     },
     gta: {
       pull: {
-        command: 'pull origin stackedit',
+        command: 'pull origin gh-pages',
         options: {
           cwd: '..',
           stdout: true,
