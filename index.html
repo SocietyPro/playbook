@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html ng-app="playbookModule" layout-fill>
+  <head>
+    <title>SocietyPro Playbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/playbook.css">
+    <link rel="stylesheet" href="bower_components/sopro-material/css/angular-material.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/indigo-theme.css">
+    <link rel="stylesheet" href="bower_components/roboto/2014/roboto-woff.css">
+    <script src="//localhost:35729/livereload.js" type="text/javascript"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="bower_components/hammerjs/hammer.min.js" type="text/javascript"></script>
+    <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js" type="text/javascript"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js" type="text/javascript"></script>
+    <script src="bower_components/angular-material/angular-material.js" type="text/javascript"></script>
+    <script src="assets/playbook.js" type="text/javascript"></script>
+  </head>
+  <body layout="horizontal" ng-controller="playbookCtrl" layout-fill>
+    <md-sidenav id="leftSideNav" component-id="left" is-locked-open="false" class="md-sidenav-left md-whiteframe-z2">
+      <md-toolbar ng-click="toggleLeft()" class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Table of Contents</h1>
+      </md-toolbar>
+      <md-content ng-controller="LeftCtrl" class="md-padding">
+        <section id="toc"> 
+          <div class="toc"><ul><li><a href="#commits">Commits</a></li><li><a href="#branches">Branches</a><ul><li><a href="#master">master</a></li><li><a href="#dev">dev</a></li><li><a href="#xp-dev">xp-dev</a></li><li><a href="#roatan-dev">roatan-dev</a></li></ul></li><li><a href="#syncing-branches">Syncing Branches</a></li><li><a href="#task-get-the-most-recent-submodules-from-github">TASK: Get the most recent submodules from github</a></li><li><a href="#task-add-a-new-child-submodule-to-a-parent-project">TASK: Add a new child submodule to a parent project</a></li><li><a href="#task-change-an-existing-submodule-child-repo-to-point-to-a-new-commit">TASK: Change an EXISTING submodule (child repo) to point to a new  commit</a></li><li><a href="#a-markdown-card">A Markdown Card</a></li><li><a href="#pomodoros">Pomodoros</a></li><li><a href="#scrum-team-information">Scrum Team Information</a></li><li><a href="#weekly-sprint-review">Weekly Sprint Review</a></li><li><a href="#weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></li><li><a href="#sprint-poker-planning">Sprint / Poker Planning</a></li></ul></div>
+        </section>
+      </md-content>
+    </md-sidenav>
+    <div id="main" layout="vertical" layout-fill>
+      <md-toolbar class="md-theme-indigo"><span layout="horizontal" class="md-toolbar-tools">
+          <md-button ng-click="toggleLeft()" flex="20" class="md-raised">TOC</md-button><span flex="60" offset="20" id="playbookTitle">Society<super>PRO</super> Playbook</span></span></md-toolbar>
+      <md-content flex>
+        <div id="innerContent">
+          <section id="playbook">
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="git-tools-and-policies">Git Tools and Policies</h1>
+<h2 id="commits"><a href="#commits" name="commits">Commits</a></h2>
+<h2 id="branches"><a href="#branches" name="branches">Branches</a></h2>
+<p>Every branch has an owner and a commit policy. The owner decides the commit policy.</p>
+<h3 id="-master-"><a href="#master" name="master"><strong>master</strong></a></h3>
+<p>This branch is the public face of the Society Pro project.</p>
+<ul>
+<li>Owner:<br>Hiro</li>
+<li>Commit Policy:<br>The <strong>master</strong> branch contains only &quot;releasable&quot; code that builds and passes all tests on Windows, Linux, and Mac.<br>The only commits to <code>master</code> should be merge commits from <code>xp-dev</code> or <code>xp-roatan</code>.<br>Releasable means that a customer could run into the room as soon as the commit happens, say &quot;Great! Let&#39;s go live now!&quot;, and nobody in the team will say &quot;no, but wait&quot;.</li>
+</ul>
+<h3 id="-dev-"><a href="#dev" name="dev"><strong>dev</strong></a></h3>
+<p>Currently under discussion</p>
+<h3 id="-xp-dev-"><a href="#xp-dev" name="xp-dev"><strong>xp-dev</strong></a></h3>
+<p>This branch is the staging point for sharing code between XP Squad Developers.</p>
+<ul>
+<li>Owner:<br>Jorge</li>
+<li>Commit Policy:<br>Code must have comments, placed before the code block.<br>Code must have tests.</li>
+</ul>
+<h3 id="-roatan-dev-"><a href="#roatan-dev" name="roatan-dev"><strong>roatan-dev</strong></a></h3>
+<p>This branch is the staging point for sharing code between XP Squad Developers.</p>
+<ul>
+<li>Owner:<br>Dan</li>
+<li>Commit Policy:<br>TBD</li>
+</ul>
+<h2 id="syncing-branches"><a href="#syncing-branches" name="syncing-branches">Syncing Branches</a></h2>
+<p>Since our project has multiple teams, we need a way to sync the different code we write.
+This strategy encourages frequent commits and easy merge resolutions:</p>
+<ul>
+<li>Every commit to <code>master</code> should be either a merge commit from <code>xp-dev</code> or a merge commit from <code>roatan-dev</code>.</li>
+<li>On every commit to master, every team and team member is responsible for rebasing their branches with the new code. The sooner you resync your branch, the fewer conflicts you&#39;ll have.</li>
+<li>Thus, if X commits a feature to master before Y, it is Y&#39;s responsibility to include X&#39;s new feature in all future commits that are merged from Y&#39;s development branch to master.</li>
+</ul>
+<p><img src="assets/images/multi-team-sourcecontrol.gif"/></p>
+<p>Example code:</p>
+<pre><code>$ ## XP Squad develops a new features:
+$ git checkout xp-dev
+$ git echo &quot;conflicting change&quot; &gt; README.md
+$ git commit -m &quot;Change readme&quot;
+
+$ ## After all builds and tests green, XP Squad deploys the feature to master:
+$ git checkout master
+$ git merge xp-dev
+$ git push
+
+$ ## Roatan Team begins development: 
+$ git checkout roatan-dev
+$ git echo &quot;new code&quot; &gt;&gt; ICrypto.cpp
+$ git commit -m &quot;ICrypto changes&quot;
+
+$ ## Roatan Team notices a new feature since their last master commit and updates roatan-dev branch:
+$ git fetch origin
+$ git rebase origin/master
+
+$ ## Roatan Team resolves any merge conflicts
+$ ## Roatan Team completes their feature, gets green builds and tests, deploys to master
+$ git checkout master
+$ git merge roatan-dev
+$ git push
+</code></pre>
+            </md-whiteframe>
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="git-submodules">Git Submodules</h1>
+<p>A &#39;submodule&#39; is a reference, stored in a parent repo, pointing at a specific commit of the child repo.</p>
+<h2 id="task-get-the-most-recent-submodules-from-github"><a href="#task-get-the-most-recent-submodules-from-github" name="task-get-the-most-recent-submodules-from-github">TASK: Get the most recent submodules from github</a></h2>
+<pre><code>   Start in root:
+0. cd /c/dev/sopro/Cambrian-src
+
+   Get the latest parent code:
+1. git checkout dev-guanaja
+2. git pull origin dev-guanaja
+
+   Update all the submodules to the commits specified in `git submodule status`:
+3. git submodule update --init --recursive
+</code></pre><h2 id="task-add-a-new-child-submodule-to-a-parent-project"><a href="#task-add-a-new-child-submodule-to-a-parent-project" name="task-add-a-new-child-submodule-to-a-parent-project">TASK: Add a new child submodule to a parent project</a></h2>
+<pre><code>   Start in root:
+0. cd /c/dev/sopro/Cambrian-src
+
+   Get the latest parent code:
+1. git checkout dev-guanaja
+   git pull origin dev-guanaja
+
+   Confirm that you do not have the new child submodule yet:
+2. git submodule status
+
+   Add the NEW submodule:
+3. git submodule add https://github.com/SocietyPro/html5-chat-log.git
+
+   Verify the parent project knows about the new submodule:
+4. git status 
+   &gt;&gt; &quot;new file:   html5-chat-log&quot;
+   git submodule status
+   &gt;&gt; &quot; 34160ab391bcddecdb02a6f5c548846e49e21155 html5-chat-log (heads/master)&quot;
+
+Caution! By default a submodule points at head/master. 
+This means that whenever you check out the submodule you&#39;ll get the latest version.
+Many times, this risks breaking your or someone else&#39;s future development.
+It&#39;s usually better to lock in a specific commit of the submodule. You can change it later.
+
+   Choose what commit of the child repo you want to include in the parent:
+5. cd html5-chat-log          # Change to submodule directory
+   git log -n 1               # See commit history
+   git checkout 34160ab391    # specify by commit hash
+                              # or,
+   git checkout 0.2.0         # specify by commit tag
+
+   Change from the child folder to the parent folder:
+6. cd ..       
+
+   Add the new submodule reference to the commit staging area:
+7. git add .gitmodules html5-chat-log
+
+   Commit the new submodule reference into the PARENT repo:
+8. git commit -m &#39;Added html5-chat-log at latest master&#39;
+</code></pre><h2 id="task-change-an-existing-submodule-child-repo-to-point-to-a-new-commit"><a href="#task-change-an-existing-submodule-child-repo-to-point-to-a-new-commit" name="task-change-an-existing-submodule-child-repo-to-point-to-a-new-commit">TASK: Change an EXISTING submodule (child repo) to point to a new  commit</a></h2>
+<pre><code>   Start in root:
+0. cd /c/dev/sopro/Cambrian-src
+
+   Confirm that you DO have the child submodule already:
+1. git submodule status
+
+   Update all the submodules to the commits specified in `git submodule status`:
+2. git submodule update --init --recursive
+
+   Change to the submodule directory:
+3. cd html5-chat-log
+
+   Find your desired new commit:
+4. git log   
+
+   Checkout whatever commit you&#39;d like to have in the parent repo:
+5. git checkout 0.2.0
+
+   Change from the child folder to the parent folder:
+6. cd ..
+
+   Add the new submodule reference to the commit staging area:
+7. git add .gitmodules html5-chat-log
+
+   COMMIT the change into the parent repo:
+8. git commit -m &#39;Use new version 0.2.0 of html5-chat-log&#39;
+</code></pre>
+            </md-whiteframe>
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="automated-testing">Automated Testing</h1>
+<ul>
+<li>Fast builds <ul>
+<li>unit/integration tests, runs in less than 5 minutes</li>
+<li>notification is sent to the team lead and to developers having committed changes.</li>
+</ul>
+</li>
+<li>Slow builds <ul>
+<li>acceptance test builds, run after the fast builds </li>
+<li>notification is sent to team lead, testers, and developers having committed changes.</li>
+</ul>
+</li>
+<li>Nightly builds <ul>
+<li>QA metrics, performance tests, and so on</li>
+<li>only run if the other builds work</li>
+<li>status available to all team members</li>
+<li>these provide a snapshot picture of project health before the daily scrum meeting.</li>
+</ul>
+</li>
+</ul>
+
+            </md-whiteframe>
+            <h1>Hello Team!</h1>
+            <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1 card-frame">
+              <md-card flex><h2 id="a-markdown-card"><a href="#a-markdown-card" name="a-markdown-card">A Markdown Card</a></h2>
+<p>This card is written in markdown.<br>It&#39;s a standalone file.</p>
+<ul>
+<li>With</li>
+<li>A</li>
+<li><strong>List!</strong></li>
+</ul>
+<meta name="sort-order" value="100">
+              </md-card>
+              <md-card flex><p><strong>X</strong>treme<br><strong>P</strong>rogramming<br><strong>TEAM</strong></p>
+
+              </md-card>
+              <md-card flex><p>These cards made with <strong>angular-material</strong>,<br><strong>Markdown</strong>, <strong>Jade</strong>, and <strong>Grunt</strong><br>for <em>fast</em> and <em>flexible</em> <strong>material design prototyping</strong>.</p>
+
+              </md-card>
+            </md-whiteframe>
+            <h1>The code for the above cards:</h1>
+            <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1 card-frame">
+              <pre><code>h1 Hello Team!
+  md-whiteframe.md-whiteframe-z1(layout, layout-align="center center")
+    md-card
+      include:md ../markdown/card-demo.md
+    md-card
+      :markdown
+        **X**treme  
+        **P**rogramming  
+        **TEAM**
+    md-card
+      :markdown
+        These cards made with **angular-material**,  
+        **Markdown**, **Jade**, and **Grunt**  
+        for *fast* and *flexible* **material design prototyping**.</code></pre>
+            </md-whiteframe>
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><p>⧸⧸#PLAYBOOK</p>
+<p>[TOC] </p>
+<h1 id="-hello"># Hello</h1>
+<p>You Work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.  It&#39;s filled with things we&#39;ve learned based on our own experience and study of others&#39; experiences.</p>
+<p>Some of Our Work IS very technical, but can be public, such as our encryption protocols or git policy. Look in our public <a href="https://Github.Com/SocietyPro/Playbook/guides/">https://Github.Com/SocietyPro/Playbook/guides/</a> GitHub repo folder for that kind of information.</p>
+<h1 id="productivity">Productivity</h1>
+<h2 id="pomodoros"><a href="#pomodoros" name="pomodoros">Pomodoros</a></h2>
+<p>We like to use a time boxing technique called Pomodoros.  A nice time boxing technique called pomodoros A Nice webapp timer we recommend is: <a href="http://tomatoi.st/mkni">http://tomatoi.st/mkni</a></p>
+<p>Here is the technique in general:</p>
+<p>1) Pick a task to do
+1) Pick a task to do 
+2) Start the timer with a 25 minute countdown Countdown 
+3) Work on this task without interruptions
+4) If you get an interruption, restart the timer interruptions 
+4) If you Get an Interruption, restart the timer 
+5) After the timer ends, mark an X next to the task
+6) Force yourself to take a 5 minute break: go for walk, stretch, get mind off work.
+7) Repeat 4 times. After the 4th pomodoro, take a forced 30 minute break.</p>
+<h1 id="scrum-process">SCRUM Process</h1>
+<h2 id="scrum-team-information"><a href="#scrum-team-information" name="scrum-team-information">Scrum Team Information</a></h2>
+<ul>
+<li>Scrum Master: klaus </li>
+<li>Product Owner: Hiro </li>
+<li>Core Team: Voodoo, Plato, Jorge and Gilberto, Jonathan</li>
+<li>Daily Scrum: 10:45am / 5:00pm (Offset team)</li>
+<li>Sprint Length: 1 Week</li>
+<li>Sprint Start: Monday </li>
+<li>Daily Scrum: 10: 45 am / 5 O&#39;Clock pm (Offset team) </li>
+<li>Sprint Length: 1 Week </li>
+<li>Sprint Start: Monday </li>
+<li>Sprint Review / Retrospective: Mondays 10:45am</li>
+</ul>
+<h2 id="weekly-sprint-review"><a href="#weekly-sprint-review" name="weekly-sprint-review">Weekly Sprint Review</a></h2>
+<ul>
+<li>When: Every Monday 10:45am</li>
+<li>Agenda: Show what was Accomplished, assess against the Sprint Goal.</li>
+<li>Timebox per Dev: 10 minutes</li>
+<li>Timebox goal of meeting:  45 Minutes (Timebox per dev has priority over full timebox goal)</li>
+<li>Concise crisp updates: minutes </li>
+<li>Timebox goal of Meeting: 45 minutes (Timebox per dev HAS priority over full Timebox goal) </li>
+<li>Concise CRISP updates: Short focused on task at hand.</li>
+<li>Developer with conch has voice</li>
+</ul>
+<h2 id="weekly-sprint-retrospective-meeting"><a href="#weekly-sprint-retrospective-meeting" name="weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></h2>
+<ul>
+<li>When: Every Monday 11:45am following break after Weekly Sprint</li>
+<li>Agenda: Team and process self reflection - each team member identifies things the team should: Start, Stop or Continue Doing</li>
+<li>Timebox per Dev: 5 minutes</li>
+<li>Timebox goal of meeting: 30 Minutes<ul>
+<li>Developer with conch has voice</li>
+</ul>
+</li>
+</ul>
+<h2 id="sprint-poker-planning"><a href="#sprint-poker-planning" name="sprint-poker-planning">Sprint / Poker Planning</a></h2>
+<ul>
+<li>Desired Outcome: Estimate the difficulty of the stories backlogged for the upcoming sprint &amp; Determine Sprint Goal or Forecast<ul>
+<li>Product owner reads the story, team estimates difficulty</li>
+<li>Meeting timebox: 30 minutes</li>
+<li>If all stories cannot be estimated in 30 minutes the meeting ends and the team can take a break and have another meeting shortly after.</li>
+<li>Per-story Timer: 2 minutes plus + 1 overflow minute per story</li>
+<li>If a story cannot be estimated in time, the chairman (usually the Scrum Master) moves the team on to the next story. Handle these inestimable stories at the end of the meeting.<ul>
+<li>Difficulty rules of thumb: (as per wiki)</li>
+<li>0: Trivial</li>
+<li>1: Easy</li>
+<li>2: Fairly Easy</li>
+<li>3: Average (a day or more);
+(Usually the Scrum Master) Moves the team on to the Next Story Handle THESE Inestimable Stories at the end of the Meeting .. <em> Difficulty Rules of thumb: (as per Wiki) </em> 0: Trivial <em> 1: Easy </em> 2: Fairly Easy <em> 3: Average (a Day or more); </em> 5: Hard (multiple days)</li>
+<li>8: Epic (many days. Break this up.)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </md-whiteframe><p>This Playbook is a CC BY-NC 3.0 work by <a href="http://societypro.github.io">Society Pro</a>,<br>derived from the original work by <a href="http://playbook.thoughtbot.com/">http://playbook.thoughtbot.com/</a>,<br>under the terms of its Creative Commons Attribution-NonCommercial license.</p>
+
+          </section>
+        </div>
+      </md-content>
+    </div>
+  </body>
+</html>

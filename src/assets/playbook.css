@@ -1,0 +1,39 @@
+
+body{
+  background-color: #22aadd;
+}
+#playbookTitle{
+  text-align: center;
+}
+
+md-sidenav {
+  margin-top: 64px;
+}
+
+#main > md-content {
+  width: 100%;  
+}
+
+@media screen and (min-width: 800px){
+  #main #innerContent {
+    width: 800px;  
+    margin: auto;
+  }
+}
+
+#main md-whiteframe {
+  margin: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+md-whiteframe.card-tray{
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+md-card {
+  min-width: 160px;
+  max-width: 400px;
+}
