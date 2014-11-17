@@ -13,13 +13,12 @@ You first need npm and nodejs.
 
 ```
 npm install -g grunt grunt-cli
-cd playbook
-git checkout stackedit
+git clone https://github.com/SocietyPro/playbook.git
+cd playbook/src
 npm install
-grunt bower:install
 grunt
 http-server
-firefox localhost:8080/src/playbook.html
+firefox localhost:8080
 ```
 
 ### Edit or add Markdown under the src/markdown directory
