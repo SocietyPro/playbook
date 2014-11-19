@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         },
       },
       all:{
-        files: ['./**/*.jade', 'markdown/**/*.md', 'assets/**/*'],
+        files: ['./**/*.jade', 'markdown/**/*.md', 'assets/**/*', 'Gruntfile.js'],
         tasks: ['jade:compile', 'maketoc', 'copy:assets'],
         options: {
           livereload: true,
@@ -102,7 +102,18 @@ module.exports = function(grunt) {
     var toc = require('toc');
     var fs = require('fs');
     var generatedIndex = fs.readFileSync('../index.html', 'utf8');
-    var indexWithTOC = toc.process(generatedIndex); // looks for /<!--\s*toc\s*-->/gi
+    //var indexWithTOC = toc.process(generatedIndex); 
+    var indexWithTOC = toc.process(generatedIndex,
+    {
+      tocMin: 1,
+      tocMax: 3,
+      anchorMin: 1,
+      anchorMax: 6,
+    }
+    );
+    // WARNING! Magic string! 
+    // By default, toc inserts the generated HTML where it matches this regex:
+    // /<!--\s*toc\s*-->/gi
     grunt.log.writeln('generated toc');
     fs.writeFileSync('../index.html', indexWithTOC, {encoding:'utf8'});
     return true;

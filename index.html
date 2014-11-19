@@ -19,11 +19,11 @@
   <body layout="horizontal" ng-controller="playbookCtrl" layout-fill>
     <md-sidenav id="leftSideNav" component-id="left" is-locked-open="false" class="md-sidenav-left md-whiteframe-z2">
       <md-toolbar ng-click="toggleLeft()" class="md-theme-indigo">
-        <h1 class="md-toolbar-tools">Table of Contents</h1>
+        <h1 class="md-toolbar-tools"><a href="#table-of-contents" name="table-of-contents">Table of Contents</a></h1>
       </md-toolbar>
       <md-content ng-controller="LeftCtrl" class="md-padding">
         <section id="toc"> 
-          <div class="toc"><ul><li><a href="#commits">Commits</a></li><li><a href="#branches">Branches</a><ul><li><a href="#master">master</a></li><li><a href="#xp-dev">xp-dev</a></li><li><a href="#dev-guanaja">dev-guanaja</a></li></ul></li><li><a href="#syncing-branches">Syncing Branches</a></li><li><a href="#task-get-the-most-recent-submodules-from-github">TASK: Get the most recent submodules from github</a></li><li><a href="#task-add-a-new-child-submodule-to-a-parent-project">TASK: Add a new child submodule to a parent project</a></li><li><a href="#task-change-an-existing-submodule-child-repo-to-point-to-a-new-commit">TASK: Change an EXISTING submodule (child repo) to point to a new  commit</a></li><li><a href="#a-markdown-card">A Markdown Card</a></li><li><a href="#pomodoros">Pomodoros</a></li><li><a href="#scrum-team-information">Scrum Team Information</a></li><li><a href="#weekly-sprint-review">Weekly Sprint Review</a></li><li><a href="#weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></li><li><a href="#sprint-poker-planning">Sprint / Poker Planning</a></li></ul></div>
+          <div class="toc"><ul><li><a href="#table-of-contents">Table of Contents</a></li><li><a href="#git-tools-and-policies">Git Tools and Policies</a><ul><li><a href="#commits">Commits</a></li><li><a href="#branches">Branches</a><ul><li><a href="#master">master</a></li><li><a href="#xp-dev">xp-dev</a></li><li><a href="#dev-guanaja">dev-guanaja</a></li></ul></li><li><a href="#syncing-branches">Syncing Branches</a></li></ul></li><li><a href="#git-submodules">Git Submodules</a><ul><li><a href="#task-get-the-most-recent-submodules-from-github">TASK: Get the most recent submodules from github</a></li><li><a href="#task-add-a-new-child-submodule-to-a-parent-project">TASK: Add a new child submodule to a parent project</a></li><li><a href="#task-change-an-existing-submodule-child-repo-to-point-to-a-new-commit">TASK: Change an EXISTING submodule (child repo) to point to a new  commit</a></li></ul></li><li><a href="#devops">Dev/Ops</a><ul><li><a href="#windows">Windows</a><ul><li><a href="#build-with-qt-creator">Build with Qt Creator</a></li><li><a href="#build-with-command-line">Build with command line</a></li><li><a href="#distribute-windows-binaries">Distribute Windows Binaries</a></li></ul></li><li><a href="#linux">Linux</a><ul><li><a href="#prerequisites-1">Prerequisites</a></li><li><a href="#build-with-qt-creator-1">Build with Qt creator</a></li><li><a href="#build-with-command-line-1">Build with command line</a></li><li><a href="#distribute-linux-binaries">Distribute Linux Binaries</a></li></ul></li><li><a href="#mac-osx-10.">Mac OSX 10.?</a><ul><li><a href="#prerequisites-2">Prerequisites</a></li><li><a href="#build-with-qt-creator-2">Build with Qt creator</a></li><li><a href="#build-with-command-line-2">Build with command line</a></li></ul></li><li><a href="#automated-testing">Automated Testing</a></li></ul></li><li><a href="#hello-team">Hello Team!</a><ul><li><a href="#a-markdown-card">A Markdown Card</a></li></ul></li><li><a href="#the-code-for-the-above-cards">The code for the above cards:</a></li><li><a href="#hello"># Hello</a></li><li><a href="#productivity">Productivity</a><ul><li><a href="#pomodoros">Pomodoros</a></li></ul></li><li><a href="#scrum-process">SCRUM Process</a><ul><li><a href="#scrum-team-information">Scrum Team Information</a></li><li><a href="#weekly-sprint-review">Weekly Sprint Review</a></li><li><a href="#weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></li><li><a href="#sprint-poker-planning">Sprint / Poker Planning</a></li></ul></li></ul></div>
         </section>
       </md-content>
     </md-sidenav>
@@ -39,7 +39,7 @@
       <md-content flex>
         <div id="innerContent">
           <section id="playbook">
-            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="git-tools-and-policies">Git Tools and Policies</h1>
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="git-tools-and-policies"><a href="#git-tools-and-policies" name="git-tools-and-policies">Git Tools and Policies</a></h1>
 <h2 id="commits"><a href="#commits" name="commits">Commits</a></h2>
 <h2 id="branches"><a href="#branches" name="branches">Branches</a></h2>
 <p>Every branch has an owner and a commit policy. The owner decides the commit policy.</p>
@@ -97,7 +97,7 @@ $ git merge dev-guanaja
 $ git push
 </code></pre>
             </md-whiteframe>
-            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="git-submodules">Git Submodules</h1>
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="git-submodules"><a href="#git-submodules" name="git-submodules">Git Submodules</a></h1>
 <p>A &#39;submodule&#39; is a reference, stored in a parent repo, pointing at a specific commit of the child repo.</p>
 <h2 id="task-get-the-most-recent-submodules-from-github"><a href="#task-get-the-most-recent-submodules-from-github" name="task-get-the-most-recent-submodules-from-github">TASK: Get the most recent submodules from github</a></h2>
 <pre><code>   Start in root:
@@ -178,7 +178,42 @@ It&#39;s usually better to lock in a specific commit of the submodule. You can c
 8. git commit -m &#39;Use new version 0.2.0 of html5-chat-log&#39;
 </code></pre>
             </md-whiteframe>
-            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="automated-testing">Automated Testing</h1>
+            <md-whiteframe layout="vertical" class="md-whiteframe-z1"><h1 id="dev-ops"><a href="#devops" name="devops">Dev/Ops</a></h1>
+<p>Devops is everything that happens in between code being committed and users using the product.</p>
+<h2 id="windows"><a href="#windows" name="windows">Windows</a></h2>
+<h4 id="prerequisites"><a href="#prerequisites" name="prerequisites">Prerequisites</a></h4>
+<p>To make a Windows installer, you need to first have:</p>
+<ol>
+<li>Qt 5.3 and mingw 4.82</li>
+<li>OpenSSL development libraries
+(installed either to default <code>C:\OpenSSL-Win32</code> or <code>Cambrian-src/sopro-cpp-dependencies/win32/OpenSSL-Win32</code>)<br>Note that you must rename one openssl file: 
+<code>&quot;OpenSSL-Win32\lib\MinGW\ssleay32.a&quot;</code> &gt; <code>&quot;OpenSSL-Win32\lib\MinGW\libssleay32.a&quot;</code></li>
+<li><a href="http://nsis.sourceforge.net/Main_Page">NSIS</a></li>
+<li>Cambrian-src source code<br><code>git clone --recursive https://github.com/SocietyPro/Cambrian-src.git</code></li>
+</ol>
+<p>If you have installed Qt or NSIS to non-default locations, or if you have different versions of Qt or mingw, you&#39;ll need to modify one or more of <code>scripts/build/build-windows.bat</code>, <code>scripts/dist/distribute-windows.bat</code>, <code>scripts/dist/make-windows-installer.nsi</code> to point to the right files.</p>
+<h4 id="-cmd-shell-vs-git-bash-shell"><a href="#cmd-shell-vs-git-bash-shell" name="cmd-shell-vs-git-bash-shell"><code>cmd</code> shell vs <code>git bash</code> shell</a></h4>
+<p>Note! The build and distribute batch files require the windows <code>cmd</code> command line. They will not work in git bash. If you are in git bash, simply type <code>cmd</code> to invoke a windows shell.</p>
+<h3 id="build-with-qt-creator"><a href="#build-with-qt-creator" name="build-with-qt-creator">Build with Qt Creator</a></h3>
+<h3 id="build-with-command-line"><a href="#build-with-command-line" name="build-with-command-line">Build with command line</a></h3>
+<h4 id="build-societypro-exe"><a href="#build-societypro.exe" name="build-societypro.exe">Build SocietyPro.exe</a></h4>
+<pre><code>cd Cambrian-src/scripts/build
+build-windows.bat
+</code></pre><h3 id="distribute-windows-binaries"><a href="#distribute-windows-binaries" name="distribute-windows-binaries">Distribute Windows Binaries</a></h3>
+<h4 id="build-windows-installer"><a href="#build-windows-installer" name="build-windows-installer">Build Windows Installer</a></h4>
+<pre><code>cd ../dist
+distribute-windows.bat
+</code></pre><p>You&#39;re done! Your new installer is located at <code>Cambrian-src/dist/sopro-0.1.7.4.exe</code>.</p>
+<h2 id="linux"><a href="#linux" name="linux">Linux</a></h2>
+<h3 id="prerequisites"><a href="#prerequisites-1" name="prerequisites-1">Prerequisites</a></h3>
+<h3 id="build-with-qt-creator"><a href="#build-with-qt-creator-1" name="build-with-qt-creator-1">Build with Qt creator</a></h3>
+<h3 id="build-with-command-line"><a href="#build-with-command-line-1" name="build-with-command-line-1">Build with command line</a></h3>
+<h3 id="distribute-linux-binaries"><a href="#distribute-linux-binaries" name="distribute-linux-binaries">Distribute Linux Binaries</a></h3>
+<h2 id="mac-osx-10-"><a href="#mac-osx-10." name="mac-osx-10.">Mac OSX 10.?</a></h2>
+<h3 id="prerequisites"><a href="#prerequisites-2" name="prerequisites-2">Prerequisites</a></h3>
+<h3 id="build-with-qt-creator"><a href="#build-with-qt-creator-2" name="build-with-qt-creator-2">Build with Qt creator</a></h3>
+<h3 id="build-with-command-line"><a href="#build-with-command-line-2" name="build-with-command-line-2">Build with command line</a></h3>
+<h2 id="automated-testing"><a href="#automated-testing" name="automated-testing">Automated Testing</a></h2>
 <ul>
 <li>Fast builds <ul>
 <li>unit/integration tests, runs in less than 5 minutes</li>
@@ -200,7 +235,7 @@ It&#39;s usually better to lock in a specific commit of the submodule. You can c
 </ul>
 
             </md-whiteframe>
-            <h1>Hello Team!</h1>
+            <h1><a href="#hello-team" name="hello-team">Hello Team!</a></h1>
             <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1 card-frame">
               <md-card flex><h2 id="a-markdown-card"><a href="#a-markdown-card" name="a-markdown-card">A Markdown Card</a></h2>
 <p>This card is written in markdown.<br>It&#39;s a standalone file.</p>
@@ -218,7 +253,7 @@ It&#39;s usually better to lock in a specific commit of the submodule. You can c
 
               </md-card>
             </md-whiteframe>
-            <h1>The code for the above cards:</h1>
+            <h1><a href="#the-code-for-the-above-cards" name="the-code-for-the-above-cards">The code for the above cards:</a></h1>
             <md-whiteframe layout layout-align="center center" class="md-whiteframe-z1 card-frame">
               <pre><code>h1 Hello Team!
   md-whiteframe.md-whiteframe-z1(layout, layout-align="center center")
@@ -237,10 +272,10 @@ It&#39;s usually better to lock in a specific commit of the submodule. You can c
             </md-whiteframe>
             <md-whiteframe layout="vertical" class="md-whiteframe-z1"><p>⧸⧸#PLAYBOOK</p>
 <p>[TOC] </p>
-<h1 id="-hello"># Hello</h1>
+<h1 id="-hello"><a href="#hello" name="hello"># Hello</a></h1>
 <p>You Work on the XP-Squad SocietyPro Development Team . This is your playbook. It details how you and your teammates try and run our software development project. And team and how we make our products together. It is a living document that you can edit in a private GitHub repo.  It&#39;s filled with things we&#39;ve learned based on our own experience and study of others&#39; experiences.</p>
 <p>Some of Our Work IS very technical, but can be public, such as our encryption protocols or git policy. Look in our public <a href="https://Github.Com/SocietyPro/Playbook/guides/">https://Github.Com/SocietyPro/Playbook/guides/</a> GitHub repo folder for that kind of information.</p>
-<h1 id="productivity">Productivity</h1>
+<h1 id="productivity"><a href="#productivity" name="productivity">Productivity</a></h1>
 <h2 id="pomodoros"><a href="#pomodoros" name="pomodoros">Pomodoros</a></h2>
 <p>We like to use a time boxing technique called Pomodoros.  A nice time boxing technique called pomodoros A Nice webapp timer we recommend is: <a href="http://tomatoi.st/mkni">http://tomatoi.st/mkni</a></p>
 <p>Here is the technique in general:</p>
@@ -253,7 +288,7 @@ It&#39;s usually better to lock in a specific commit of the submodule. You can c
 5) After the timer ends, mark an X next to the task
 6) Force yourself to take a 5 minute break: go for walk, stretch, get mind off work.
 7) Repeat 4 times. After the 4th pomodoro, take a forced 30 minute break.</p>
-<h1 id="scrum-process">SCRUM Process</h1>
+<h1 id="scrum-process"><a href="#scrum-process" name="scrum-process">SCRUM Process</a></h1>
 <h2 id="scrum-team-information"><a href="#scrum-team-information" name="scrum-team-information">Scrum Team Information</a></h2>
 <ul>
 <li>Scrum Master: klaus </li>
