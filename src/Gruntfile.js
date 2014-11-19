@@ -105,6 +105,7 @@ module.exports = function(grunt) {
     //var indexWithTOC = toc.process(generatedIndex); 
     var indexWithTOC = toc.process(generatedIndex,
     {
+      openLI: '<li data-level="H<%= level %>" ng-click="close()"><a href="#<%= anchor %>"><%= text %></a>',
       tocMin: 1,
       tocMax: 3,
       anchorMin: 1,
