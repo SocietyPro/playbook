@@ -1,4 +1,24 @@
-
+#badgeContainer{
+  height: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: Inconsolata, Fixedsys, monospace;
+  vertical-align: center;
+  position: relative;
+  padding: 6px 0px;
+}
+#badgeContainer p, #badgeContainer a{
+  display: block;
+  margin: 0; padding: 0;
+  line-height: 18px;
+}
+#badgeContainer img{
+  display: block;
+}
+#badgeContainer .badgeLabel{
+  text-align: right;
+  margin-right: 8px;
+}
 body{
   background-color: #22aadd;
 }

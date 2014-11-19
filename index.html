@@ -23,13 +23,19 @@
       </md-toolbar>
       <md-content ng-controller="LeftCtrl" class="md-padding">
         <section id="toc"> 
-          <div class="toc"><ul><li><a href="#commits">Commits</a></li><li><a href="#branches">Branches</a><ul><li><a href="#master">master</a></li><li><a href="#dev">dev</a></li><li><a href="#xp-dev">xp-dev</a></li><li><a href="#roatan-dev">roatan-dev</a></li></ul></li><li><a href="#syncing-branches">Syncing Branches</a></li><li><a href="#task-get-the-most-recent-submodules-from-github">TASK: Get the most recent submodules from github</a></li><li><a href="#task-add-a-new-child-submodule-to-a-parent-project">TASK: Add a new child submodule to a parent project</a></li><li><a href="#task-change-an-existing-submodule-child-repo-to-point-to-a-new-commit">TASK: Change an EXISTING submodule (child repo) to point to a new  commit</a></li><li><a href="#a-markdown-card">A Markdown Card</a></li><li><a href="#pomodoros">Pomodoros</a></li><li><a href="#scrum-team-information">Scrum Team Information</a></li><li><a href="#weekly-sprint-review">Weekly Sprint Review</a></li><li><a href="#weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></li><li><a href="#sprint-poker-planning">Sprint / Poker Planning</a></li></ul></div>
+          <div class="toc"><ul><li><a href="#commits">Commits</a></li><li><a href="#branches">Branches</a><ul><li><a href="#master">master</a></li><li><a href="#xp-dev">xp-dev</a></li><li><a href="#dev-guanaja">dev-guanaja</a></li></ul></li><li><a href="#syncing-branches">Syncing Branches</a></li><li><a href="#task-get-the-most-recent-submodules-from-github">TASK: Get the most recent submodules from github</a></li><li><a href="#task-add-a-new-child-submodule-to-a-parent-project">TASK: Add a new child submodule to a parent project</a></li><li><a href="#task-change-an-existing-submodule-child-repo-to-point-to-a-new-commit">TASK: Change an EXISTING submodule (child repo) to point to a new  commit</a></li><li><a href="#a-markdown-card">A Markdown Card</a></li><li><a href="#pomodoros">Pomodoros</a></li><li><a href="#scrum-team-information">Scrum Team Information</a></li><li><a href="#weekly-sprint-review">Weekly Sprint Review</a></li><li><a href="#weekly-sprint-retrospective-meeting">Weekly Sprint Retrospective Meeting</a></li><li><a href="#sprint-poker-planning">Sprint / Poker Planning</a></li></ul></div>
         </section>
       </md-content>
     </md-sidenav>
     <div id="main" layout="vertical" layout-fill>
       <md-toolbar class="md-theme-indigo"><span layout="horizontal" class="md-toolbar-tools">
-          <md-button ng-click="toggleLeft()" flex="20" class="md-raised">TOC</md-button><span flex="60" offset="20" id="playbookTitle">Society<super>PRO</super> Playbook</span></span></md-toolbar>
+          <md-button ng-click="toggleLeft()" flex="20" class="md-raised">TOC</md-button><span flex="60" id="playbookTitle">Society<super>PRO</super> Playbook</span>
+          <div flex="20" layout="vertical" layout-align="space-around" id="badgeContainer">
+            <div layout="horizontal"><a flex="50" href="http://ci.societypro.org:8080/job/Cambrian-src_Master_Linux/" class="badgeLabel">Linux</a><span flex="50"><p><a href="http://ci.societypro.org:8080/job/Cambrian-src_Master_Linux/"><img src="http://ci.societypro.org:8080/job/Cambrian-src_Master_Linux/badge/icon" alt="Build Status"></a></p>
+</span></div>
+            <div layout="horizontal"><a flex="50" href="http://ci.societypro.org:8080/job/Cambrian-src_Master_Windows/" class="badgeLabel">Windows</a><span flex="50"><p><a href="http://ci.societypro.org:8080/job/Cambrian-src_Master_Windows/"><img src="http://ci.societypro.org:8080/job/Cambrian-src_Master_Windows/badge/icon" alt="Build Status"></a></p>
+</span></div>
+          </div></span></md-toolbar>
       <md-content flex>
         <div id="innerContent">
           <section id="playbook">
@@ -40,28 +46,26 @@
 <h3 id="-master-"><a href="#master" name="master"><strong>master</strong></a></h3>
 <p>This branch is the public face of the Society Pro project.</p>
 <ul>
-<li>Owner:<br>Hiro</li>
-<li>Commit Policy:<br>The <strong>master</strong> branch contains only &quot;releasable&quot; code that builds and passes all tests on Windows, Linux, and Mac.<br>The only commits to <code>master</code> should be merge commits from <code>xp-dev</code> or <code>xp-roatan</code>.<br>Releasable means that a customer could run into the room as soon as the commit happens, say &quot;Great! Let&#39;s go live now!&quot;, and nobody in the team will say &quot;no, but wait&quot;.</li>
+<li>Owner:<br>Jorge + Cesar  </li>
+<li>Commit Policy:<br>The <strong>master</strong> branch contains only &quot;releasable&quot; code that builds and passes all tests on Windows, Linux, and Mac.<br>The only commits to <code>master</code> should be merge commits from <code>xp-dev</code> or <code>dev-guanaja</code>.<br>Releasable means that a customer could run into the room as soon as the commit happens, say &quot;Great! Let&#39;s go live now!&quot;, and nobody in the team will say &quot;no, but wait&quot;.</li>
 </ul>
-<h3 id="-dev-"><a href="#dev" name="dev"><strong>dev</strong></a></h3>
-<p>Currently under discussion</p>
 <h3 id="-xp-dev-"><a href="#xp-dev" name="xp-dev"><strong>xp-dev</strong></a></h3>
 <p>This branch is the staging point for sharing code between XP Squad Developers.</p>
 <ul>
 <li>Owner:<br>Jorge</li>
 <li>Commit Policy:<br>Code must have comments, placed before the code block.<br>Code must have tests.</li>
 </ul>
-<h3 id="-roatan-dev-"><a href="#roatan-dev" name="roatan-dev"><strong>roatan-dev</strong></a></h3>
+<h3 id="-dev-guanaja-"><a href="#dev-guanaja" name="dev-guanaja"><strong>dev-guanaja</strong></a></h3>
 <p>This branch is the staging point for sharing code between XP Squad Developers.</p>
 <ul>
-<li>Owner:<br>Dan</li>
+<li>Owner:<br>Cesar</li>
 <li>Commit Policy:<br>TBD</li>
 </ul>
 <h2 id="syncing-branches"><a href="#syncing-branches" name="syncing-branches">Syncing Branches</a></h2>
 <p>Since our project has multiple teams, we need a way to sync the different code we write.
 This strategy encourages frequent commits and easy merge resolutions:</p>
 <ul>
-<li>Every commit to <code>master</code> should be either a merge commit from <code>xp-dev</code> or a merge commit from <code>roatan-dev</code>.</li>
+<li>Every commit to <code>master</code> should be either a merge commit from <code>xp-dev</code> or a merge commit from <code>dev-guanaja</code>.</li>
 <li>On every commit to master, every team and team member is responsible for rebasing their branches with the new code. The sooner you resync your branch, the fewer conflicts you&#39;ll have.</li>
 <li>Thus, if X commits a feature to master before Y, it is Y&#39;s responsibility to include X&#39;s new feature in all future commits that are merged from Y&#39;s development branch to master.</li>
 </ul>
@@ -77,19 +81,19 @@ $ git checkout master
 $ git merge xp-dev
 $ git push
 
-$ ## Roatan Team begins development: 
-$ git checkout roatan-dev
+$ ## Guanaja Team begins development: 
+$ git checkout dev-guanaja
 $ git echo &quot;new code&quot; &gt;&gt; ICrypto.cpp
 $ git commit -m &quot;ICrypto changes&quot;
 
-$ ## Roatan Team notices a new feature since their last master commit and updates roatan-dev branch:
+$ ## Guanaja Team notices a new feature since their last master commit and updates dev-guanaja branch:
 $ git fetch origin
 $ git rebase origin/master
 
-$ ## Roatan Team resolves any merge conflicts
-$ ## Roatan Team completes their feature, gets green builds and tests, deploys to master
+$ ## Guanaja Team resolves any merge conflicts
+$ ## Guanaja Team completes their feature, gets green builds and tests, deploys to master
 $ git checkout master
-$ git merge roatan-dev
+$ git merge dev-guanaja
 $ git push
 </code></pre>
             </md-whiteframe>

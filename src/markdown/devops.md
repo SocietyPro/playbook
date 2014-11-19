@@ -1,9 +1,5 @@
 #Automated Testing
 
-Society Pro for Windows: [![Build Status](http://ci.societypro.org:8080/job/Cambrian-src_Master_Linux/badge/icon)](http://ci.societypro.org:8080/job/Cambrian-src_Master_Linux/)
-
-Society Pro for Linux: [![Build Status](http://ci.societypro.org:8080/job/Cambrian-src_Master_Linux/badge/icon)](http://ci.societypro.org:8080/job/Cambrian-src_Master_Linux/)
-
 * Fast builds 
   * unit/integration tests, runs in less than 5 minutes
   * notification is sent to the team lead and to developers having committed changes.

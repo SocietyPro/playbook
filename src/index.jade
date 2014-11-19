@@ -37,7 +37,9 @@ html(ng-app="playbookModule" layout-fill)
             flex="20",
             class="md-raised"
           ) TOC
-          span(flex="60", offset="20", id="playbookTitle") Society<super>PRO</super> Playbook
+          span(flex="60", id="playbookTitle") Society<super>PRO</super> Playbook
+          include jade/badges
+
       md-content(flex)
         div#innerContent
           section#playbook
@@ -46,7 +48,7 @@ html(ng-app="playbookModule" layout-fill)
             md-whiteframe.md-whiteframe-z1(layout="vertical")
               include:md markdown/git-submodules.md
             md-whiteframe.md-whiteframe-z1(layout="vertical")
-              include:md markdown/testing.md
+              include:md markdown/devops.md
             include jade/demo-cards.jade
             include jade/demo-card-2.jade
             md-whiteframe.md-whiteframe-z1(layout="vertical")
