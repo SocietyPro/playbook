@@ -18,8 +18,17 @@ If you have installed Qt or NSIS to non-default locations, or if you have differ
 Note! The build and distribute batch files require the windows `cmd` command line. They will not work in git bash. If you are in git bash, simply type `cmd` to invoke a windows shell.
 
 ### Build with Qt Creator
+* Open `sopro.pro` and `otx/projects/otx.pro` in Qt Creator.
+* Open the project settings for `sopro.pro`. Choose an output directory that is not inside the Cambrian-src folder.
+* Open the project settings for `otx.pro`. **Set the same output directory** as `sopro.pro`. Set **release mode**.
+* Go back to the Edit window. Right click `otx.pro` and click **Set "otx" as Active Project**.
+* Right click `otx.pro` again and click Build.
+* After a successful otx build, right click `sopro.pro` and click **Set "sopro" as Active Project**. Set **release mode**.
+* Right click `sopro.pro` again and click Build.
+
+You now have SocietyPro.exe in the output folder.
+
 ### Build with command line
-####Build SocietyPro.exe
     cd Cambrian-src/scripts/build
     build-windows.bat
 ### Distribute Windows Binaries
@@ -40,6 +49,7 @@ You're done! Your new installer is located at `Cambrian-src/dist/sopro-0.1.7.4.e
 ### Prerequisites
 ### Build with Qt creator
 ### Build with command line
+### Distribute Mac DMG
 
 ## Automated Testing
 
