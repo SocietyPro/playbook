@@ -1,8 +1,25 @@
 #Git Tools and Policies
-##Commits
+##Projects
+Development of the SocietyPro core is in SocietyPro/Cambrian-src.
 
-##Branches
-Every branch has an owner and a commit policy. The owner decides the commit policy.
+We have other repositories for related code. 
+
+The following branch policies apply to all SocietyPro repos.
+##Branch Policies
+###TLDR:  
+>Every team has their own team branch with an 'owner'.
+
+>The owner is responsible for frequently pulling commits from master onto their team branch.
+
+>The team resolves merge conflicts when they appear from other teams on master.
+
+>The team decides the commit policy for their team branch.  
+
+>The owner is the only one allowed to make merge commits onto master from the team branch.
+
+>Only code that is releasable to users is allowed on master.
+
+>Use feature branches to make work-in-progress commits - committing unreleasable work to the team branch impedes your teammates who want to release their completed feature.
 
 ###**master**
 This branch is the public face of the Society Pro project.
@@ -14,7 +31,7 @@ This branch is the public face of the Society Pro project.
   Releasable means that a customer could run into the room as soon as the commit happens, say "Great! Let's go live now!", and nobody in the team will say "no, but wait".
 
 ###**xp-dev**
-This branch is the staging point for sharing code between XP Squad Developers.
+This branch is the staging point for sharing code among the XP Squad.
 * Owner:  
   Jorge
 * Commit Policy:  
@@ -22,7 +39,7 @@ This branch is the staging point for sharing code between XP Squad Developers.
   Code must have tests.
 
 ###**dev-guanaja**
-This branch is the staging point for sharing code between XP Squad Developers.
+This branch is the staging point for sharing code among the Guanaja team.
 * Owner:  
   Cesar
 * Commit Policy:  
@@ -34,8 +51,10 @@ Since our project has multiple teams, we need a way to sync the different code w
 This strategy encourages frequent commits and easy merge resolutions:
 
 * Every commit to `master` should be either a merge commit from `xp-dev` or a merge commit from `dev-guanaja`.
-* On every commit to master, every team and team member is responsible for rebasing their branches with the new code. The sooner you resync your branch, the fewer conflicts you'll have.
+* On every commit to master, the team branch owners are responsible for integrating the new code onto the team branch with a merge or rebase.
+* Team members with personal branches or feature branches should then integrate the new code from the team branch onto their child branch.
 * Thus, if X commits a feature to master before Y, it is Y's responsibility to include X's new feature in all future commits that are merged from Y's development branch to master.
+* The sooner you resync your branch, the fewer conflicts you'll have.
 
 <img src="assets/images/multi-team-sourcecontrol.gif"/>
 
