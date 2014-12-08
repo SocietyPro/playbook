@@ -32,11 +32,29 @@ You now have SocietyPro.exe in the output folder.
     cd Cambrian-src/scripts/build
     build-windows.bat
 ### Distribute Windows Binaries
-####Build Windows Installer
-    cd ../dist
-    distribute-windows.bat
 
-You're done! Your new installer is located at `Cambrian-src/dist/sopro-0.1.7.4.exe`.
+Our Grunt distribution script does a number of tasks:
+* Find version number
+* Build installer
+* Generate a json metadata file with hash
+* Update current-releases.json and historical-releases.json
+* Compile a new index.html
+
+####Build Windows Installer
+
+    cd ../dist
+    npm install
+    grunt
+
+You're done! Your new installer is located at `Cambrian-src/releases/sopro-<version>.exe`.
+
+If you would like to put the new release on the internet,  
+and you have `aws` and a set of ssh keys configured,  
+then you can tell Grunt to upload the files with the following two commands:
+
+    grunt upload-index
+    grunt upload-release
+
 
 ## Linux
 ### Prerequisites

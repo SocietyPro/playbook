@@ -4,8 +4,13 @@ Development of the SocietyPro core is in SocietyPro/Cambrian-src.
 
 We have other repositories for related code. 
 
-The following branch policies apply to all SocietyPro repos.
+##Tags and Releases
+We have two types of tags - version numbers stored in code, and Git tags that mark a specific commit.  
+The Windows installer distribution script expects to find the authoritative version string in `Cambrian-src/version.h`.  
+This version string **should only be bumped by the owner of a team branch when a new feature is merged onto the master branch**.
+
 ##Branch Policies
+The following branch policies apply to all SocietyPro repos.
 ###TLDR:  
 >Every team has their own team branch with an 'owner'.
 
