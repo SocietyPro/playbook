@@ -233,14 +233,26 @@ build-windows.bat
 <li>Update current-releases.json and historical-releases.json</li>
 <li>Compile a new index.html</li>
 </ul>
-<h4 id="build-windows-installer"><a href="#build-windows-installer" name="build-windows-installer">Build Windows Installer</a></h4>
+<p>To begin using Grunt, install nodejs, then:</p>
+<pre><code>npm install -g grunt-cli
+</code></pre><h4 id="build-windows-installer-installer-metadata-into-releases"><a href="#build-windows-installer-+-installer-metadata-into-releases" name="build-windows-installer-+-installer-metadata-into-releases">Build Windows Installer + installer metadata into /releases</a></h4>
+<pre><code>cd ../dist
+npm install
+grunt build-installer
+</code></pre><p>You&#39;re done! Your new installer is located at <code>Cambrian-src/releases/sopro-&lt;version&gt;.exe</code>.</p>
+<h4 id="build-windows-installer-installer-metadata-index-html"><a href="#build-windows-installer-+-installer-metadata-+-index.html" name="build-windows-installer-+-installer-metadata-+-index.html">Build Windows Installer + installer metadata + index.html</a></h4>
 <pre><code>cd ../dist
 npm install
 grunt
-</code></pre><p>You&#39;re done! Your new installer is located at <code>Cambrian-src/releases/sopro-&lt;version&gt;.exe</code>.</p>
+</code></pre><p>This likewise puts the installer at <code>Cambrian-src/releases/sopro-&lt;version&gt;.exe</code>.<br>It also creates <code>index.html</code> in <code>Cambrian-src/scripts/dist/</code> suitable for uploading to Amazon S3.</p>
+<h4 id="upload-to-s3-with-grunt"><a href="#upload-to-s3-with-grunt" name="upload-to-s3-with-grunt">Upload to S3 with Grunt</a></h4>
 <p>If you would like to put the new release on the internet,<br>and you have <code>aws</code> and a set of ssh keys configured,<br>then you can tell Grunt to upload the files with the following two commands:</p>
 <pre><code>grunt upload-index
 grunt upload-release
+</code></pre><h4 id="upload-to-s3-manually"><a href="#upload-to-s3-manually" name="upload-to-s3-manually">Upload to S3 manually</a></h4>
+<pre><code>aws s3 cp index.html s3://download.societypro.org
+aws s3 cp c:\dev\src\sopro\Cambrian-src\releases\societypro-0.1.7.6.exe s3://download.societypro.org/releases/
+aws s3 cp c:\dev\src\sopro\Cambrian-src\releases\societypro-0.1.7.6.exe.json s3://download.societypro.org/releases/
 </code></pre><h2 id="linux"><a href="#linux" name="linux">Linux</a></h2>
 <h3 id="prerequisites"><a href="#prerequisites-1" name="prerequisites-1">Prerequisites</a></h3>
 <h3 id="build-with-qt-creator"><a href="#build-with-qt-creator-1" name="build-with-qt-creator-1">Build with Qt creator</a></h3>

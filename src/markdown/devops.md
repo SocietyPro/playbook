@@ -40,20 +40,40 @@ Our Grunt distribution script does a number of tasks:
 * Update current-releases.json and historical-releases.json
 * Compile a new index.html
 
-####Build Windows Installer
+To begin using Grunt, install nodejs, then:
+
+    npm install -g grunt-cli
+
+#### Build Windows Installer + installer metadata into /releases
+
+    cd ../dist
+    npm install
+    grunt build-installer
+
+You're done! Your new installer is located at `Cambrian-src/releases/sopro-<version>.exe`.
+
+#### Build Windows Installer + installer metadata + index.html
 
     cd ../dist
     npm install
     grunt
 
-You're done! Your new installer is located at `Cambrian-src/releases/sopro-<version>.exe`.
+This likewise puts the installer at `Cambrian-src/releases/sopro-<version>.exe`.  
+It also creates `index.html` in `Cambrian-src/scripts/dist/` suitable for uploading to Amazon S3.
 
+#### Upload to S3 with Grunt
 If you would like to put the new release on the internet,  
 and you have `aws` and a set of ssh keys configured,  
 then you can tell Grunt to upload the files with the following two commands:
 
     grunt upload-index
     grunt upload-release
+
+#### Upload to S3 manually
+
+    aws s3 cp index.html s3://download.societypro.org
+    aws s3 cp c:\dev\src\sopro\Cambrian-src\releases\societypro-0.1.7.6.exe s3://download.societypro.org/releases/
+    aws s3 cp c:\dev\src\sopro\Cambrian-src\releases\societypro-0.1.7.6.exe.json s3://download.societypro.org/releases/
 
 
 ## Linux
