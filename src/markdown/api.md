@@ -9,6 +9,9 @@ The full API specification and documentattion can be found on [Apiary](http://do
 ###Google Test
 The primary API testing is completed during unit testing.
 
+To run unit tests in SocietyPro use the following command with a successfully built executable
+SocietyPro.exe --UnitTests --gtest_output=xml:<filename>.xml
+
 ###Postman
 REST client testing is completed with [Postman](http://getpostman.com). ([documentation](http://www.getpostman.com/docs))
 
