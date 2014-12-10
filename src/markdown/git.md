@@ -90,3 +90,25 @@ Example code:
     $ git merge dev-guanaja
     $ git push
 
+## Remotes, Forks, and Pull Requests
+Some of our repos disallow commits from individual developers. Instead, these repos require Github pull requests to be made to get new code into a maintained repo.
+
+* Fork the repo to your personal Github account (click Fork on top right of the github repo page)
+* Get the source code
+  * If you already have source code from the "upstream" repo (i.e. SocietyPro, the place you forked from), you can use that existing repo by adding a new **'Remote'**. (see below)
+  * If you prefer to clone your new, forked repo, the `origin` remote will automatically point at your forked repo.
+
+* Configure your local project's known **remote repositories**:
+
+    > * If you are starting with an EXISTING copy of the original `SocietyPro/repo-name` repository, its `origin` remote points at `https://github.com/SocietyPro/repo-name`.  
+    >   You can add your fork as a new labeled remote with, e.g. `git remote add YourGithubUsername https://github.com/YourGithubUsername/repo-name`.  
+    > * Now you can do e.g. `git push YourGithubUsername master` to push your current commit to the master branch of `YourGithubUsername/repo-name`.
+
+* Do some work on your local project
+* Make a commit
+* Upload your work to your fork with `git push remoteName remoteBranch`
+  * e.g. this will be `git push YourGithubUsername master` for the case where you want the master branch to go to the `YourGithubUsername/repo-name` repository
+* Go back to Github and find your forked repo (`https://github.com/YourGithubUsername/repo-name`)
+* Click "Pull Request"
+* Give it a title, and explain the purpose of the pull request in the description
+* Make sure that you see `SocietyPro:upstream-branch-name   ...   YourGithubUsername/local-branch-name` at the top. This means that the work from YourGithubUsername will be pulled into SocietyPro.
