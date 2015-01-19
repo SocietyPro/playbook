@@ -41,13 +41,17 @@ html(ng-app="playbookModule" layout-fill)
             flex="60", 
             id="playbookTitle"
           ) Society<super>PRO</super> Playbook
-          include jade/badges
+          // include jade/badges
 
       md-content(flex)
         div#innerContent
           section#playbook
             md-whiteframe.md-whiteframe-z1(layout="vertical")
               include:md markdown/git.md
+            md-whiteframe.md-whiteframe-z1(layout="vertical")
+              include:md markdown/definitionOfDone.md
+            md-whiteframe.md-whiteframe-z1(layout="vertical")
+              include:md markdown/codeReviewChecklist.md
             md-whiteframe.md-whiteframe-z1(layout="vertical")
               include:md markdown/git-submodules.md
             md-whiteframe.md-whiteframe-z1(layout="vertical")
